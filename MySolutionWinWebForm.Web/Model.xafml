@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems ShowImages="True">
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Department_ListView" ImageName="BO_Department" />
+          <Item Id="Position_ListView" ImageName="BO_Position" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="22.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>
