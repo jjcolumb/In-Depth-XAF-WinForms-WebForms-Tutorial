@@ -16,6 +16,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DevExpress.ExpressApp.Security;
 
 namespace MySolutionWinWebForm.Module.Controllers
 {
@@ -95,6 +96,31 @@ namespace MySolutionWinWebForm.Module.Controllers
             {
                 objectSpace.CommitChanges();
                 View.ObjectSpace.Refresh();
+            }
+
+            private void TaskActionsController_Activated(object sender, EventArgs e)
+            {
+                View.SelectionChanged += View_SelectionChanged;
+                UpdateSetTaskActionState();
+            }
+            void View_SelectionChanged(object sender, EventArgs e)
+            {
+                UpdateSetTaskActionState();
+            }
+            private void UpdateSetTaskActionState()
+            {
+                bool isGranted = true;
+                SecurityStrategy security = Application.GetSecurityStrategy();
+                foreach (object selectedObject in View.SelectedObjects)
+                {
+                    bool isPriorityGranted = security.CanWrite(selectedObject, nameof(DemoTask.Priority));
+                    bool isStatusGranted = security.CanWrite(selectedObject, nameof(DemoTask.Status));
+                    if (!isPriorityGranted || !isStatusGranted)
+                    {
+                        isGranted = false;
+                    }
+                }
+                SetTaskAction.Enabled.SetItemValue("SecurityAllowance", isGranted);
             }
         }
     }
