@@ -22,31 +22,36 @@ The tutorial consists of the following sections.
     
     This section describes the use of the  [eXpress Persistent Objects (XPO)](https://www.devexpress.com/Products/NET/ORM/)  object-relational mapping ([ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)) tool. You will implement classes that will form the business model (which defines the database tables) of your application. As a result of completing this section, you will end up with two automatically generated interfaces based on the same business model - a WinForms application and a website. In addition, these applications will contain a set of features that form the base application functionality.
     
-    ![Main_Demo_BMD](https://docs.devexpress.com/eXpressAppFramework/images/main_demo_bmd117570.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a4397d82-163d-4a85-a1f7-8980233acec2)
+
     
 -   [Extend Functionality](https://docs.devexpress.com/eXpressAppFramework/112740/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality?v=22.1)
     
     In this section, you will add custom features to the application built in the previous section.
     
-    ![Main_Demo_Extend](https://docs.devexpress.com/eXpressAppFramework/images/main_demo_extend117574.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d0c0a858-c744-40a6-85fe-0dcf0b3c7cd0)
+
     
 -   [UI Customization](https://docs.devexpress.com/eXpressAppFramework/112748/getting-started/in-depth-tutorial-winforms-webforms/ui-customization?v=22.1)
     
     This section will teach you how to easily customize the automatically generated UI of an application.
     
-    ![Main_Demo_UI](https://docs.devexpress.com/eXpressAppFramework/images/main_demo_ui117575.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1fdda560-2407-4f9a-aae2-ba9f000763a4)
+
     
 -   [Extra Modules](https://docs.devexpress.com/eXpressAppFramework/112770/getting-started/in-depth-tutorial-winforms-webforms/extra-modules?v=22.1)
     
     In this section, you will add extra features supplied with XAF (file attachment, data analysis, report generation, etc.).
     
-    ![Main_Demo_Modules](https://docs.devexpress.com/eXpressAppFramework/images/main_demo_modules117572.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a7f2a935-4988-446b-bdb9-13a4ecf7fec8)
+
     
 -   [Security System](https://docs.devexpress.com/eXpressAppFramework/112771/getting-started/in-depth-tutorial-winforms-webforms/security-system?v=22.1)
     
     Use this section to learn how to make the application secure by adding the XAF Security System to it.
     
-    ![Main_Demo_Sec](https://docs.devexpress.com/eXpressAppFramework/images/main_demo_sec117573.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ed949c2f-56c2-4874-b401-44053a0ed47b)
+
     
 
 Each section consists of a number of lessons. Each lesson provides the steps required for implementing the functionality mentioned in the lesson title. These steps include the exact instructions , and may also include code snippets (in C# and VB) and images.
@@ -84,13 +89,16 @@ If you need to build an application based on an existing database, refer to the 
 
 After completing the tutorial, you will have WinForms and ASP.NET Web Forms applications.
 
-![Tutorial_BMD_Lesson0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson0_1115540.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d14f98d5-bcc1-4d68-ae88-a00ff7818a35)
+
 
 The ASP.NET Web Forms application will provide almost the same functionality, but via a slightly different set of visual elements.
 
-![Tutorial_BMD_Lesson0_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson0_2115541.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/85603f63-001e-438a-9ec3-12401d560939)
 
-![Tutorial_BMD_Lesson0_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson0_3117477.png?v=22.1)
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4a69b23f-c99d-4f05-98d5-7794dffe1529)
+
 
 # Create a Solution using the Wizard
 
@@ -100,27 +108,33 @@ In this lesson, you will learn how to create a new XAF solution. You will also b
     
 -   Select  **DevExpress v22.1  XAF Template Gallery**  for C# or Visual Basic and click  **Next**. Specify the project name (“MySolution”) and click  **Create**.
     
-    ![Create a new XAF project](https://docs.devexpress.com/eXpressAppFramework/images/spm_newproject_blazor.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/217c6766-c0f3-4c82-a8b0-ce73f3a263a8)
+
     
 -   In the invoked Template Gallery, select  **XAF Solution Wizard (.NET Framework)**  in the  **.NET Framework**  section and click  **Run Wizard**.
     
-    ![Select "XAF Solution Wizard (.NET Framework)" in the Template Gallery](https://docs.devexpress.com/eXpressAppFramework/images/MainDemo_TemplateGallery_RunWizard_WinWeb.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/da31bbbc-cf37-4394-bd00-9a82335c0171)
+
     
 -   This will invoke the  **Solution Wizard**. In the first screen of the wizard, choose the target platform(s). You can create separate WinForms, ASP.NET Web Forms applications, or multiple applications at once. Choose the  **WinForms**  and  **Web**  platforms and click  **Next**.
     
-    ![Choose Target Platforms](https://docs.devexpress.com/eXpressAppFramework/images/ctutor_solution_wizard_1117478_large.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/81854033-4199-4104-9970-487b2f8b5eee)
+
     
 -   In the next screen, choose  **eXpress Persistent Objects**  and click  **Next**.
     
-    ![Choose ORM](https://docs.devexpress.com/eXpressAppFramework/images/ctutor_solution_wizard_2117479.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fabe03fa-174c-4e54-abdb-faeef1d73940)
+
     
 -   In the next screen, you can choose the security options of your application. Choose  **Active Directory**  as the  **Authentication**  type, select  **Client-Side Security - Integrated Mode**  as the  **Database security**  type, and click  **Next**.
     
-    ![Choose Security](https://docs.devexpress.com/eXpressAppFramework/images/ctutor_solution_wizard_3_xpo117484.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a9721387-79fc-44d9-8c86-ed6874882027)
+
     
 -   On the next screen, you can choose the required XAF modules, which will automatically be added to your application. Select the  [Business Class Library Customization](https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces?v=22.1#business-class-library-customization-module)  module and click  **Finish**.
     
-    ![Choose Extra Modules](https://docs.devexpress.com/eXpressAppFramework/images/ctutor_solution_wizard_4117481.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/230390be-90f1-404a-8f83-3c768f963ccf)
+
     
     >NOTE
     Most of the other modules will be added manually in the [Extra Modules](https://docs.devexpress.com/eXpressAppFramework/112770/getting-started/in-depth-tutorial-winforms-webforms/extra-modules?v=22.1) section.
@@ -134,7 +148,8 @@ Once the solution has been created, you will see five projects in the  **Solutio
 -   _MySolution.Web_  - the ASP.NET Web Forms application project is similar to the WinForms application, but generates a browser-based interface instead of a WinForms interface. Do not use this project for feature implementation. All application logic should be implemented in the appropriate Module projects.
 -   _MySolution.Win_  - the WinForms application project, which relies on basic and WinForms modules, automatically generates the Windows user interface. Do not use this project for feature implementation. All application logic should be implemented in the appropriate Module projects.
 
-![Tutorial_BMD_Lesson1_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson1_2115423.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3807734b-a474-42a2-896f-13bbfccbf50f)
+
 
 You can refer to the  [Application Solution Structure](https://docs.devexpress.com/eXpressAppFramework/118045/application-shell-and-base-infrastructure/application-solution-components/application-solution-structure?v=22.1)  topic for additional information on the XAF solution structure.
 
@@ -147,11 +162,13 @@ The following images show the resulting WinForms and ASP.NET Web Forms applicati
 
 **WinForms**
 
-![Tutorial_BMD_Lesson1_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson1_3115424.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/38b0af8f-4415-4499-8b44-7fdfed84d8b9)
+
 
 **ASP.NET Web Forms**
 
-![Tutorial_BMD_Lesson1_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson1_4117402.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/444fff60-1410-4f7e-925a-165821c30252)
+
 
 By default, the wizard enables the  **Tabbed MDI**  UI type and the  **Ribbon**  Form Style in the WinForms application. Refer to the  [Choose the WinForms UI Type](https://docs.devexpress.com/eXpressAppFramework/113264/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/choose-the-winforms-ui-type?v=22.1)  and  [Toggle the WinForms Ribbon Interface](https://docs.devexpress.com/eXpressAppFramework/113038/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/toggle-the-winforms-ribbon-interface?v=22.1)  topics to learn how to change these options.
 
@@ -164,7 +181,8 @@ In this lesson, you will learn how to implement business classes for your applic
 
 -   Typically, business classes should be implemented in a  [platform-independent module project](https://docs.devexpress.com/eXpressAppFramework/118045/application-shell-and-base-infrastructure/application-solution-components/application-solution-structure?v=22.1), so that the same objects will be available in both WinForms and ASP.NET Web Forms applications. To simplify the implementation of XAF-specific classes, several Visual Studio templates are supplied. In this lesson, you will use the  **XPO Business Object**  template to implement a persistent business class. Right-click the  _Business Objects_  folder in the  _MySolution.Module_  project, and choose  **Add DevExpress Item**  |  **New Item…**  to invoke  [Template Gallery](https://docs.devexpress.com/eXpressAppFramework/113455/installation-upgrade-version-history/visual-studio-integration/template-gallery?v=22.1).Then select the  **XAF Business Object** | **XPO Business Object**  template, specify  _Contact.cs_  as the new item’s name and press  **Add Item**. As a result, you will get an automatically generated code file with a single class declaration.
     
-    ![TemplateGalery_XPO](https://docs.devexpress.com/eXpressAppFramework/images/templategalery_xpo123144.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/42a5b952-4530-495a-88f8-c7b15fbf0df1)
+
     
     The auto-generated  **Contact**  class is a  [BaseObject](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.BaseImpl.BaseObject?v=22.1)  class descendant, which is one of the  [base persistent classes](https://docs.devexpress.com/eXpressAppFramework/113146/business-model-design-orm/business-model-design-with-xpo/base-persistent-classes?v=22.1). You should inherit one of these classes when implementing a persistent class from scratch is required, or use  [Business Class Library](https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces?v=22.1)  classes (which are derived from the  **BaseObject**  class as well). For a general overview of the business class concept, refer to the  [Business Classes vs Database Tables](https://docs.devexpress.com/eXpressAppFramework/112570/business-model-design-orm/business-model-design-with-xpo/business-classes-vs-database-tables?v=22.1)  topic.
     
@@ -228,7 +246,8 @@ In this lesson, you will learn how to implement business classes for your applic
     
     The following image demonstrates the Detail and List Views in the WinForms application.
     
-    ![Tutorial_BMD_Lesson2_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson2_2116011.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/07a0d505-d2a1-432d-82a8-644c0139b134)
+
     
     Notice that many elements have been generated in an intuitive manner in very little time. The proper editors are created for data fields, and appropriate editors are used in the grid controls to display data. Note that a combo box editor has been created for  **Title Of Courtesy**  (an enumerator). Also note that captions have automatically been transformed from camel-case to space-separated strings, form titles are automatically updated, etc.
     
