@@ -2714,11 +2714,13 @@ Follow the steps below to change the UI Type of your WinForms application using 
 
 -   Invoke the  **Model Editor**  by double-clicking the  _Model.xafml_  file from the  **MySolution.Win**  project. Navigate to the  **Options**  node. This node allows you to edit different UI settings of the application. In the  **UIType**  property’s dropdown list, select the desired option, for example,  **SingleWindowSDI**.
     
-    ![MDI_ME](https://docs.devexpress.com/eXpressAppFramework/images/mdi_me116635.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/496c399b-c025-4081-ba35-b1b6b6acea0a)
+
     
 -   Run the WinForms application. Ensure that the  **SDI**  is enabled, as illustrated in the image below.
     
-    ![SDI](https://docs.devexpress.com/eXpressAppFramework/images/sdi116634.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d588ad57-9738-4f5a-b5fb-397d8ba1e58e)
+
     
     In  **SDI**  mode, each invoked  **View**  appears within a single window that replaces the previous one.
     
@@ -2740,7 +2742,8 @@ Before proceeding, take a moment to review the [Create a Solution using the Wiza
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  by double-clicking the  _Model.xafml_  file from the  **MySolution.Win**  project. Navigate to the  **Options**  node. This node allows you to edit different UI settings of the application. In the  **FormStyle**  property’s dropdown list, select  **Ribbon**.
     
-    ![RibbonME](https://docs.devexpress.com/eXpressAppFramework/images/ribbonme116638.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b20fefda-464a-43c9-a7cc-c787f6b34b07)
+
     
    > NOTE
     Additional ribbon options are available in the **Options** | **RibbonOptions** node.
@@ -2749,11 +2752,13 @@ Before proceeding, take a moment to review the [Create a Solution using the Wiza
     
     **Ribbon UI**
     
-    ![Ribbon](https://docs.devexpress.com/eXpressAppFramework/images/ribbon116637.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f1fcfb61-ad12-470f-93b7-5a93835f67d5)
+
     
     **Standard UI**
     
-    ![Non-Ribbon](https://docs.devexpress.com/eXpressAppFramework/images/non-ribbon117495.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f2ad2dfb-cb53-4385-ade5-de6ef5492360)
+
     
     >NOTE
     The **Ribbon UI** provides the Quick Access Toolbar. You can place frequently used Actions on this toolbar to improve the usability of your application. To add a certain Action to this toolbar, navigate to the **ActionDesign** | **Actions** | **_<Action>_** node and set the **QuickAccess** property to “**True**“.
@@ -2768,13 +2773,15 @@ In this lesson, you will learn how to change the style of navigation items in a 
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  by double-clicking the  _Model.DesignedDiffs.xafml_  file located in the  **MySolution.Module**  project. Navigate to the  **NavigationItems** | **Items** | **Default**  node. This node specifies settings for the  **Default**  navigation group that encloses navigation items created in the previous lessons (**Contact**,  **Task**,  **Department**, etc.). In the grid to the right, set the  **ChildItemsDisplayStyle**  property to  **List**  (the default is  **LargeIcons**).
     
-    ![Tutorial_UIC_Navigation_01](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_navigation_01117206.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eb79d695-6dca-4eff-ba7a-d7c1c4ec20f4)
+
     
     For details, see the  [IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle?v=22.1)  property and  [ItemsDisplayStyle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Templates.ActionContainers.ItemsDisplayStyle?v=22.1)  enumeration description.
     
 -   Run the WinForms application. You will see that small icons are now used for navigation items in the  **Default**  navigation group. The image below illustrates the changes.
     
-    ![Tutorial_UIC_Navigation_02](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_navigation_01117207.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/bef5abc7-b3c9-41bd-8915-07e822f2f33c)
+
     
 
 >NOTE
@@ -2814,11 +2821,13 @@ Before proceeding, take a moment to review the following lessons:
 
 -   Add the  **File Attachments**  module to your WinForms module project. For this purpose, find the  _WinModule.cs_  (_WinModule.vb_) file in the  **MySolution.Module.Win**  project displayed in the  **Solution Explorer**. Double-click this file to invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, expand the  **DX.22.1: XAF Modules**  tab. Drag the  **FileAttachmentsWindowsFormsModule**  item to the Designer’s  **Required Modules**  section.
     
-    ![Tutorial_EM_Lesson1_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson1_0115637.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/03d73714-e87f-45b3-b609-723aa71d6aa6)
+
     
 -   Add the  **File Attachments**  module to your ASP.NET Web Forms module project. For this purpose, find the  _WebModule.cs_  (_WebModule.vb_) file in the  **MySolution.Module.Web**  project displayed in the Solution Explorer. Double-click this file to invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, expand the  **DX.22.1: XAF Modules**  tab. Drag the  **FileAttachmentsAspNetModule**  item to the Designer’s  **Required Modules**  section.
     
-    ![Tutorial_EM_Lesson1_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson1_0_1116428.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/16d597b3-dd44-4153-89e3-9329eb8dfa45)
+
     
 -   After you have made changes in the  **Module Designer**, rebuild your solution.
 -   Add a new  **Resume**  business class, as described in the  [Inherit from the Business Class Library Class](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)  lesson.
@@ -2893,11 +2902,13 @@ Before proceeding, take a moment to review the following lessons:
 -   Run the WinForms or ASP.NET Web Forms application and create a new  **Resume**  object.
 -   To specify the  **File**  property, attach a file in the  **Open**  dialog, invoked via the  **Add From File…**  (![btn_attach](https://docs.devexpress.com/eXpressAppFramework/images/btn_attach117501.png?v=22.1)) button.
     
-    ![Tutorial_EM_Lesson1_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson1_1115519.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e2e5e2e9-6c8e-4ca4-92d8-acb242404e50)
+
     
 -   To open or save a file attached to the  **Portfolio**  collection, or add a new file, use the  **Open…**,  **Save As…**  or  **Add From File…**  Actions supplied with the collection.
     
-    ![Tutorial_EM_Lesson1_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson1_3115521.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6f0fb51c-635d-436c-8d43-77d01daa2072)
+
     
 
 >TIP
@@ -2921,58 +2932,69 @@ Before proceeding, take a moment to review the following lessons:
 
 -   Add the  **View Variants**  module to your  **MySolution.Module**  project. Find the  _Module.cs_  (_Module.vb_) file in the  **MySolution.Module**  project displayed in the  **Solution Explorer**, and double-click this file. The  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  will be invoked. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  tab. Drag the  **ViewVariantsModule**  item from this tab to the Designer’s  **Required Modules**  section.
     
-    ![Tutorial_EM_Lesson2_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_0115638.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3da22829-77e3-4ba0-b2a8-7b3e45ec65fc)
+
     
 -   Rebuild your solution so that the changes made in the  **Module Designer**  are loaded to the  **Application Model**.
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  **MySolution.Module**  project. Right-click the  **Views**  node and select  **Add…**  |  **ListView**.
     
-    ![Tutorial_EM_Lesson2_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_0_1116430.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/02104c2f-aa2d-4f18-a036-6716b0eea9dd)
+
     
     For the new node, set the  **Id**  property to “Contact_ListView_AllColumns” and the  **ModelClass**  property to “Contact”.
     
-    ![Tutorial_EM_Lesson2_0_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_0_2116431.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5ec348d8-d212-45f6-bb2c-f2a1df037f94)
+
     
 -   Right-click the newly created node and select  **Generate content**. Columns will be generated using information on the specified class (**BOModel**  |  **Contact**  node) and its ancestors. Leave these columns as is. This  **List View**  will represent the complete variant for the  **Contact**  List View.
     
-    ![Tutorial_EM_Lesson2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_1115525.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b270cbac-6c40-42fc-8fb8-94738af80a34)
+
     
 -   Right-click the  **Views**  node and select  **Add…**  |  **ListView**. For the new node, set the  **Id**  property to “Contact_ListView_Varied” and the  **ModelClass**  property to “Contact”. Do not generate content for the new node.
     
-    ![Tutorial_EM_Lesson2_2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_2_1116617.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d6227555-ed2f-496f-8f55-f44dcfdf62b4)
+
     
 -   Expand the newly added  **Contact_ListView_Varied**  node, right-click the  **Variants**  child node and select  **Add…**  |  **Variant**.
     
-    ![Tutorial_EM_Lesson2_2_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_2_2116618.png?v=22.1)
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/626fce85-4529-4e42-bd04-9fff3dbaf056)
+
 -   For the new node, set the  **View**  property to “Contact_ListView”, and set the  **Id**  and  **Caption**  properties to “Few columns”.
     
-    ![Tutorial_EM_Lesson2_2_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_2_3116619.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fc41e8a9-209d-42e6-8cfe-461068255a9b)
+
     
 -   Right-click the  **Variants**  node and select  **Add…**  |  **Variant**. For the new node, set the  **View**  property to “Contact_ListView_AllColumns”, and set the  **Id**  and  **Caption**  properties to “All columns”.
     
-    ![Tutorial_EM_Lesson2_2_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_2_4116620.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ea0997b4-ca57-45f8-aed5-dc46681cd7c5)
+
     
 -   Navigate to the  **NavigationItems** | **Items** | **Default** | **Items**  |  **Contact**  node. Its  **View**  property, specifying the View displayed when choosing the  **Contact**  navigation item, is “Contact_ListView” by default. Change it to “Contact_ListView_Varied”.
     
-    ![Tutorial_EM_Lesson2_2_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_2_4116621.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/965ab9f0-47b8-4332-9216-c4631d4401e1)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Select the  **Contact**  item in the navigation control. For the displayed  **Contact**  List View, the  **ChangeVariant**  Action will be activated. This Action’s items represent the view variants specified in the  **Model Editor**.
     
-    ![Tutorial_EM_Lesson2_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_3115524.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/aa1d3387-fdd5-4c0d-89f6-72d859d18f84)
+
     
     >NOTE
     You can use the **Index** property to specify the sort order of variants in the **ChangeVariant** Action drop-down list. Additionally, you can set the **Current** property of the **Variants** node to specify the default variant.
     
 -   Optionally, you can add view variants to the navigation control. For this purpose, invoke the Model Editor and set the  **GenerateRelatedViewVariantsGroup**  property of the  **NavigationItems**  node to  **true**.
     
-    ![Tutorial_EM_Lesson2_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_5117208.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7506e0ac-6ad3-4a21-b3ad-2bc7c784952d)
+
     
     >NOTE
     Ensure that the [IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle?v=22.1) property of the current navigation group node is set to **List** (see [Change Style of Navigation Items](https://docs.devexpress.com/eXpressAppFramework/113474/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/change-style-of-navigation-items?v=22.1)). Otherwise, the view variants will not be added to the navigation control in the WinForms application.
     
     As a result, the  **Contact**  navigation item will expose child items for each view variant.
     
-    ![Tutorial_EM_Lesson2_6](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson2_6117209.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/544531fa-1ff9-4c14-a5ef-b72434d012b3)
+
     
 
 You can see the changes made in this lesson in the  **Model Editor**  invoked for the  _Model.DesignedDiffs.xafml_  file, located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2990,7 +3012,8 @@ Before proceeding, take a moment to review the [Inherit from the Business Class 
 
 Add the  **AuditTrail**  module to your  **MySolution.Module**  project. For this purpose, find the  _Module.cs_  (_Module.vb_) file in the  **MySolution.Module**  project displayed in the  **Solution Explorer**. Double-click this file to invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, expand the  **DX.22.1: XAF Modules**  tab. Drag the  **AuditTrailModule**  item to the Designer’s  **Required Modules**  section.
 
-![Tutorial_EM_Lesson4_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson4_0116433.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/10ea4707-694a-4efd-ba5d-c12da22a427c)
+
 
 Now, all objects that are created in the application are audited. The  **Audit Trail System**  logs information on the change type (object was created, changed, etc.), who made this change, the object that was changed, the previous and new property values, etc. When an object is saved to the database, any changes between two sequential events are registered.
 
@@ -3024,7 +3047,8 @@ Use the following approach to view object changes directly in the application.
     
 -   Run the WinForms or ASP.NET Web Forms application and invoke a  **Contact**  Detail View. Modify the  **Contact**  object to test the auditing capability, save the changes and click  **Refresh**  (![btn_refresh](https://docs.devexpress.com/eXpressAppFramework/images/btn_refresh117427.png?v=22.1)). The  **Change History**  collection will contain information on the previous  **Contact**  object changes.
     
-    ![Tutorial_EM_Lesson4_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson4_1115536.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6de4f26c-304e-4c62-863d-5265e72f52d6)
+
     
 
 >NOTE
@@ -3040,7 +3064,8 @@ In this lesson, you will learn how to format data that satisfies the specified c
 
 -   Add the  **Conditional Appearance**  module to your  **MySolution.Module**  project. For this purpose, double-click the  _Module.cs_  (_Module.vb_) file, located in the  **MySolution.Module**  project. The  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  will be invoked. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  tab, and drag the  **ConditionalAppearanceModule**  item from this tab to the Designer’s  **Required Modules**  section, as shown below.
     
-    ![Tutorial_EM_Lesson_5_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_5_1115688.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1869c3b7-fdd7-4fdb-b8af-35dc3def3263)
+
     
 -   Rebuild your solution after you have made changes in the  **Module Designer**.
 -   To declare a conditional appearance rule for the  **DemoTask**  class, apply the  [AppearanceAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute?v=22.1)  attribute to this class. As the first parameter, specify the  **Appearance Rule identifier**  (e.g., “FontColorRed”). Then, specify the following parameters.
@@ -3099,7 +3124,8 @@ In this lesson, you will learn how to format data that satisfies the specified c
     
 -   Run the WinForms or ASP.NET Web Forms application. The  **DemoTask**  List View and Detail View data will be highlighted, as demonstrated in the following image.
     
-    ![Tutorial_EM_Lesson_5_7](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_5_7116957.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/083870c7-6f89-49a5-a12e-da857f0f1bb2)
+
     
 
 >NOTE
@@ -3115,72 +3141,86 @@ In this lesson, you will learn how to add the  **Analysis**  functionality to yo
 
 -   Add the  **Analysis**  business class to your  **MySolution.Module**  project using the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). Invoke it by double-clicking the  _Module.cs_  (_Module.vb_) file within the  **MySolution.Module**  project displayed in the  **Solution Explorer**. In the  **Exported Types**  section, locate the  **Referenced Assemblies**  |  **DevExpress.Persistent.BaseImpl.v22.1**  |  **Analysis**  node. Select it and press the  **Spacebar**, or right-click it and choose  **Use Type in Application**  in the invoked menu. The node will be marked in bold. This means that the  **Analysis**  business class will be added to the  [Application Model](https://docs.devexpress.com/eXpressAppFramework/112748/getting-started/in-depth-tutorial-winforms-webforms/ui-customization?v=22.1), and this class will take part in the UI construction process.
     
-    ![Tutorial_EM_Lesson_6_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_1115996.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6f46595e-1c73-4e03-9939-35f292009e2a)
+
     
 -   Rebuild your solution so that the changes made in the  **Designer**  are loaded to the  **Application Model**.
 -   The  **eXpressApp Framework**  provides the  [Pivot Chart Module](https://docs.devexpress.com/eXpressAppFramework/113024/analytics/pivot-chart-module?v=22.1). When this module is referenced, the  **Self**  property of the  **Analysis**  Detail View is displayed via a special  **Property Editor**. In WinForms applications, this  **Property Editor**  uses the  **PivotGridControl**  supplied by the  [Pivot Grid](https://docs.devexpress.com/WindowsForms/3409/controls-and-libraries/pivot-grid?v=22.1)  library and the  **ChartControl**  from the  [Chart Control](https://docs.devexpress.com/WindowsForms/8117/controls-and-libraries/chart-control?v=22.1)  library. In ASP.NET Web Forms applications, this  **Property Editor**  uses the  **ASP.NET Web Forms Pivot Grid**  that is supplied by the  [ASP.NET Web Forms Pivot Grid](https://docs.devexpress.com/AspNet/5830/components/pivot-grid?v=22.1)  library, and the  **WebChartControl**  from the  [Chart Control](https://docs.devexpress.com/WindowsForms/8117/controls-and-libraries/chart-control?v=22.1)  library. These controls allow end-users to build summarized reports to analyze large quantities of data quickly and easily. Features like filtering, top value display, hierarchical value arrangement on the axes, and grand and group totals give end-users a wide range of tools to control the data level in detail.
     
     To use the  **Pivot Chart Module**  in a WinForms application, add it to the WinForms module project. For this purpose, find the  _WinModule.cs_  (_WinModule.vb_) file in the  **MySolution.Module.Win**  project displayed in the Solution Explorer. Double-click this file. The  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  will be invoked. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  page. Drag the  **PivotChartWindowsFormsModule**  item to the Designer’s  **Required Modules**  section. Build the project.
     
-    ![Tutorial_EM_Lesson_6_2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_2_1116438.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1127648d-df01-46ba-a37e-04ccbd6686ab)
+
     
     To use the  **Pivot Chart Module**  in the ASP.NET Web Forms application, add it to the ASP.NET Web Forms module project. For this purpose, double-click the  _WebModule.cs_  (_WebModule.vb_) file, located in the  **MySolution.Module.Web**  application project. The  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  will be invoked. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  tab, and drag the  **PivotChartAspNetModule**  item to the Designer’s  **Required Modules**  section. Build the project.
     
-    ![Tutorial_EM_Lesson_6_2_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_2_2116439.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1a7fcfb4-e042-46a4-98b4-79f5d1038e2e)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. In the navigation control, select the  **Reports**  |  **Analysis**  item. An empty  **Analysis**  object list will be displayed (called  **Analysis**  List View). Create a new  **Analysis**  object by clicking the  **New**  button. In the invoked  **Detail View**, specify a name for the new  **Analysis**  object and the type of objects to be analyzed via a pivot grid and chart control. For instance, assign the “Tasks” value to the  **Name**  property and choose “Task” in the  **Data Type**  drop-down menu. Click  **Bind Analysis Data**  (![Bind Analysis Data](https://docs.devexpress.com/eXpressAppFramework/images/bind-analysis-data116074.png?v=22.1)).  **Task**  objects will be loaded as the data source for the pivot grid.
     
-    ![Tutorial_EM_Lesson_6_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_3116037.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/04f292a7-92be-4c4f-8cce-090c30618a22)
+
     
 -   Drag the required fields to the row, column and data areas.
     
-    ![Tutorial_EM_Lesson_6_3_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_3_1116440.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/00b50b96-2f1b-42a9-a29e-580fed45c1a2)
+
     
     The following configuration demonstrates how to find out how many tasks are assigned to a contact.
     
-    ![Tutorial_EM_Lesson_6_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_4116038.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f88ccd2f-f5e7-4936-9cb7-886c54c5a656)
+
     
 -   Switch to the  **Chart**  tab. It displays the data configured in the pivot grid via a chart.
     
-    ![Tutorial_EM_Lesson_6_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_5116039.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7e98cb24-8779-425c-8f53-dbd1d18b4f27)
+
     
 -   In WinForms applications, you can specify the chart’s settings using the  **ChartWizard**  Action invoked by right-clicking the chart image and choosing  **ChartWizard**.
     
-    ![Tutorial_EM_Lesson_6_7_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_7_1116442.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3a2b5e49-c1b1-4c88-8f38-a225a22b4a6b)
+
     
     In ASP.NET Web Forms applications, you can only set the chart type using the  **ChartType**  combo box.
     
-    ![Tutorial_EM_Lesson_6_13](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_13116046.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/42d49855-5505-4ae7-842e-8e33058a950d)
+
     
 
 The following configurations demonstrate how fields in the pivot grid can be reconfigured based on what you are trying to analyze.
 
 _How many tasks of a particular priority are completed_.
 
-![Tutorial_EM_Lesson_9_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_9_1116080.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7480b719-8271-4149-8e69-70cc96681fc8)
 
 _How many tasks of a particular priority are assigned to a contact_.
 
-![Tutorial_EM_Lesson_6_8](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_8116041.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/bf6611a5-1ebf-4f18-ba13-e3c631108c73)
+
 
 _How many estimated and actual hours each contact has spent on implementing all tasks assigned to that contact_.
 
-![Tutorial_EM_Lesson_6_10](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_10116043.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5e1163f6-fc59-4ca1-bbae-194599857659)
+
 
 _How many hours of work are planned for a contact and how many hours a contact has already spent on the completed tasks_.
 
-![Tutorial_EM_Lesson_6_11](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_11116044.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3edbc696-0eeb-4e19-95ee-27e452b7884d)
+
 
 _The previous analysis is extended by showing the distribution based on task priority_.
 
-![Tutorial_EM_Lesson_6_12](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_12116045.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a3611bb8-cf6b-4a96-9dd1-54e36b26abca)
+
 
 >NOTE
 The images above illustrate how to build an analysis in a WinForms application, but you can follow the same steps in an ASP.NET Web Forms application.
 
 When an  **Analysis**  object is displayed in a Detail View, the  **Export**  button can be used to export the Pivot Grid or Chart to a number of formats.
 
-![Tutorial_EM_Lesson_6_14](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_em_lesson_6_14116814.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d92c5682-d860-499f-aef8-b8eb287dc5c5)
+
 
 The  **Export**  Action is available in both WinForms and ASP.NET Web Forms applications.
 
@@ -3197,15 +3237,18 @@ In this lesson, you will learn how to create reports in the integrated reporting
 
 -   Add the platform-independent  [Reports V2](https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview?v=22.1)  module to your project. To do this, double-click the  _Module.cs_  (_Module.vb_) file in the  **MySolution.Module**  project. This will invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  group. Drag the  **ReportsModuleV2**  item from this group to the Designer’s  **Required Modules**  section.
     
-    ![ReportsV2_to_Module_cs](https://docs.devexpress.com/eXpressAppFramework/images/reportsv2_to_module_cs117429.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e2e1becd-1a77-4345-bf89-6c5d6c91ebf3)
+
     
 -   Add a WinForms-specific  **Reports V2**  module to your WinForms module project. Double-click the  _WinModule.cs_  (_WinModule.vb_) file in the  **MySolution.Module.Win**  project. This will invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  group. Drag the  **ReportsWindowsFormsModuleV2**  item from this group to the Designer’s  **Required Modules**  section.
     
-    ![ReportsV2_to_WinApp_cs](https://docs.devexpress.com/eXpressAppFramework/images/reportsv2_to_winapp_cs117430.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/199c28c5-4ec4-49fc-85a4-a551321fb56d)
+
     
 -   Add the ASP.NET Web Forms-specific  **Reports V2**  module to your ASP.NET Web Forms application project. Invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  by double-clicking the  _WebModule.cs_  (_WebModule.vb_) file in the  **MySolution.Module.Web**  project. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  group. Drag the  **ReportsAspNetModuleV2**  item from this group to the Designer’s  **Required Modules**  section.
     
-    ![ReportsV2_to_WebApp_cs](https://docs.devexpress.com/eXpressAppFramework/images/reportsv2_to_webapp_cs117431.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c4e08dd0-00a9-4336-b3d6-e5a98416fb55)
+
     
 -   Rebuild your solution.
 
@@ -3213,37 +3256,44 @@ In this lesson, you will learn how to create reports in the integrated reporting
 
 -   Right-click the  **MySolution.Module**  project and select  **Add**  |  **New Folder**. Set the name of the new folder to “Reports”. Right-click the  **Reports**  folder and select  **Add**  |  **New Item**.
     
-    ![New_Report](https://docs.devexpress.com/eXpressAppFramework/images/new_report117433.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ec596dae-713c-4ce7-8ef4-d7cf8614049b)
+
     
     >NOTE
     You can place reports in any folder (including the root project folder), although it is recommended that you organize your project files.
     
 -   Select the  **DevExpress v22.1  Report**, name it “ContactsReport” and click  **Add**.
     
-    ![New_Report_Dialog](https://docs.devexpress.com/eXpressAppFramework/images/new_report_dialog117434.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cf758fcf-d473-4b7d-87e0-459da4290e5e)
+
     
 -   This invokes the  [Report Wizard](https://docs.devexpress.com/XtraReports/4254/visual-studio-report-designer/report-wizard?v=22.1). Select  **Blank**  and click  **Finish**.
     
-    ![XtraReport_Wizard](https://docs.devexpress.com/eXpressAppFramework/images/xtrareport_wizard117445.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ca19dc01-1233-45cf-8c4e-806792d3899e)
+
     
     >NOTE
     Do not use report types other than **Blank**. Other report types will not allow you to select an XAF-specific data source. You will be able to proceed with the **Report Wizard** later, after the data source is selected in the **Report Designer**.
     
 -   After clicking  **Finish**, the  [Report Designer](https://docs.devexpress.com/XtraReports/4257/winforms-reporting/end-user-report-designer-for-winforms/api-and-customization?v=22.1)  is invoked. In the  **Toolbox**, navigate to the  **DX.22.1: XAF Data Sources for Reports**  group. Drag the  **CollectionDataSource**  item from this group to the  **Report Designer**  window.
     
-    ![CollectionDataSource_to_Report](https://docs.devexpress.com/eXpressAppFramework/images/collectiondatasource_to_report117436.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/542cde8e-2a6e-4a78-853c-004f9cd20f58)
+
     
 -   In the  [Report Explorer](https://docs.devexpress.com/XtraReports/4258/visual-studio-report-designer/dock-panels/report-explorer?v=22.1)  window, select the  **collectionDataSource1**  item. In the  **Properties**  window, assign the “MySolution.Module.BusinessObjects.Contact” value to the  **ObjectTypeName**  property. Note the changes in the  [Field List](https://docs.devexpress.com/XtraReports/4259/visual-studio-report-designer/dock-panels/field-list?v=22.1)  window - the fields of the  **Contact**  class are now available if you expand the  **collectionDataSource1**  node.
     
-    ![DataSource_Populate](https://docs.devexpress.com/eXpressAppFramework/images/datasource_populate117437.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e6f03b5d-935c-41c9-a6a8-4a6c7bfb25ec)
+
     
 -   Click the  **Report Designer**‘s  [Smart Tag](https://docs.devexpress.com/XtraReports/4260/detailed-guide-to-devexpress-reporting/use-report-controls/manipulate-report-controls?v=22.1)  and select  **Design in Report Wizard…**  in the invoked menu.
     
-    ![Report_Designer-Smart_Tag](https://docs.devexpress.com/eXpressAppFramework/images/report_designer-smart_tag117446.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b36f7e60-4633-4866-87dc-3a5e5c121c07)
+
     
 -   This invokes the  [Report Wizard](https://docs.devexpress.com/XtraReports/4241/visual-studio-report-designer/data-source-wizard/connect-to-a-database?v=22.1). In the first step, you should select the  **Table Report**  and click  **Next**. Since the data source is already specified, you will skip some wizard screens and the second step will allow you to choose the report data.
     
-    ![Report_Designer0](https://docs.devexpress.com/eXpressAppFramework/images/report_designer0117505.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/33393a65-2d14-4e4e-b208-98c689b4f606)
+
     
 -   Select the fields that to be used within your report. Check the  **collectionDataSource1**  data member on the left and the following data fields on the right:
     
@@ -3253,27 +3303,32 @@ In this lesson, you will learn how to create reports in the integrated reporting
     
     Click  **Next**  when finished.
     
-    ![Report_Wizard_1](https://docs.devexpress.com/eXpressAppFramework/images/report_wizard_1117447.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/730ff101-686e-4b31-a378-41387668d5cc)
+
     
 -   Select the fields by which to group the report rows. Since grouping is not required in this example, click  **Next**  to continue.
     
-    ![Report_Wizard_2](https://docs.devexpress.com/eXpressAppFramework/images/report_wizard_2117448.png?v=22.1)
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d67d3634-79bf-409a-bb1c-851279e98598)
+
 -   In the next step, you can customize the report page. Stay these settings unchanged and click  **Next**.
     
-    ![Report_Wizard_4](https://docs.devexpress.com/eXpressAppFramework/images/report_wizard_4117450.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/886a60d8-63e6-4327-866d-29569c21e154)
+
     
 -   Choose a report color scheme, for example,  **Azure**, and click  **Next**.
     
-    ![Report_Wizard_ColorScheme](https://docs.devexpress.com/eXpressAppFramework/images/report_wizard_colorscheme.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1a69e6d5-2cfd-4e16-9801-b2fbe22e36bd)
+
     
 -   In the final step, you can set the report’s title. This text will be displayed at the top of your report. Set the title to “Contacts” and click  **Finish**.
     
-    ![Report_Wizard_5](https://docs.devexpress.com/eXpressAppFramework/images/report_wizard_5117451.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7ae4346f-b46f-4afa-9319-f45408427718)
+
     
 -   The report structure you created will be displayed in the  **Report Designer**. Customize and save the report.
     
-    ![Report_Structure](https://docs.devexpress.com/eXpressAppFramework/images/report_structure117453.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f549fd30-67fc-470d-a51e-aa1a8641a298)
+
     
     >NOTE
     At design time, the Preview tab of the Report Designer is empty. The [CollectionDataSource](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.CollectionDataSource?v=22.1) and [ViewDataSource](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.ViewDataSource?v=22.1) components do not connect to a database directly and require an [IObjectSpace](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.IObjectSpace?v=22.1) instance (that can be created at runtime only) to load data. Thus, it cannot load data at design time.
@@ -3307,9 +3362,11 @@ In this lesson, you will learn how to create reports in the integrated reporting
     
 -   Run the WinForms or ASP.NET Web Forms application, navigate to  **Reports**  and open the  **Contacts Report**.
     
-    ![ReportV2_OK](https://docs.devexpress.com/eXpressAppFramework/images/reportv2_ok117439.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/49f0ff25-4b21-4269-be05-5f661ddc3b05)
+
     
-    ![ReportV2_Web_OK](https://docs.devexpress.com/eXpressAppFramework/images/reportv2_web_ok117440.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9e1b14dd-1287-4476-9d6b-83527b24154f)
+
     
 
 >NOTE
@@ -3328,12 +3385,14 @@ You can also create a new report in an ASP.NET Web Forms application (see [Creat
 
 1.  Run the WinForms application and go to the  **Reports**  List View.
     
-    ![Reports_ListView](https://docs.devexpress.com/eXpressAppFramework/images/reports_listview117466.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1de62deb-70e7-487d-b37f-6361d94a0ffa)
+
     
 2.  Create a new report by clicking the  **New**  button (![button_new](https://docs.devexpress.com/eXpressAppFramework/images/btn_new117411.png?v=22.1)).
 3.  Name this report “Tasks Report”, set the  **Data Type**  to “Task” and click  **Next**.
     
-    ![Reports_Wizars_1_Runtime](https://docs.devexpress.com/eXpressAppFramework/images/reports_wizars_1_runtime117467.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e7ad5bbc-9e1f-4041-8894-a11055a2e3cf)
+
     
     >NOTE
     The **Data Type** drop-down list shows only those business classes that have the [DefaultClassOptionsAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.DefaultClassOptionsAttribute?v=22.1) or [VisibleInReportsAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.VisibleInReportsAttribute?v=22.1) applied.
@@ -3347,7 +3406,8 @@ You can also create a new report in an ASP.NET Web Forms application (see [Creat
     -   Status
     -   Percent Completed
     
-    ![Reports_Wizars_Fields_Runtime](https://docs.devexpress.com/eXpressAppFramework/images/reports_wizard_fields_runtime.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/429f009b-0016-4c4f-ac45-689ac482313a)
+
     
 
 -   Click  **Next**  to skip the grouping configuration, summary functions, and report page settings.
@@ -3355,13 +3415,16 @@ You can also create a new report in an ASP.NET Web Forms application (see [Creat
 -   Set the title to “Tasks” and click  **Finish**.
 -   After clicking  **Finish**, the  [Runtime Report Designer](https://docs.devexpress.com/XtraReports/1763/winforms-reporting/end-user-report-designer-for-winforms/gui/end-user-report-designer-with-a-standard-toolbar?v=22.1)  will be invoked.
     
-    ![Runtime_Report_Designer](https://docs.devexpress.com/eXpressAppFramework/images/runtime_report_designer117458.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5cbc748f-44a1-4e17-805e-dce192a24576)
+
     
 -   Customize the report, save it by clicking the  **Save**  button (![btn_report_save](https://docs.devexpress.com/eXpressAppFramework/images/btn_report_save117463.png?v=22.1)), and open it from the  **Reports**  List View. This report will also be available in the ASP.NET Web Forms version of the application.
     
-    ![Runtime_Created_Report_Win](https://docs.devexpress.com/eXpressAppFramework/images/runtime_created_report_win117468.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7b1e996a-d0c3-4da8-b68c-976719279997)
+
     
-    ![Report_OK_Web](https://docs.devexpress.com/eXpressAppFramework/images/report_ok_web117489.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/69934275-5a38-4b1f-bb0f-d3f1198abe0e)
+
 
 
 # Add the Scheduler Module (.NET Framework)
@@ -3374,17 +3437,21 @@ The  **eXpressApp Framework (XAF)**  supplies the  [Scheduler module](https://do
 
 -   To use the Scheduler module in the WinForms application, add it to the WinForms module project. For this purpose, find the  _WinModule.cs_  (_WinModule.vb_) file in the  _MySolution.Module.Win_  application project displayed in the  **Solution Explorer**. Double-click this file to invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Toolbox**, navigate to the  **DX.22.1: XAF Modules**  section. Drag the  **SchedulerWindowsFormsModule**  item to the Designer’s  **Required Modules**  panel, and build the project.
     
-    ![Tutorial_BMD_Lesson4_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson4_0_1116400.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2345843e-eab8-4125-8241-ad3313e2bf37)
+
     
     To use the Scheduler module in an ASP.NET Web Forms application, add it to the ASP.NET Web Forms module project. To do this, invoke the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  by double-clicking the  _WebModule.cs_  (_WebModule.vb_) file. Then, drag the  **SchedulerAspNetModule**  item from the  **Toolbox**  to the  **RequiredModules**  panel.
     
-    ![Tutorial_BMD_Lesson4_0_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson4_0_2116401.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/439b5904-fc3e-4b5f-844b-42865dd95b0a)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Select the  **Scheduler Event**  item in the  **Navigation Control**. The  **Event**  object list (called the “Event List View”) will be displayed using the  **Scheduler**  control. You can create new  **Event**  objects by clicking the  **New**  (![btn_new](https://docs.devexpress.com/eXpressAppFramework/images/btn_new117411.png?v=22.1)) button on the toolbar. Alternatively, you can select an area in the timeline view, right-click it and choose  **New Appointment**.
     
-    ![Tutorial_BMD_Lesson4_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson4_3115430.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8f604585-72c9-4c7b-b193-114e79e92b75)
+
     
-    ![Tutorial_BMD_Lesson4_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson4_4115966.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/52943bea-f6d5-4354-b479-65f3ef65337b)
+
     
 
 >NOTE
@@ -3425,11 +3492,13 @@ If you have followed the  [Create a Solution using the Wizard](https://docs.deve
 
 Invoke the Application Designer for the WinForms application and take a look at the Security section.
 
-![Tutorial_SS_Lesson1_0_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson1_0_2117014.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ec0c6121-4726-4121-8c20-0b0681ff5505)
+
 
 As you can see in the image above, a Complex Security Strategy and Active Directory authentication are used, and the  **CreateUserAutomatically**  property is set to  **true**. This means that a user object (**PermissionPolicyUser**) is created automatically when you first run the application. This object’s  **UserName**  property is set to your Active Directory account. You’ve got all permissions as the automatically created user type is an administrator. To see this user’s details at runtime, navigate to the User and MyDetails items in the navigation control.
 
-![Tutorial_SS_Lesson1_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson1_0_1117013.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/936d803b-b146-407f-9293-446cd1ebef40)
+
 
 Now, follow the Tutorial to learn how to change authentication type in your application.
 
@@ -3437,7 +3506,8 @@ Now, follow the Tutorial to learn how to change authentication type in your appl
 
 -   Invoke the Application Designer for the WinForms application. To use a standard authentication strategy, drag the  **AuthenticationStandard**  component from the  **DX.22.1: XAF Security**  Toolbox tab to the Designer’s  _Security_  section.
     
-    ![Tutorial_SS_Lesson2_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson2_0_1117017.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fb84385f-f7af-4c63-99ef-c6bf93e73fc6)
+
     
 -   Invoke the  **Application Designer**  for the ASP.NET Web Forms application. Drag the  **AuthenticationStandard**  component from the  **DX.22.1: XAF Security**  Toolbox tab to the Designer’s  **Security**  section.
 
@@ -3557,11 +3627,13 @@ Now, follow the Tutorial to learn how to change authentication type in your appl
     
 -   Run the WinForms or ASP.NET Web Forms application. The following logon window will be displayed in a WinForms application.
     
-    ![Tutorial_SS_Lesson1_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson1_1115528.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6e5f7fc4-cf6e-4cc1-8921-444a9752ac31)
+
     
     The following window will be displayed in the ASP.NET Web Forms application.
     
-    ![Tutorial_SS_Lesson1_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson1_5115539.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c0049196-45e2-4506-a792-aca756040ba7)
+
     
     After the  **Log In**  button is clicked, the user’s credentials are authenticated and the application will run.
     
@@ -3572,7 +3644,8 @@ Administrators, and other users with Role creation permission can create Roles a
 
 Select the  **Role**  item in the navigation control and click the  **New**  Action. In the invoked Detail View, set the name and permissions for the new Role.
 
-![Tutorial_SS_Lesson2_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson2_2115532.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/59e76876-8cdb-4cd9-9d2a-19180a32c405)
+
 
 With the  **Permission Policy**  property, you can assign “deny all”, “read only all” or “allow all” default permission policies for each role. For each operation, you can explicitly specify the Allow or Deny modifier or leave it blank. If the modifier is not specified, the permission is determined by the role’s permission policy.
 
@@ -3582,14 +3655,18 @@ Users who have permission to create Users can do the following.
 
 Select the  **User**  item in the navigation control and click the  **New**  button. In the invoked Detail View, specify the  **User Name**  and assign one or more Roles.
 
-![Tutorial_SS_Lesson2_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson2_3115533.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/19bc03bc-99d9-4cea-b4b3-bfd3762cb02d)
+
+
 
 >NOTE
 Set the **Is Active** property to **false** if you need to temporarily prohibit the user from using the application.
 
 To assign a password to a newly created user, click the  **Reset Password**  button. The assigned password should be passed to the user. A User will be able to change it when logging on for the first time.
 
-![Tutorial_SS_Lesson2_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson2_4115534.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ecfa0935-7066-46b2-a6a3-f33877da0a71)
+
+
 
 >NOTE
 This button is the **ResetPassword** Action, which is available to users who are allowed to modify User objects. This button is not available when the Active Directory authentication is used.
@@ -3598,17 +3675,19 @@ This button is the **ResetPassword** Action, which is available to users who are
 
 The  **My Details**  navigation item is available for users who have read access to the current User object. This navigation item opens the current user details.
 
-![SS_Complex_Win](https://docs.devexpress.com/eXpressAppFramework/images/ss_complex_win115679.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/31b9eacf-8e8c-473c-a19e-155d9aee9785)
+
 
 In an ASP.NET Web Forms application, it can also be opened by clicking the  **My Details**  link at the top-right corner of the page.
 
-![MyDetailWeb](https://docs.devexpress.com/eXpressAppFramework/images/mydetailweb119982.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d82821f8-cad4-491b-8edf-97a4c89520eb)
+
 
 ## Change Password
 
 When the standard authentication type is used, the  **Change My Password**  button is available once the  **My Details**  Detail View is displayed. This button opens a dialog where a user can change the password.
 
-![Tutorial_SS_Lesson2_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ss_lesson2_5115535.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4fae62be-abad-4c9e-a606-c59c7804093d)
 
 >NOTE
 This button is the **ChangePasswordByUser** Action that is not available if the Active Directory authentication is used. To change a password in this instance, end users can use the operating system’s standard tools (e.g., press **CTRL**+**ALT**+**DEL** and select **Change a password**).
