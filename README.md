@@ -1,5 +1,5 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/SimpleProjectManager/blob/master/README.es.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.es.md)
 # In-Depth XAF WinForms & Web Forms Tutorial (Main Demo)
 
 Follow this tutorial to create a simple application used to store contacts and other related objects as you learn about the fundamentals of the  **eXpressApp Framework**.
