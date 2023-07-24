@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7f1fb32f-b17d-455e-ae6d-88a4c04aa942)[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/SimpleProjectManager/blob/master/README.es.md)
 # In-Depth XAF WinForms & Web Forms Tutorial (Main Demo)
 
@@ -1584,7 +1584,6 @@ Due to WinForms and ASP.NET Web Forms platform specifics, View Item and List Edi
 
 These additional platform-dependent events indicate the controls’ “ready” state: a control has been added to the form controls hierarchy or has been bound to data. Contact us using the [Support Center](https://supportcenter.devexpress.com/) if you need additional help to perform customizations.
 
-# **SEGUIR EDITANDO AQUÍ***
 # UI Customization
 
 In this tutorial section, you will customize the automatically generated user interface. Visual elements in your XAF application are based on the data classes you have declared and the information from the assemblies referenced in your application. All the received information is represented as metadata - data that defines database structure and application features via a neutral format, that can be adopted to any target platform. This metadata is called the  [Application Model](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). It is a powerful tool that allows you to customize your application. For this purpose, use the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  - an instrument for customizing the  **Application Model**  at design time. The following lessons will demonstrate what you can customize via the  **Model Editor, and how**:
@@ -1633,31 +1632,36 @@ You can also change an Action location in code by handling the [ActionControlsSi
 
 -   Since the  **ClearTasksAction**  is implemented in the common application module, you can specify its location directly in this module. To do this, invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  by double-clicking the  _Model.DesignedDiffs.xafml_  file from the  _MySolution.Module_  project.
     
-    ![Tutorial_BMD_Lesson4_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_bmd_lesson4_1115428.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c81a409c-e2e4-47d4-8560-08e07a9dcf23)
+
     
-    ![Tutorial_UIC_Lesson1_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson1_1115473.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fa0905b4-2555-47ef-9c1e-05d1f09b8f01)
+
     
     The XAF application interface is based on the  [Application Model](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). The  **Model Editor**  is a tool for browsing and editing the Application Model. This tool is integrated in Visual Studio and displayed as a window pane. Commands specific to the  **Model Editor**  are available in the  **XAF Model Editor**  toolbar.
     
-    ![ModelEditor_DesignToolbar](https://docs.devexpress.com/eXpressAppFramework/images/modeleditor_designtoolbar116735.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/95154419-ec6a-4490-bde1-f82a00b68333)
+
     
     If the  **XAF Model Editor**  toolbar is hidden, you can make it visible by checking the  **XAF Model Editor**  item in the  **VIEW**  |  **Toolbars**  menu.
     
-    ![ModelEditor_DesignToolbar_Show](https://docs.devexpress.com/eXpressAppFramework/images/modeleditor_designtoolbar_show116838.png?v=22.1)
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dab6ed97-452a-4c46-b2ad-67cafe3777af)
+
 >    NOTE
     To learn more about **Model Editor** capabilities, refer to the [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1) topic.
     
 -   In the  **Model Editor**, navigate to the  **ActionDesign**  |  **ActionToContainerMapping**  node. Its child nodes represent the Action Containers to which the Actions are mapped according to their  **Category**  property values. Expand the  **View**  node representing the  **View**  Action Container. Drag the  **ClearTasksAction**  child node to the  **RecordEdit**  node.
     
-    ![Tutorial_UIC_Lesson1_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson1_2115474.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e459de27-c959-467b-b2ad-c956c931f2d0)
+
     
  >   NOTE
     Alternatively, you can use the context menu’s **Copy**, **Paste**, **Delete** and **Clone** commands to modify the Application Model structure. The modified parts of the Application Model are displayed with a bold font. You can revert any node with all of its child nodes to their original state via the context menu’s **Reset Differences** command.
     
 -   Run the WinForms or ASP.NET Web Forms application. Invoke a detail form, since the  **ClearTasksAction**  is activated for  **Detail Views**  only. The following image demonstrates that this Action is located with Actions that belong to the  **RecordEdit**  Action Container.
     
-    ![Tutorial_UIC_Lesson1_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson1_3115475.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/de5705df-6356-4e10-8aea-f61429b2d241)
+
     
 
 You can see the changes made in the lesson in the  **Model Editor**  invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -1681,17 +1685,20 @@ Before proceeding, take a moment to review the following lessons:
     
 The current object identifier will be inserted into the confirmation message if the Action’s  **SelectionDependencyType**  property is not set to “Independent”. So, assign the “RequireSingleObject” value to the  **SelectionDependencyType**  property. This property belongs to the  **Behavior**  category. You can also set this property to “RequireMultipleObjects”. In this case, the count of selected objects will be substituted to the confirmation message.
     
-![Tutorial_UIC_Lesson2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson2_1116707.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eb43792d-48bf-4efe-a896-6eaee44cb733)
+
     
 -   Run the WinForms or ASP.NET Web Forms application and invoke the  **Detail View**  of any object, by double-clicking an existing one or creating a new one. Check to see if the  **Clear Tasks**  button has the required tooltip, can be executed via the specified shortcut, and a confirmation message with the specified text is invoked.
 
 **WinForms Application**
 
-![Tutorial_UIC_Lesson2_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson2_3116411.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b161b261-222e-43e3-8472-1c17c7cc4f7d)
+
 
 **ASP.NET Web Forms Application**
 
-![Tutorial_UIC_Lesson2_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson2_4116412.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dbee9b62-3be6-4951-98ec-b2e2ad20c759)
+
 
 >NOTE
 You can also set an image for an Action. For details, refer to the [Assign a Custom Image](https://docs.devexpress.com/eXpressAppFramework/112744/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/assign-a-custom-image?v=22.1) topic.
@@ -1711,7 +1718,8 @@ Before proceeding, take a moment to review the following lessons:
 
 By default, the class’  [default property](https://docs.devexpress.com/eXpressAppFramework/113525/business-model-design-orm/how-to-specify-a-display-member-for-a-lookup-editor-detail-form-caption?v=22.1)  value is used in the detail form caption. The  **FullName**  property is the  **Person**  class’ default property (specified via the  **DefaultProperty**  attribute). As the  **Contact**  class is inherited from  **Person**  (see  [Inherit from the Business Class Library’s Class](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)), the  **FullName**  property is also the default property in the  **Contact**  class.
 
-![Tutorial_UIC_Lesson3_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson3_1115477.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ce3f91e1-3f26-4f35-9e55-88287c22a39d)
+
 
 Perform the following steps to specify the custom caption format.
 
@@ -1722,11 +1730,13 @@ Perform the following steps to specify the custom caption format.
     >    NOTE
     When setting the object caption format, you can explicitly specify the format string. For instance, **{0:ArticleNo:0000,00#}** or **{0:PeriodDateValue:MM.yyyy}**. For more information about formatting, refer to the [Format Specifiers](https://docs.devexpress.com/WindowsForms/2141/common-features/formatting-values/format-specifiers?v=22.1) topic.
     
-    ![Tutorial_UIC_Lesson3_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson3_2115478.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/50f3cbe5-3d82-4ee6-99ce-b279de7dd134)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Invoke a detail form for a  **Contact**  object. The caption must be set to a value, as shown in the following image.
     
-    ![Tutorial_UIC_Lesson3_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson3_3115479.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d1f99a8b-f0a1-4aeb-95eb-0adf193c1af6)
+
     
 
 You can see the changes made in this lesson in the Model Editor invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -1756,28 +1766,33 @@ Follow the steps below to assign images to the  **Department**  and  **Position*
     
 -   Images are now displayed for business classes. The “BO_Unknown” image is shown for classes that have no preassigned image.
     
-    ![BO_Unknown](https://docs.devexpress.com/eXpressAppFramework/images/BO_Unknown_SVG32.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7cb5335a-5bc4-40a4-937c-a90f08efb0e3)
+
     
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112830/installation-upgrade-version-history/visual-studio-integration/model-editor?v=22.1). Navigate to the  **BOModel**  |  **MySolution.Module.BusinessObjects**  |  **Department**  node and change the  **ImageName**  property value to “BO_Department”. This is the name of the image in the  _%PROGRAMFILES%\DevExpress  22.1\Components\Sources\DevExpress.Images\Images_  folder. This folder represents a  _Standard Image Library_.
     
-    ![Tutorial_UIC_Lesson4_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson4_1115480.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/792bb675-da2e-48d2-b6c5-82a5a316fd70)
+
     
 >    NOTE    
     -   When the **ImageName** property is focused, the ellipsis button (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) is displayed to the right of the property value. You can click this button to invoke the **Image Picker** dialog and browse the available images.
     
 -   Navigate to the  **BOModel**  |  **MySolution.Module.BusinessObjects**  |  **Position**  node and change the  **ImageName**  property value to “BO_Position”.
     
-    ![Tutorial_UIC_Lesson4_1_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson4_1_1116708.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/643f3ae7-eff8-4201-b48c-16f556cd31e1)
+
     
 -   Run the application. You will see that  **Department**  and  **Position**  now have corresponding images displayed within the navigation bar and tab panel. If you run the ASP.NET Web Forms application, you will see similar images within the page header when the  **Department**  (or  **Position**) List View or Detail View is active.
     
     **WinForms Application**
     
-    ![Tutorial_UIC_Lesson4_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson4_2.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d321ffa8-ec50-4719-a298-290aca278fc7)
+
     
     **ASP.NET Web Forms Application**
     
-    ![Tutorial_UIC_Lesson4_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson4_3.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8b2f39ab-ff5f-4a33-9c44-0e1af51eb6fd)
+
     
 
 You can see the results in the  **Main Demo**  |  **MainDemo.Module**  project’s Model Editor. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -1796,7 +1811,8 @@ Before proceeding, take a moment to review the following lessons:
     
     For this tutorial, you can use custom image files or load them from the  _%PROGRAMFILES%\DevExpress  22.1\Components\Sources\DevExpress.Images\Images_  folder.
     
-    ![Assign a Custom Image_Employee](https://docs.devexpress.com/eXpressAppFramework/images/Contact.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4860d779-7a83-4cd9-a2fd-6e19b7345878)
+
     
     To use an SVG image in a C# project, save it as as  _\MySolution.Module\Images\Employee.svg_.
     
@@ -1811,19 +1827,23 @@ Before proceeding, take a moment to review the following lessons:
     
     **C#**
     
-    ![Tutorial_UIC_Lesson5_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson5_2.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fbec9b6f-dc28-47a1-8a1c-4fffdcb99800)
+
     
     **Visual Basic**
     
-    ![Assign_a_Custom_Image_VB](https://docs.devexpress.com/eXpressAppFramework/images/assign_a_custom_image_vb.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/219c1b6b-3923-498b-8ec3-27ca97d77c90)
+
     
 -   Select the images and switch to the  **Properties**  window. Set the  **Build Action**  option to  **Embedded Resource**.
     
-    ![Tutorial_UIC_Lesson5_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson5_3.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/29a53cad-2b70-4eef-9fd1-3e8c697f5408)
+
     
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1). Navigate to the  **BOModel**  |  **MySolution.Module.BusinessObjects**  |  **Contact**  node and set its  **ImageName**  property to “Employee”.
     
-    ![Tutorial_UIC_Lesson5_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson5_4115485.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9de5856c-e8b3-4b01-bc4a-105cec6c1b56)
+
     
 >    NOTE    
     -   When the **ImageName** property is focused, the ellipsis button (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) is displayed to the right of the property value. You can click this button to invoke the **Image Picker** dialog and browse the available images.
@@ -1833,11 +1853,13 @@ Before proceeding, take a moment to review the following lessons:
     
     **WinForms Application**
     
-    ![Tutorial_UIC_Lesson5_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson5_5.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/84a47249-5942-4fad-96b1-627b03dc5dba)
+
     
     **ASP.NET Web Forms Application**
     
-    ![Tutorial_UIC_Lesson5_6](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson5_6.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b51607b8-641d-48ab-9974-a68bda794ddc)
+
     
 
 You can see the changes made in this lesson in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -1904,18 +1926,21 @@ Before proceeding, take a moment to review the following lessons:
     
 -   Rebuild the  _MySolution.Module_  project and invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for it. Navigate to the  **BOModel**  |  **Payment**  |  **OwnMembers**  |  **Rate**  node. Set the  **Rate**‘s  **ImmediatePostData**  property to  **True**. The  **ImmediatePostData**  property specifies whether or not the property value is updated immediately after changes occur in the current Property Editor’s bound control. As the calculated  **Amount**  property value depends on  **Rate**, these values will be updated simultaneously in the UI.
     
-    ![Tutorial_UIC_Lesson6_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson6_1115487.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d96941d1-4780-46c4-aa6a-acff9283f55d)
+
     
 >    NOTE
     Alternatively, you can use the [ImmediatePostDataAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ImmediatePostDataAttribute?v=22.1) in code.
     
 -   Run the WinForms application. Select the  **Payment**  item in the navigation control. Click the  **New**  button. The detail form for the new  **Payment**  object will be invoked. Specify the  **Rate**  and  **Hours**  properties, and save the changes. Then, change the  **Rate**  and  **Hours**  properties, and see how this affects the  **Amount**  property. The  **Amount**  property value is updated immediately when changing the  **Rate**  property value, and also after the  **Hours**  property field loses focus.
     
-    ![Tutorial_UIC_Lesson6_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson6_2116415.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fed1e2db-982d-4fbf-81f3-6bee2579b871)
+
     
 -   Run the ASP.NET Web Forms application. Select the  **Payment**  item in the navigation control. Invoke the  **Payment**  Detail View in edit mode. Then, change the  **Rate**  and  **Hours**  properties to see how this affects the  **Amount**  property. The page is updated immediately after the  **Rate**  property field loses focus. If you change the  **Hours**  property value, the  **Amount**  value is updated after saving the changes.
     
-    ![Tutorial_UIC_Lesson6_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson6_3116416.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9cc9a37a-c07e-4306-b878-1322ae579cc3)
+
     
 
 You can see the changes made in this lesson in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx). Note that in  **MainDemo**, the  **ImmediatePostData**  property of  **Hours**  is also set to “**True**“, so the behavior is different from the behavior described in this tutorial.
@@ -1964,7 +1989,8 @@ Before proceeding, take a moment to review the following lessons:
     
 -   Set the  **DataSourcePropertyIsNullMode**  property to “SelectAll”, to display all existing objects in the  **Contact.Position**  editor when the  **Department.Positions**  property is not specified.
     
-    ![Tutorial_UIC_Lesson7_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson7_1115488.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3fa91894-066d-41cc-b8e7-cc0453e183fe)
+
     
 >    NOTE
     You can perform the task defined above in code. See the [Implement Dependent Reference Properties (XPO)](https://docs.devexpress.com/eXpressAppFramework/112720/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-dependent-reference-properties-xpo?v=22.1) topic.
@@ -1995,9 +2021,12 @@ Before proceeding, take a moment to review the following lessons:
     
 -   Run the WinForms or ASP.NET Web Forms application. Specify the  **Positions**  property for  **Department**  objects. Invoke a Contact Detail View. The dropdown list for the  **Position**  lookup editor contains the Positions assigned to the  **Department**  object that is specified by the  **Department**  editor:
     
-    ![Tutorial_UIC_Lesson7_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson7_2115489.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/145d3a14-0dc0-4e00-8527-61680bc8f2ea)
+
+
     
-    ![Tutorial_UIC_Lesson7_2_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson7_2_0115582.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cea2bce7-7e42-40b1-a66b-b65aa4dd4b5a)
+
     
 
 You can see the changes made in this lesson in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2018,24 +2047,28 @@ Before proceeding, take a moment to review the following lessons:
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **BOModel**  |  **DevExpress.Persistent.BaseImpl**  |  **Task**  |  **OwnMembers**  node and select the  **DueDate**  child node. To the right, you will see properties that represent the  **DueDate**  property’s settings.
 -   Find the  [DisplayFormat](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.PropertyEditor.DisplayFormat?v=22.1)  property located under the  **Format**  category. Its default value is “{0:d}”. This mask corresponds to the short date pattern (e.g., “3/21/2014”). To use the long date pattern (e.g., “Friday, March 21, 2014”), set the  **DisplayFormat**  property to “{0:D}”. However, the long date pattern is inconvenient when typing the date manually. So, set the  [EditMask](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.PropertyEditor.EditMask?v=22.1)  property value to “d”. This mask will be used when the  **DueDate**  property editor is focused.
     
-    ![Tutorial_UIC_Lesson8_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_3116567.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5dc6cf4e-8b35-4263-bb64-0f12de85bc34)
+
     
 >    NOTE
     You can set the **DisplayFormat** property to “D” instead of “{0:D}”. These values set the same formatting in a WinForms application. However, note that the “D” value is not valid in an ASP.NET Web Forms application. Use the “{0:<Format_Specifiers>}” syntax instead.
     
 -   Select the  **StartDate**  child node. Set the  **DisplayFormat**  property to “{0:D}” and the  **EditMask**  to “d”.
     
-    ![Tutorial_UIC_Lesson8_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_4116568.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cfe975fe-361d-4846-9f62-1138798514c6)
+
     
 -   Run the WinForms application. Invoke a detail form for the DemoTask class. You will see that the formatting of the  **StartDate**  and  **DueDate**  properties depends on the focus. When the Property Editor is focused, the  **EditMask**  is applied, and the property value is formatted according to the short date pattern (the “d” edit mask). When the Property Editor is not focused, the  **DisplayFormat**  is applied, and the property value is formatted according to the long date pattern (the “D” format specifier).
     
 -   Run the ASP.NET Web Forms application. Invoke a detail form for the DemoTask class. You will see that the  **DisplayFormat**  is applied, and the  **StartDate**  and  **DueDate**  property values are formatted according to the long date pattern (the “D” format specifier).
     
-    ![Tutorial_UIC_Lesson8_6](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_6116570.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fd4dee68-94b5-4c06-9f37-95f93cd303ac)
+
     
 -   Click the  **Edit**  button to display the  **DemoTask**  object in Edit mode. You will see that the  **EditMask**  is applied, and the  **StartDate**  and  **DueDate**  property values are formatted according to the short date pattern (the “d” edit mask).
     
-    ![Tutorial_UIC_Lesson8_7](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_7116571.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c46820d8-f671-4af5-b584-08ab0ad92e2c)
+
     
 
 >NOTE
@@ -2046,17 +2079,20 @@ Refer to the [Mask Type: Date-time](https://docs.devexpress.com/WindowsForms/149
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  **MySolution.Module**  project. Navigate to the  **BOModel**  |  **DevExpress.Persistent.BaseImpl**  |  **Task**  |  **OwnMembers**  node and select the  **PercentCompleted**  child node. To the right, you will see properties that represent the  **PercentCompleted**  property settings.
 -   Set the  **DisplayFormat**  property to “{0:N0}%”.
     
-    ![Tutorial_UIC_Lesson8_8](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_8116572.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ecacc310-416c-44b1-bf62-74e8b93e84bc)
+
     
 -   Run the application. Invoke a detail form for the  **DemoTask**  class. You will see that the  **PercentCompleted**  property value is displayed with the ‘%’ sign appended.
     
     In a WinForms application:
     
-    ![Tutorial_UIC_Lesson8_9](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_9116573.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d2347b66-0f49-49bf-91a1-e7f3c21f33cb)
+
     
     In an ASP.NET Web Forms application:
     
-    ![Tutorial_UIC_Lesson8_10](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_10116574.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1e15ba48-7078-4bf1-9073-dd6a2a4ae55c)
+
     
     Since the  **EditMask**  was not specified, the ‘%’ sign is not appended when the editor is focused in a WinForms application. In an ASP.NET Web Forms application, the ‘%’ sign is not appended when the Detail View is in Edit mode.
     
@@ -2066,7 +2102,8 @@ Refer to the [Mask Type: Date-time](https://docs.devexpress.com/WindowsForms/149
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **BOModel**  |  **DevExpress.Persistent.BaseImpl**  |  **PhoneNumber**  |  **OwnMembers**  node and select the  **Number**  child node. To the right, you will see properties that represent the  **Number**  property’s settings.
 -   Set the  **EditMask**  property to “(000)000-0000”.
     
-    ![Tutorial_UIC_Lesson8_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_1115490.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5c5a72ec-5b50-48d6-9142-df3609d80b2d)
+
     
 >    NOTE    
     >-   The **EditMaskType** property is set to **Simple** by default. However, you can use the [simplified regular expression](https://docs.devexpress.com/WindowsForms/1499/controls-and-libraries/editors-and-simple-controls/common-editor-features-and-concepts/masks/mask-type-simplified-regular-expressions?v=22.1) mask by setting this property to **RegEx**. In this instance, an appropriate regular expression for a phone number is “((\d\d\d))\d\d\d-\d\d-\d\d”. However, note that the **RegEx** edit mask type is currently supported in WinForms applications only.
@@ -2074,13 +2111,14 @@ Refer to the [Mask Type: Date-time](https://docs.devexpress.com/WindowsForms/149
     
 -   Run the WinForms or ASP.NET Web Forms application. Invoke a detail form for the Contact class. Add a  **PhoneNumber**  object to it using the New Action that accompanies the  **PhoneNumbers**  collection. In the  **PhoneNumber**  Detail View, you will see that the  **Number**  property supports the specified mask.
     
-    ![Tutorial_UIC_Lesson8_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_2115491.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/71227239-1973-4ff3-822b-37e59c8d38c4)
+
+
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/068c0ddc-08e0-435f-929b-f1c63226830b)
+
+The  **PhoneNumber**  Property Editor allows you to input digits at the positions specified by the ‘0’ metacharacters. The ‘(‘, ‘)’ and ‘-‘ characters cannot be removed, and their positions are fixed. As a result, end-users will not be allowed to type an incorrectly formatted phone number.
     
-    ![Tutorial_UIC_Lesson8_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson8_3117420.png?v=22.1)
-    
-    The  **PhoneNumber**  Property Editor allows you to input digits at the positions specified by the ‘0’ metacharacters. The ‘(‘, ‘)’ and ‘-‘ characters cannot be removed, and their positions are fixed. As a result, end-users will not be allowed to type an incorrectly formatted phone number.
-    
-    The ‘(‘, ‘)’ and ‘-‘ characters are saved within the property value, so you do not need to specify the  **DisplayFormat**  to display the parentheses and hyphen when the Property Editor is not focused, or the property value is not editable.
+The ‘(‘, ‘)’ and ‘-‘ characters are saved within the property value, so you do not need to specify the  **DisplayFormat**  to display the parentheses and hyphen when the Property Editor is not focused, or the property value is not editable.
     
 
 Refer to the  [Mask Type: Simple](https://docs.devexpress.com/WindowsForms/1500/controls-and-libraries/editors-and-simple-controls/common-editor-features-and-concepts/masks/mask-type-simple?v=22.1)  topic for details.
@@ -2106,11 +2144,12 @@ Before proceeding, take a moment to review the [Place an Action in a Different L
 -   Set the  **RowCount**  property to “2”. This means that a two-line editor will be created for the  **Subject**  property.
 -   Set the  **Size**  property to “200”. This means that an entry of 200 symbols will be allowed in the two-line editor. Alternatively, you can apply the  **Size**  attribute in code.
     
-    ![Tutorial_UIC_Lesson9_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson9_1115493.png?v=22.1)
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2df277bf-6fbb-45e0-a2ea-6ab308cd4846)
+
 -   Run the WinForms or ASP.NET Web Forms application. Invoke a detail form for a  **DemoTask**  class. The  **Subject**  property will be displayed via a memo editor that contains two lines.
     
-    ![Tutorial_UIC_Lesson9_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson9_2115492.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4a85f5ad-851f-4593-8b08-21a8bc658c8c)
+
     
 
 You can see the changes made in this lesson in the Model Editor invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2130,29 +2169,33 @@ Follow the steps below to study the basic concepts of translating your applicati
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Find the Model Editor’s toolbar. If it is hidden, check the  **View**  |  **Toolbars**  |  **XAF Model Editor**  menu item. In the toolbar’s  **Language**  combo box (located on the Model Editor’s toolbar), select  **de**. If it is not there, click the  **Language Manager…**  item. In the invoked dialog, click the  **Add**  button and select  **de (German - Deutsch)**.
     
-    ![Tutorial_UIC_Lesson11_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_0115495.png?v=22.1)
-    
-    ![Tutorial_UIC_Lesson11_0_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_0_0116417.png?v=22.1)
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/734b2c5f-e423-4088-b4ff-782eedaa557f)
+
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/687ad866-b3f0-41a1-bdee-bf212b7f7cd8)
+
 -   After adding the language, you should restart Visual Studio.
 -   Select the newly added language in the  **Language**  combo box.
     
-    ![Tutorial_UIC_Lesson11_0_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_0_1115628.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/55d6c28a-7c44-4236-a7f3-0a5d23c1c68b)
+
     
 -   To fully localize your application, you should look through all the nodes and their child nodes to set German values for the properties denoted by the “globe” glyph. The  [Localization Tool](https://docs.devexpress.com/eXpressAppFramework/113297/localization/localization-tool?v=22.1)  simplifies this task. For training purposes, translate a few values to see how this affects your application. Esentially, the  **Caption**  properties can be localized.
     
-    ![Tutorial_UIC_Lesson11_0_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_0_2116418.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9e4842bd-f30b-4ad0-911b-7a5824b38453)
+
     
 >    NOTE
     The [How to: Localize an XAF Application](https://docs.devexpress.com/eXpressAppFramework/113250/localization/localize-an-xaf-application-net-framework?v=22.1) topic explains how to localize an **XAF** application.
     
 -   In the Model Editor invoked for a WinForms project and/or an ASP.NET Web Forms application project, navigate to the  **Application**  node. In the  **PreferredLanguage**  property’s dropdown list, select “de”. If you need to use the German language in both the WinForms and ASP.NET Web Forms applications, you can specify the  **PreferredLanguage**  property value in the Model Editor invoked for the application module.
     
-    ![Tutorial_UIC_Lesson11_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_1115494.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dd619144-6dae-49bc-ba72-65d04ab8a05b)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Check to see that the properties that you translated via the Model Editor are displayed in German.
 
-![Tutorial_UIC_Lesson11_1_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_1_1116419.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/41a9929d-659e-490b-88db-29691a3b8a0b)
+
 
 ## Make a User-Language Application
 
@@ -2163,7 +2206,8 @@ Perform the steps below if your application needs to be in the user’s language
     
     Alternatively, you can specify the  **PreferredLanguage**  property value in the Model Editor invoked for the application module. In this instance, the user language will be used in both the WinForms and ASP.NET Web Forms applications.
     
-    ![Tutorial_UIC_Lesson11_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson11_2115629.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1a282d2e-a196-4194-af6c-f0d5acee90a0)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Check to see if the language corresponds to your system’s current language.
     
@@ -2187,15 +2231,18 @@ The  **New**  Action’s items are defined in the  [Application Model](https://d
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  by double-clicking the  _Model.DesignedDiffs.xafml_  file from the  _MySolution.Module_  project. In the tree view, navigate to the  **CreatableItems**  node. If you expand this node, you will see the items that correspond to the business classes used in your application. These items were generated because the  **DefaultClassOptions**  attribute is applied to the corresponding classes. To add another item, right-click the  **CreatableItems**  node, and choose  **Add…**  |  **CreatableItem**.
     
-    ![Tutorial_UIC_Lesson13_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson13_1115499.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/22847e66-a220-49c3-bfa2-f9e673e506fa)
+
     
 -   For the newly created node, select “Event” in the  **ModelClass**  dropdown list. The  **Caption**  property will automatically be set to “Scheduler Event”.
     
-    ![Tutorial_UIC_Lesson13_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson13_2115500.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e5ed9fec-3bfa-4a85-8db7-23e275fe6efc)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Notice that the  **Scheduler Event**  item has been added to the  **New**  Action’s dropdown list. This item allows you to create  **Event**  objects, when objects of another type are displayed in the List View. Also note that an image has already been assigned to this item.
     
-    ![Tutorial_UIC_Lesson13_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson13_3115501.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3492bf15-a54b-4cab-bd3e-bfc647fc1bce)
+
     
 
 You can see the changes made in this lesson in the Model Editor invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2214,11 +2261,13 @@ Before proceeding, we recommend that you review the following lessons:
 -   If the  **Note**  class is not used as an ancestor in your code, you will need to add it to the UI generation process. To do this, use the  [Module Designer](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). In the  **Exported Types**  pane, focus the  **Referenced assemblies**  |  **DevExpress.Persistent.BaseImpl.Xpo.v22.1**  |  **Note**  item and press the space bar. Refer to the  [Add a Class from the Business Class Library (XPO)](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1)  lesson for details.
 -   The XAF application’s navigation structure is defined by the  **NavigationItems**  node in the  [Application Model](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). To customize the navigation, invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  by double-clicking the  _Model.DesignedDiffs.xafml_  file in the  _MySolution.Module_  project. In the tree view, navigate to the  **NavigationItems** | **Items** | **Default** | **Items**  node. To add a child item to the required navigation item, right-click the  **Items**  node and select  **Add…**  |  **NavigationItem**  from the invoked context menu.
     
-    ![Tutorial_UIC_Lesson12_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson12_1115496.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/34091e33-e754-4996-9125-cff5cb13dd88)
+
     
 -   For the newly added node, select “Note_ListView” in the  **View**  dropdown list. The  **Caption**  property will automatically be set to “Note”. Optionally, you can set a user-friendly  **Id**  value.
     
-    ![Tutorial_EF_Lesson4_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ef_lesson4_4115464.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c417b07d-78cb-48b3-a46f-0a044d27108e)
+
     
     As you have seen, there are many ready-to-use Views available in the  **View**  dropdown list. These views are automatically generated based on business classes loaded to the Application Model. One of these classes is  **Note**. So, you only need to add a corresponding View to the navigation items collection.
     
@@ -2227,7 +2276,8 @@ Before proceeding, we recommend that you review the following lessons:
     
 -   Run the WinForms or ASP.NET Web Forms application. You now have an additional navigation item that allows you to add and edit plain text notes. Also note that this item already has an image assigned.
     
-    ![Tutorial_UIC_Lesson12_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson12_3115498.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a9d7ebfb-23c4-4e6c-a7c3-69cd35d346f0)
+
     
 
 >NOTE
@@ -2250,28 +2300,32 @@ The validation functionality is provided by the  [Validation Module](https://doc
 
 -   Invoke the Model Editor for the  _MySolution.Module_  project. Navigate to the  **Validation**  |  **Rules**  node. It already contains child nodes that define the rules to be checked. For example, it may contain the “**RuleRequiredField for Position.Title**“ rule that was implemented in the  [Implement Property Value Validation in Code (XPO)](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  lesson. To add a new rule that checks specific criteria, right-click the  **Rules**  node and select  **Add…**  |  **RuleCriteria**.
     
-    ![Tutorial_UIC_Lesson14_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_1115502.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/893d83e9-b9e3-4de9-8c09-d164646b4162)
+
     
 >    NOTE
     The descriptions of all available rule types are available in the [Validation Rules](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1) topic.
     
 -   For the newly created node, set the  **TargetType**  to “MySolution.Module.BusinessObjects.DemoTask”, and set the  **Criteria**  property to  `Status != 'NotStarted'`. Set the  **ID**  property to “TaskIsNotStarted”,  **TargetContextIDs**  to “MarkCompleted” and  **CustomMessageTemplate**  to “Cannot set the task as completed because it has not started”.
     
-    ![Tutorial_UIC_Lesson14_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_2115508.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4838d9cd-2151-417b-8494-aa9e6f1a2167)
+
     
 >    NOTE
     The **Criteria** property value must be specified using the [Criteria Language Syntax](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1). To simplify this task, you can invoke the **Filter Builder** dialog by clicking the ellipsis button (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) to the right of the **Criteria** value. Within this dialog, you can visually design a criteria expression.
     
 -   The  **TargetContextIDs**  property is set to “MarkCompleted”. This means that the rule will be checked when executing the Action whose  **ValidationContexts**  property is set to “MarkCompleted”. So, set the  **Mark Completed**  Action’s  **ValidationContexts**  property (in the  **ActionDesign**  |  **Actions**  |  **Task.MarkCompleted**  node) to “MarkCompleted”.
     
-    ![Tutorial_UIC_Lesson14_2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_2_1116422.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f4b64c6c-f7e7-41d0-9463-92595c23556c)
+
     
 >    NOTE
     You can also use the **Save** or **Delete** contexts, which are available by default. Rules with these contexts are validated when an object is saved or deleted, respectively (see [Validation Rules](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1)).
     
 -   Run the WinForms or ASP.NET Web Forms application. Assign the “Not Started” value to the  **Status**  property of one of the existing  **DemoTask**  objects. Click the  **MarkCompleted**  button. The following  **Validation Error**  dialog will be displayed.
     
-    ![Tutorial_UIC_Lesson14_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_4116421.png?v=22.1)
+   ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eb8f9e47-0bed-470e-ae5d-17c39f346916)
+
     
 
 >NOTE
@@ -2292,17 +2346,20 @@ Before proceeding, take a moment to review the following lessons:
 
 Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  node. Expand the  **Contact_DetailView**  child node. It contains the  **Items**  and  **Layout**  child nodes. To view and modify the current layout of the Contact Detail View editors, select the  **Layout**  node. The property list to the right will be replaced with a design surface that imitates the Contact Detail View. To modify the editor arrangement, right-click the View’s empty space and choose  **Customize Layout**.
 
-![Tutorial_UIC_Lesson21_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson21_1115630.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b682a127-b72e-4bc6-9941-f7b2a24229c1)
+
 
 The  **Customization Form**  will be invoked. In the invoked form, you can drag editors to the required positions.
 
-![Tutorial_UIC_Lesson21_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson21_2115631.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/89a90745-7902-4455-a0d2-f1a09ce073b0)
+
 
 Follow the graphical prompts that indicate the item’s new location. In addition, you can remove and restore  **View Items**. Drag the required item from the Detail View to the  **Customization Form**  to remove the item, and drag the item from the  **Customization Form**  to the  **Detail View**  to add it.
 
 To view the layout tree for View Items, click the  **Layout Tree View**  tab on the  **Customization Form**. You can right click a tree item and invoke a context menu, allowing you to hide the  **Customization Form**, reset the layout, create a tabbed group, etc. (See the image below.)
 
-![Tutorial_UIC_Lesson21_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson21_3115632.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7b8d4976-5654-4ee2-be86-65ad07dc5cc9)
+
 
 To learn more about the  **Customization**  form, the  **Layout Tree View**  tab and its context menu, refer to the  [Default Runtime Customization](https://docs.devexpress.com/WindowsForms/2307/controls-and-libraries/form-layout-managers/layout-and-data-layout-controls/design-time-and-runtime-customization/default-runtime-customization?v=22.1)  topic.
 
@@ -2310,7 +2367,8 @@ Close the  **Customization Form**. Run the WinForms or ASP.NET Web Forms applica
 
 If you want to reset changes, right-click  **Contact_DetailView**  |  **Layout**  and choose  **Reset Differences**.
 
-![Tutorial_UIC_Lesson21_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson21_4120047.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9d5c77a3-6bb9-4e46-b521-44e14d081706)
+
 
 >NOTE
 Alternatively, you can customize the **Contact** Detail View layout at runtime, and then merge these customizations into the **MySolution.Module** project. Refer to the [How to: Merge End-User Customizations into the XAF Solution](https://docs.devexpress.com/eXpressAppFramework/113335/ui-construction/application-model-ui-settings-storage/application-model-storages/merge-end-user-customizations-model?v=22.1) topic for details.
@@ -2333,26 +2391,32 @@ Before you proceed, take a moment to review the following lesson:
     
 3.  The Model Editor displays a design surface that imitates the  **Contact**  Detail View. Right-click the View’s empty space and choose  **Customize Layout**.
     
-    ![Start layout customization](https://docs.devexpress.com/eXpressAppFramework/images/blazor-tutorial-customize-layout-context-menu.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f4dc162b-6586-4eab-8b7a-b88006fed4fe)
+
     
 4.  In the invoked  **Customization**  window, click the  **Add**  button.
     
-    ![Customization Window](https://docs.devexpress.com/eXpressAppFramework/images/blazor-tutorial-customization-window.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f7b70421-6da6-40a4-bfa9-4fc124bbe03e)
+
     
 5.  In the  **Object Model**  dialog, expand the  **Department**  node, check the  **Office**  checkbox, and click  **OK**.
     
-    ![Object Model Window](https://docs.devexpress.com/eXpressAppFramework/images/blazor-tutorial-object-model-window.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2e9dbad8-49d5-4128-b821-d344e7dc9af4)
+
     
 6.  The  **Office:**  item appears on the  **Hidden Items**  tab of the  **Customization**  window:
     
-    ![A new field is added to the Object Model Window](https://docs.devexpress.com/eXpressAppFramework/images/blazor-tutorial-customization-window-new-field.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/28318e49-1b6c-4fef-bdd2-fe04ce40a4b1)
+
     
 7.  Drag the  **Office:**  item to the required position of the  **Contact**  Detail View.
-    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/417af015-ab7f-45c6-97c8-5deb88d0befa)
+
 
 8.  Run the WinForms or ASP.NET Web Forms application and invoke a  **Contact Detail**  View. The  **Office**  editor is located in the same column as the  **Department**  editor,  **Position**  editor, and other editors.
     
-    ![Tutorial_UIC_Lesson15_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson15_3115505.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eadb6be4-d8dc-4ca1-8fea-b194fb0faba6)
+
     
 
 You can see the changes made in this lesson in the  **Model Editor**  invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2380,7 +2444,8 @@ In a WinForms application, the customizations made using the  **Runtime Column C
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project, and navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  |  **Columns**  node to invoke the  **Grid List Editor Designer**. It will display the default structure of the  **List View**. You can customize the default appearance of the List View by dragging, resizing and grouping the columns. Invoke the  **Customization**  window by right-clicking the table header and selecting  **Column Chooser**.
     
-    ![Tutorial_UIC_Lesson16_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson16_1115506.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1401e3a0-0053-4b4d-bf8e-388e5af0dd9d)
+
     
 -   For example, customize the List View to display the following columns.
     
@@ -2389,20 +2454,24 @@ In a WinForms application, the customizations made using the  **Runtime Column C
     3.  **Department**
     4.  **Email**
     
-    ![Tutorial_UIC_Lesson16_1_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson16_1_2117540.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0cf45d0b-2bed-45ed-b9c9-067a13b64ef2)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. See if the  **Contact**  List View looks like the following image.
     
-    ![Tutorial_UIC_Lesson16_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson16_2115507.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/13f63fac-4e3a-49ed-8d01-5bf0194417e1)
+
     
-    ![Tutorial_UIC_Lesson16_2_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson16_2_2121225.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1bd3ec88-0ab3-4dfd-ae88-628162de8755)
+
     
 >    TIP
     When the browser window shrinks, some columns become hidden and can be accessed using the “…” button (see [IModelColumnWeb.AdaptivePriority](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.SystemModule.IModelColumnWeb.AdaptivePriority?v=22.1)).
     
    If you previously customized the visibility of the  **Contact**  List View columns at runtime, the new set of visible columns will not be applied. To remove the previous customization in a WinForms application, click the  **Reset View Settings**  button. Alternatively, you can invoke the  **Runtime Model Editor**  (using the  **Tools**  |  **Edit Model**  menu item), right-click the  **Views**  |  **Contact_ListView**  node and select  **Reset Differences**.
     
-![ResetDifferencesOrViewSettings](https://docs.devexpress.com/eXpressAppFramework/images/resetdifferencesorviewsettings120365.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/21366966-a2a6-45a3-884e-584e33a3e478)
+
 
 You can see the changes made in the lesson in the Model Editor invoked for the  _Model.DesignedDiffs.xafml_  file located in the  **Main Demo**  |  **MainDemo.Module**  project. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
 
@@ -2423,17 +2492,20 @@ Before proceeding, take a moment to review the [Place an Action in a Different L
 
 Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **Department_ListView**  node. It defines the  **List View**  that is used for  **Department**  objects using the properties to the right. In the  [MasterDetailMode](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelListView.MasterDetailMode?v=22.1)  property’s dropdown list, select  **ListViewAndDetailView**.
 
-![Tutorial_UIC_Lesson17_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson17_1115513.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f4fc6680-2b9c-42a6-b7db-59e861251dfe)
+
 
 Run the WinForms or ASP.NET Web Forms application. The  **Department**  List View will appear as follows.
 
 **WinForms Application**
 
-![Tutorial_UIC_Lesson17_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson17_2115512.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d598c03f-d4d2-4d33-a1f9-c35a848e5938)
+
 
 **ASP.NET Web Forms Application**
 
-![Tutorial_UIC_Lesson17_2_Web](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson17_web.png?v=22.1)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1657c730-bf89-4ce3-bdeb-ff1c68d5cccc)
+
 
 In the WinForms application, use the  **Save**  (![btn_Save](https://docs.devexpress.com/eXpressAppFramework/images/btn_save117423.png?v=22.1)) or  **SaveAndClose**  (![btn_SaveClose](https://docs.devexpress.com/eXpressAppFramework/images/btn_saveclose117425.png?v=22.1)) buttons on the toolbar to commit changes made in the  **Detail View**. To cancel the changes, use the  **Cancel**  (![btn_Cancel](https://docs.devexpress.com/eXpressAppFramework/images/btn_cancel117426.png?v=22.1)) button.
 
@@ -2461,18 +2533,21 @@ Before proceeding, take a moment to review the following lessons:
     
     When  **List Views**  are displayed in edit mode, you can apply the  **NewItemRow**  functionality of the  **XtraGrid**  that displays  **ListViews**  in XAF applications. This functionality allows end-users to create new objects directly in a  **List View**  without a  **Detail View**. To add this functionality, set the  **NewItemRowPosition**  property to  **Top**  or  **Bottom**.
     
-    ![Tutorial_UIC_Lesson18_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson18_1115510.png?v=22.1)
+  ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e44536af-da81-45f5-a18b-dc9d75fdff7d)
+
     
 >    TIP
     In ASP.NET Web Forms applications, there are several modes for editing. To set the required mode, use the [IModelListViewWeb.InlineEditMode](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.SystemModule.IModelListViewWeb.InlineEditMode?v=22.1) property in the **Model Editor** invoked for the _MySolution.Module.Web_ project. Various edit modes are illustrated in the [List View Edit Modes](https://docs.devexpress.com/eXpressAppFramework/113249/ui-construction/views/list-view-edit-modes?v=22.1) topic (**ASP.NET Web Forms-Specific Functionality** section).
     
 -   Run the WinForms or ASP.NET Web Forms application and edit one of the  **DemoTask**  objects within the  **List View**.
     
-    ![Tutorial_UIC_Lesson18_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson18_2115511.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8da597e8-0b1c-426b-86c8-c117e7ae0b83)
+
     
     To edit one of the  **DemoTask**  objects in an ASP.NET Web Forms application, click  **Edit**(![InlineEdit_EditButton](https://docs.devexpress.com/eXpressAppFramework/images/inlineedit_editbutton116546.png?v=22.1)) or click  **New**(![InlineEdit_NewButton](https://docs.devexpress.com/eXpressAppFramework/images/inlineedit_newbutton116547.png?v=22.1)) to create a new  **Task**.
     
-    ![Tutorial_UIC_Lesson18_2_Web](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson18_2_web115979.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/3970c982-fbcb-46d8-b504-190a75fd528e)
+
     
     In a WinForms application, to save the changes made to an object, click the  **Save**  (![btn_Save](https://docs.devexpress.com/eXpressAppFramework/images/btn_save117423.png?v=22.1)) or  **SaveAndClose**  (![btn_SaveClose](https://docs.devexpress.com/eXpressAppFramework/images/btn_saveclose117425.png?v=22.1)) button on the toolbar. To cancel the changes, click the  **Cancel**  (![btn_Cancel](https://docs.devexpress.com/eXpressAppFramework/images/btn_cancel117426.png?v=22.1)) button.
     
@@ -2500,11 +2575,13 @@ The  **DemoTask**  List View is presented by the  [ASPxGridListEditor](https://d
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the MySolution.Module project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **DemoTask_ListView**  node. It defines the List View that is used for DemoTask objects via the properties to the right. Set the  **PreviewColumnName**  property to “Description”. As a result, the text for the preview section will be retrieved from the  **DemoTask.Description**  property.
     
-    ![Tutorial_UIC_Lesson22_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson22_1117008.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1bd004ef-2082-4ad1-9868-8cd17fd95616)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Navigate to the  **DemoTask**  List View. Check to see that the preview section is enabled and it shows the  **DemoTask.Description**  property.
     
-    ![Tutorial_EF_Lesson9_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_ef_lesson9_1115472.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fe25a048-9e86-48e4-8771-5ec69db2f32c)
+
     
 
 To see the changes made in this lesson, invoke the  **Model Editor**  for the  **Main Demo**‘s  **MainDemo.Module**,  **MainDemo.Module.Win**  and  **MainDemo.Module.Web**  projects. The  **MainDemo**  application is installed in  _%PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  by default. The ASP.NET Web Forms version is available online at  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx).
@@ -2528,26 +2605,31 @@ Use this approach to enable an end-user to apply predefined filters to a particu
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  node. Right-click the  **Filters**  child node and select  **New**  |  **ListViewFilterItem**. For the new node, set the  **Id**  property to “Development Department Contacts”. To specify a criteria, set the  **Criteria**  property to the  `[Department.Title] = 'Development Department'`  value.
     
-    ![Tutorial_UIC_Lesson19_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_2115515.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4222f498-27db-4968-a71d-346854e74204)
+
     
 >    NOTE
     The **Criteria** property value must be specified using the [Criteria Language Syntax](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1). To simplify this task, you can invoke the **Filter Builder** dialog by clicking the ellipsis button (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) to the right of the **Criteria** value. Within this dialog, you can design a criteria expression using the visual **Filter Builder**.
     
 -   Add one more  **Filter**  node to the  **Filters**  node as defined above. Set the  **Id**  property to “Developers” and the  **Criteria**  property - to  `Position.Title = 'Developer'`.
     
-    ![Tutorial_UIC_Lesson19_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_3115516.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5620b91c-b313-4496-9925-101d856c7f83)
+
     
 -   To be able to view all  **Contact**  objects in the  **List View**, add one more  **Filter**  node to the  **Filters**  node, as defined above. Set the  **Id**  property to “All Contacts” and leave the  **Criteria**  property empty.
     
-    ![Tutorial_UIC_Lesson19_3_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_3_1116424.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4ba4203c-e750-457b-824d-ae62c30b0871)
+
     
 -   For the  **Filters**  node, set the  **CurrentFilter**  property to “Developers”. Save the changes.
     
-    ![Tutorial_UIC_Lesson19_3_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_3_2116425.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2f7fb69b-0208-4fa2-92d2-7e12c3d29159)
+
     
 -   Run the WinForms or ASP.NET Web Forms application and select the  **Contacts**  item in the navigation control. Notice that the  **SetFilter**  Action is now available.
     
-    ![Tutorial_UIC_Lesson19_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_4115517.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/819a016b-ff36-4527-b5d6-19447c7e60a4)
+
     
 
 ## Use the Model Editor’s Application | Views | ListView Node
@@ -2556,7 +2638,8 @@ Use this approach to filter a  **List View**  via the  **Model Editor**. Filters
 
 -   Run the  **Model Editor**  for the  _MySolution.Module_  project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  node. Set its  **Criteria**  property to  `Position.Title = 'Developer'`.
     
-    ![Tutorial_UIC_Lesson19_5](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson19_5115518.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/71940e8d-db17-441a-9f45-d13dd909a805)
+
     
 -   Run the WinForms or ASP.NET Web Forms application. Select the  **Contacts**  item in the navigation control and check to see if the  **Contact**  objects in the  **List View**  are filtered.
 
@@ -2599,19 +2682,22 @@ Before proceeding, take a moment to review the [Place an Action in a Different L
 
 -   Invoke the  [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  for the  _MySolution.Module_  project. Navigate to the  **Views**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  |  **Columns**  node to invoke the  **Grid List Editor Designer**. It will display the default structure of the List View. You can customize the default appearance of the List View. Invoke the Customization window by right-clicking the table header and selecting  **Show Group By Box**.
     
-    ![Tutorial_UIC_Lesson20_0](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson20_0117547.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4b30463e-4c77-4fcd-ac83-abac877aeef6)
+
     
 -   This will set  **Contact_ListView**‘s  **IsGroupPanelVisible**  property to true and display a special group area for  **Contact**  List Views in both the WinForms and ASP.NET Web Forms applications. To specify the column by which the  **Contact**  List View will be grouped by default, drag the column’s header to the group area. A nested grouping can be applied by dragging multiple columns to the group area. Group the  **Contact**  List View against the  **Department**  column, then against the  **Position**  column.
     
-    ![Tutorial_UIC_Lesson20_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson20_1117548.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a34b84a6-7e49-4e6c-a42b-1fe9cee2e523)
+
     
 -   Run the WinForms or ASP.NET Web Forms application and select the  **Contacts**  item in the navigation control. The group area is displayed in  **Contact**  List View. The column order within this area represents the nesting order of data groups. The  **Contact**  List View is grouped by the  **Department**  and  **Position**  columns.
     
-    ![Tutorial_UIC_Lesson20_3](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson20_3115635.png?v=22.1)
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cbdf3424-a067-4038-bcab-2f05dfd18492)
+
     
 -   You can specify this group area in runtime similarly to described above method. If you want to reset changes clicking  **Reset View Settings**  button.
     
-    ![Tutorial_UIC_Lesson20_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson20_4120065.png?v=22.1)
+    
     
 
 >NOTE
