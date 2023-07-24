@@ -1,4 +1,4 @@
-![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7f1fb32f-b17d-455e-ae6d-88a4c04aa942)[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/SimpleProjectManager/blob/master/README.es.md)
 # In-Depth XAF WinForms & Web Forms Tutorial (Main Demo)
 
