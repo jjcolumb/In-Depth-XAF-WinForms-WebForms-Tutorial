@@ -1289,3 +1289,138 @@ Antes de continuar, tómese un momento para repasar las siguientes lecciones:
 
 Puede ver el código que se muestra aquí en  _MySolution.Module_  |  _Controladores_  | Archivo TaskActionsController_.cs (TaskActionsController__.vb_) de la demo principal instalada con XAF. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
 
+
+# Configuración del editor de acceso
+
+En este tema se muestra cómo acceder a los editores en una vista detallada mediante un controlador de  [vista](https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views?v=22.1). Este controlador busca en la vista de detalles  **de contacto**  un editor de propiedades de cumpleaños que enlace datos a un control y especifica que el control debe mostrar el calendario de interfaz  **de**  usuario táctil en su menú desplegable.
+
+>NOTA
+Recomendamos revisar los siguientes temas antes de continuar:
+>-   [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+>-   [Agregar una acción simple](https://docs.devexpress.com/eXpressAppFramework/112737/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-a-simple-action?v=22.1)
+
+## Acceder a la configuración del editor en una aplicación de formularios de Windows
+
+-   Agregue un controlador de vista denominado "WinDateEditCalendarController" al proyecto  _MySolution.Module.Win_  como se describe en la lección  [Agregar una acción simple](https://docs.devexpress.com/eXpressAppFramework/112737/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-a-simple-action?v=22.1)  (pasos 1-3). Cambie a la vista de código. Derive el nuevo controlador de  [ObjectViewController<ViewType, ObjectType>](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ObjectViewController-2?v=22.1):
+    
+
+    
+    ```csharp
+    using DevExpress.ExpressApp;
+    using MySolution.Module.BusinessObjects;
+    
+    namespace MySolution.Module.Win.Controllers {
+        public partial class WinDateEditCalendarController : ObjectViewController<DetailView, Contact> {
+            public WinDateEditCalendarController() {
+                InitializeComponent();
+            }
+            // ...
+        }
+    }
+    
+    ```
+    
+-   Reemplace el método  **OnActivated**. Utilice el método  [DetailViewExtensions.CustomizeViewItemControl(DetailView, Controller, Action<ViewItem>, String[])](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DetailViewExtensions.CustomizeViewItemControl(DetailView--Controller--Action-ViewItem---String--)?v=22.1)  para personalizar el control del  [elemento](https://docs.devexpress.com/eXpressAppFramework/112612/ui-construction/view-items-and-property-editors?v=22.1)  Vista  **de cumpleaños**.
+    
+
+El código siguiente muestra  **WinDateEditCalendarController**:
+
+
+```csharp
+using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Editors;
+using DevExpress.XtraEditors;
+using MySolution.Module.BusinessObjects;
+
+namespace MySolution.Module.Win.Controllers {
+    public partial class WinDateEditCalendarController : ObjectViewController<DetailView, Contact> {
+        public WinDateEditCalendarController() {
+            InitializeComponent();
+        }
+        protected override void OnActivated() {
+            base.OnActivated();
+            View.CustomizeViewItemControl(this, SetCalendarView, nameof(Contact.Birthday));
+        }
+        private void SetCalendarView(ViewItem viewItem) {
+            DateEdit dateEdit = (DateEdit)viewItem.Control;
+            dateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+        }
+    }
+}
+
+```
+
+Ejecute la aplicación WinForms y abra la Vista de detalles de  **contacto**. El editor de  **cumpleaños**  muestra un menú desplegable de calendario táctil.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c94a3b87-ae23-4885-af4a-8a6c961a5101)
+
+
+>PROPINA
+Este enfoque no es aplicable a los [editores locales](https://docs.devexpress.com/eXpressAppFramework/113249/ui-construction/views/list-view-edit-modes?v=22.1)  de la vista de lista. Para personalizar estos editores, siga uno de estos procedimientos:
+
+-   Utilice un editor de propiedades  personalizado como se muestra en el tema  [Cómo: Personalizar un editor de propiedades integrado (formularios de Windows](https://docs.devexpress.com/eXpressAppFramework/113104/ui-construction/view-items-and-property-editors/property-editors/customize-a-built-in-property-editor-winforms?v=22.1)).
+-   Obtener acceso a los eventos y propiedades del control Editor de listas como se describe en el artículo  [Propiedades del control de cuadrícula de acceso](https://docs.devexpress.com/eXpressAppFramework/113165/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/access-grid-control-properties?v=22.1).
+
+## Configuración del editor de acceso en una aplicación ASP.NET  Web Forms
+
+-   Agregue un controlador de vistas denominado "_WebDateEditCalendarController_" al proyecto  _MySolution.Module.Web_  como se describe en el tema  [Agregar una acción simple](https://docs.devexpress.com/eXpressAppFramework/112737/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-a-simple-action?v=22.1)  (pasos 1-3). Cambie a la vista de código. Derive el nuevo controlador de  [ObjectViewController<ViewType, ObjectType>](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ObjectViewController-2?v=22.1):
+    
+
+    
+    ```csharp
+    using DevExpress.ExpressApp;
+    using MySolution.Module.BusinessObjects;
+    
+    namespace MySolution.Module.Web.Controllers {
+        public partial class WebDateEditCalendarController : ObjectViewController<DetailView, Contact> {
+            public WebDateEditCalendarController() {
+                InitializeComponent();
+            }
+            // ...
+        }
+    }
+    
+    ```
+    
+-   Reemplace el método  **OnActivated**. Utilice el método  [DetailViewExtensions.CustomizeViewItemControl(DetailView, Controller, Action<ViewItem>, String[])](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DetailViewExtensions.CustomizeViewItemControl(DetailView--Controller--Action-ViewItem---String--)?v=22.1)  para personalizar el control del  [elemento](https://docs.devexpress.com/eXpressAppFramework/112612/ui-construction/view-items-and-property-editors?v=22.1)  Vista  **de cumpleaños**.
+
+El código siguiente muestra  **WebDateEditCalendarController**:
+
+
+
+```csharp
+using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Editors;
+using DevExpress.ExpressApp.Web.Editors.ASPx;
+using DevExpress.Web;
+using MySolution.Module.BusinessObjects;
+
+namespace MySolution.Module.Web.Controllers {
+    public partial class WebDateEditCalendarController : ObjectViewController<DetailView, Contact> {
+        public WebDateEditCalendarController() {
+            InitializeComponent();
+        }
+        protected override void OnActivated() {
+            base.OnActivated();
+            View.CustomizeViewItemControl(this, SetCalendarView, nameof(Contact.Birthday));
+        }
+        private void SetCalendarView(ViewItem viewItem) {
+            var propertyEditor = viewItem as ASPxDateTimePropertyEditor;
+
+            if(propertyEditor != null && propertyEditor.ViewEditMode == ViewEditMode.Edit) {
+                ASPxDateEdit dateEdit = propertyEditor.Editor;
+                dateEdit.PickerDisplayMode = DatePickerDisplayMode.ScrollPicker;
+            }
+        }
+    }
+}
+
+```
+
+Ejecute la aplicación ASP.NET formularios Web Forms y abra la Vista de detalles de  **contacto**. El editor de  **cumpleaños**  muestra un menú desplegable de calendario táctil.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c1668e68-6d52-4503-af8f-376206ba56cc)
+
+
+>PROPINA
+Este enfoque no afecta a los [editores locales](https://docs.devexpress.com/eXpressAppFramework/113249/ui-construction/views/list-view-edit-modes?v=22.1)  de la vista de lista. Para personalizar también estos editores, utilice la solución descrita en el tema  [Cómo: Personalizar un editor de propiedades integrado (formularios Web Forms ASP.NET).](https://docs.devexpress.com/eXpressAppFramework/113114/ui-construction/view-items-and-property-editors/property-editors/customize-a-built-in-property-editor-asp-net?v=22.1) Como alternativa, acceda al Editor de listas web local necesario como se indica en la descripción del método [`ComplexWebListEditor.FindPropertyEditor`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ComplexWebListEditor.FindPropertyEditor.overloads?v=22.1). Para aplicar una configuración personalizada a la columna de un [`ASPxGridListEditor`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor?v=22.1), controle los eventos [`ASPxGridListEditor.CreateCustomGridViewDataColumn`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor.CreateCustomGridViewDataColumn?v=22.1) y  [`ASPxGridListEditor.CustomizeGridViewDataColumn`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor.CustomizeGridViewDataColumn?v=22.1). Si necesita acceder a una plantilla para mostrar celdas dentro de la columna actual, utilice los eventos [`ASPxGridListEditor.CreateCustomDataItemTemplate`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor.CreateCustomDataItemTemplate?v=22.1) y [`ASPxGridListEditor.CreateCustomEditItemTemplate`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor.CreateCustomEditItemTemplate?v=22.1).
