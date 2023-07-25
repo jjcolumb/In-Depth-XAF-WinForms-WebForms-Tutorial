@@ -2071,3 +2071,246 @@ Se proporciona un ejemplo de formato personalizado en  **PropertyEditors**  |  *
 Puede especificar el formato predeterminado para todas las propiedades de un tipo determinado. En un proyecto específico de la plataforma, utilice [IModelRegisteredPropertyEditor.DefaultDisplayFormat](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.IModelRegisteredPropertyEditor.DefaultDisplayFormat?v=22.1) y [IModelRegisteredPropertyEditor.DefaultEditMask](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.IModelRegisteredPropertyEditor.DefaultEditMask?v=22.1) de una **ViewItems** | **PropertyEditors** | **RegisteredPropertyEditors**.
 
 
+# Usar un editor multilínea para las propiedades de cadena
+
+En esta lección, aprenderá a mostrar un editor multilínea para las propiedades de cadena. Para ello, se utilizará la propiedad  **Task.Subject.**  De forma predeterminada, se muestra a través de un cuadro de texto de una sola línea.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1).
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Vaya a la  **lista de materiales**  |  **DevExpress.Persistent.BaseImpl**  |  **Tarea**  |  **OwnMembers**  y seleccione el nodo secundario  **Subject**. A la derecha, verá propiedades que representan la configuración de la propiedad  **Asunto**.
+-   Establezca la propiedad  **RowCount**  en "2". Esto significa que se creará un editor de dos líneas para la propiedad  **Subject**.
+-   Establezca la propiedad  **Size**  en "200". Esto significa que se permitirá una entrada de 200 símbolos en el editor de dos líneas. Como alternativa, puede aplicar el atributo  **Size**  en el código.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d18edbd2-409c-4e38-b059-782b03dfefa8)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Invoque un formulario de detalles para una clase  **DemoTask**. La propiedad  **Subject**  se mostrará a través de un editor de notas que contiene dos líneas.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/bb07862b-9d7e-4bbf-bb27-4ec35c413d80)
+
+    
+
+Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx)
+
+
+# Localizar elementos de la interfaz de usuario
+
+En esta lección, aprenderá los conceptos básicos de la localización de elementos visibles de la interfaz de usuario. De forma predeterminada, la aplicación utiliza el idioma invariante (inglés). Traducirá su aplicación al alemán y creará una aplicación multilingüe. Para ilustrar diferentes escenarios de localización, la lección se divide en dos secciones. Deben realizarse en orden. Traducirá varios subtítulos con fines de capacitación. Para obtener información sobre cómo localizar completamente una aplicación XAF, primero revise la sección  [Localización](https://docs.devexpress.com/eXpressAppFramework/113298/localization?v=22.1)  y, a continuación, siga el tema  [Cómo: Localizar una aplicación XAF](https://docs.devexpress.com/eXpressAppFramework/113250/localization/localize-an-xaf-application-net-framework?v=22.1).
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1).
+
+## Traducir la aplicación a un idioma adicional
+
+Siga los pasos a continuación para estudiar los conceptos básicos de la traducción de su aplicación.
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Busque la barra de herramientas del Editor de modelos. Si está oculto, compruebe la  **casilla Ver**  |  **Barras de herramientas**  | Elemento de menú  **Editor de modelos XAF**. En el cuadro combinado  **Idioma**  de la barra de herramientas (ubicado en la barra de herramientas del Editor de modelos), seleccione  **de**. Si no está allí, haga clic en el elemento  **Administrador de idiomas....**  En el cuadro de diálogo invocado, haga clic en el botón  **Agregar**  y seleccione  **de (alemán - alemán).**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8e098f9b-0b33-46c6-9718-b9f4fba3934b)
+
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6c8b9cdf-6b2b-44b1-8e4b-e3d13d8d9a60)
+
+    
+-   Después de agregar el idioma, debe reiniciar Visual Studio.
+-   Seleccione el idioma recién agregado en el cuadro combinado  **Idioma**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fc8b4abc-5475-4898-a119-13f470b4cbc2)
+
+    
+-   Para localizar completamente la aplicación, debe examinar todos los nodos y sus nodos secundarios para establecer valores alemanes para las propiedades indicadas por el glifo "globo". La  [herramienta de localización](https://docs.devexpress.com/eXpressAppFramework/113297/localization/localization-tool?v=22.1)  simplifica esta tarea. Para fines de capacitación, traduzca algunos valores para ver cómo afecta esto a su aplicación. Esencialmente, las propiedades  **Caption**  se pueden localizar.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8e9ca1cd-9234-4a55-a78c-1bf378326ed2)
+
+    
+    >NOTA
+    En el tema Cómo: Localizar una aplicación XAF  se explica cómo localizar [una aplicación XAF](https://docs.devexpress.com/eXpressAppFramework/113250/localization/localize-an-xaf-application-net-framework?v=22.1).
+    
+-   En el Editor de modelos invocado para un proyecto de WinForms y/o un proyecto de aplicación de formularios Web Forms ASP.NET, navegue hasta el nodo  **Aplicación**. En la lista desplegable de la propiedad  **PreferredLanguage**, seleccione "de". Si necesita utilizar el idioma alemán en las aplicaciones WinForms y ASP.NET formularios Web Forms, puede especificar el valor de la propiedad  **PreferredLanguage**  en el Editor de modelos invocado para el módulo de aplicación.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1d802785-3b79-4136-a089-db6eb04af72c)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Compruebe que las propiedades que ha traducido a través del Editor de modelos se muestran en alemán.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6ba2972c-1916-4d25-95ff-ebc8117865a9)
+
+
+## Crear una aplicación de idioma de usuario
+
+Realice los pasos siguientes si la aplicación debe estar en el idioma del usuario (el idioma del sistema operativo del usuario o el idioma pasado por el explorador de Internet del usuario).
+
+-   Traduzca su aplicación a los idiomas requeridos. Para ello, invoque el Editor de modelos, establezca el idioma requerido en el elemento de la barra de herramientas  **Idioma**  del editor de modelos y traduzca todos los valores de propiedad localizables (como se detalla en la sección anterior). Haga esto para cada idioma requerido.
+-   En el Editor de modelos invocado para el proyecto de aplicación de formularios WinForms y/o ASP.NET Web Forms, navegue hasta el nodo  **Aplicación**. En la lista desplegable de la propiedad  **PreferredLanguage**, seleccione el elemento (**Idioma del usuario**).
+    
+    Como alternativa, puede especificar el valor de la propiedad  **PreferredLanguage**  en el Editor de modelos invocado para el módulo de aplicación. En este caso, el idioma del usuario se utilizará en las aplicaciones WinForms y ASP.NET formularios Web Forms.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/34cc1eac-8f2d-42c6-9fd4-5aa81a52b153)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Compruebe si el idioma corresponde al idioma actual de su sistema.
+    
+    Si no ha localizado la aplicación al idioma actual del sistema, se utilizará el idioma predeterminado (inglés).
+    
+
+Puede ver una aplicación de ejemplo localizada al alemán en la  **demostración principal**. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Agregar un elemento a la nueva acción
+
+
+En esta lección, aprenderá a agregar un elemento a la  **acción Nueva**  (NewObjectViewController.NewObjectAction).[](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.SystemModule.NewObjectViewController.NewObjectAction?v=22.1)  Se usará la clase Business  **Event**  de la Biblioteca de Business Class.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+>-   [Agregar una clase de la biblioteca de clases empresariales y usar el módulo Programador](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1)
+
+Los elementos de  **la nueva**  acción se definen en el  [modelo de aplicación](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1)  mediante nodos secundarios del nodo  **CreatableItems**. Por lo tanto, para agregar un elemento a la  **nueva**  acción, es necesario agregar un elemento secundario al nodo  **CreatableItems**. De forma predeterminada, los objetos de negocio cuyas declaraciones están decoradas por  [CreatableItemAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.CreatableItemAttribute?v=22.1)  o  [DefaultClassOptionsAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.DefaultClassOptionsAttribute?v=22.1)  se pueden crear mediante la  **nueva**  acción desde cualquier vista. Sin embargo, la clase  **Event**  (agregada en el tema  [Agregar una clase desde la Biblioteca de clases empresariales (XPO](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1))) no tiene ninguno de estos atributos aplicados. Esta clase se declara en la  [biblioteca de clases empresariales](https://docs.devexpress.com/eXpressAppFramework/112571/business-model-design-orm/built-in-business-classes-and-interfaces?v=22.1). Aunque es posible modificar los orígenes de la biblioteca y volver a compilar la biblioteca, es más conveniente realizar personalizaciones en el modelo de aplicación.
+
+-   Para invocar el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1), haga doble clic en el archivo  _Model.DesignedDiffs.xafml_  del proyecto  _MySolution.Module._  En la vista de árbol, navegue hasta el nodo  **CreatableItems**. Si expande este nodo, verá los elementos que corresponden a las clases de negocio utilizadas en la aplicación. Estos elementos se generaron porque el atributo  **DefaultClassOptions**  se aplica a las clases correspondientes. Para agregar otro elemento, haga clic con el botón secundario en el nodo  **CreatableItems**  y elija  **Agregar...**  |  **CreatableItem**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9b21125a-2f19-4e46-b348-976b1a10acdb)
+
+    
+-   Para el nodo recién creado, seleccione "Evento" en la lista desplegable  **ModelClass**. La propiedad  **Caption**  se establecerá automáticamente en "Evento del programador".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f64391aa-1edd-4389-890b-266b67fbcedb)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Observe que el elemento  **Evento del programador**  se ha agregado  **a la lista**  desplegable Nueva acción. Este elemento permite crear objetos de  **evento**  cuando se muestran objetos de otro tipo en la vista de lista. Tenga en cuenta también que ya se ha asignado una imagen a este elemento.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dd53f8e3-4aa5-4eb3-b57e-6aa100d2aa4a)
+
+    
+
+Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Agregar un elemento al control de navegación
+
+
+En esta lección, aprenderá a agregar un elemento al control de navegación. Para ello, se utilizará la clase Business Class de Note de la biblioteca de Business  **Class**.
+
+>NOTA
+Antes de continuar, le recomendamos que revise las siguientes lecciones:
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+>-   [Agregar una clase de la biblioteca de clases empresariales y usar el módulo Programador](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1)
+
+-   Si la clase  **Note**  no se usa como antecesor en el código, deberá agregarla al proceso de generación de la interfaz de usuario. Para ello, utilice el Diseñador de  [módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el panel  **Tipos exportados**, enfoque los  **ensamblados a los que se hace referencia**  |  **DevExpress.Persistent.BaseImpl.Xpo.v22.1**  |  **Anote**  el elemento y presione la barra espaciadora. Consulte la lección  [Agregar una clase desde la Biblioteca de clases empresariales (XPO)](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1)  para obtener más información.
+-   La estructura de navegación de la aplicación XAF se define mediante el nodo  **NavigationItems**  en el  [modelo de aplicación](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). Para personalizar la navegación, invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  haciendo doble clic en el archivo  _Model.DesignedDiffs.xafml_  en el proyecto  _MySolution.Module._  En la vista de árbol, navegue hasta  **NavigationItems**  |  **Artículos**  |  **Predeterminado**  |  **Nodo Elementos**. Para agregar un elemento secundario al elemento de navegación requerido, haga clic con el botón secundario en el nodo  **Elementos**  y seleccione  **Agregar...**  |  **NavigationItem**  en el menú contextual invocado.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cd89f2b7-8f76-420d-89b0-314a73d14dda)
+
+    
+-   Para el nodo recién agregado, seleccione "Note_ListView" en la lista desplegable  **Ver**. La propiedad  **Caption**  se establecerá automáticamente en "Nota". Opcionalmente, puede establecer un valor de  **ID fácil de**  usar.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e570d5b1-6313-4cd2-8b44-a9b4a817db51)
+
+    
+    Como ha visto, hay muchas vistas listas para usar disponibles en la lista desplegable  **Ver**. Estas vistas se generan automáticamente en función de las clases de negocio cargadas en el modelo de aplicación. Una de estas clases es  **Nota**. Por lo tanto, solo necesita agregar una vista correspondiente a la colección de elementos de navegación.
+    
+    >NOTA
+    Puede establecer accesos directos para los elementos de navegación mediante la propiedad  **Acceso directo**. En este caso, no tendrá que usar un mouse para cambiar entre Vistas, incluso si el control de navegación está oculto a través de View | **Paneles** | **Navegación** | **Elemento de menú oculto**.
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Ahora tiene un elemento de navegación adicional que le permite agregar y editar notas de texto sin formato. Tenga en cuenta también que este elemento ya tiene una imagen asignada.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/518b0208-1edf-4760-8668-b8cc8d7d77aa)
+
+    
+
+>NOTA
+Al definir una clase de negocio en la aplicación, puede aplicar el  [`DefaultClassOptionsAttribute`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.DefaultClassOptionsAttribute?v=22.1) o el atributo  [`NavigationItemAttribute`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.NavigationItemAttribute?v=22.1) en lugar de utilizar el modelo de aplicación. Consulte la  lección  [Heredar de la clase de biblioteca de clase empresarial (XPO).](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+
+Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**
+
+
+# Implementar la validación del valor de la propiedad en el modelo de aplicación
+
+En esta lección, aprenderá a comprobar si un valor de propiedad satisface o no una regla determinada. Para ello, se utilizarán la propiedad  **DemoTask.Status**  y la acción  **MarkCompleted**. Esta acción no debe ejecutarse si el estado actual de la tarea es "NotStarted". Por lo tanto, la regla se comprobará al ejecutar la acción  **MarkCompleted**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Implementar la validación del valor de la propiedad en el código](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+La funcionalidad de validación la proporciona el  [módulo](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module?v=22.1)  de validación que se agregó en la lección  [Implementar validación de valor de propiedad en código (XPO).](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  Cuando este módulo se agrega al proyecto  _MySolution.Module_, el nodo  **Validación**  está disponible en Application  [Model](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). Este nodo define los  **contextos**  y  **reglas**  de validación utilizados en la aplicación. Puede utilizar el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para agregar reglas y especificar  **contextos**.
+
+-   Invoque el Editor de modelos para el proyecto  _MySolution.Module._  Vaya a la  **Validación**  |  **Nodo Reglas**. Ya contiene nodos secundarios que definen las reglas que se deben verificar. Por ejemplo, puede contener la regla "**RuleRequiredField for Position.Title**" que se implementó en la lección  [Implementar validación de valor de propiedad en código (XPO).](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  Para agregar una nueva regla que compruebe criterios específicos, haga clic con el botón secundario en el nodo  **Reglas**  y seleccione  **Agregar...**  |  **RuleCriteria**.
+    
+    ![Tutorial_UIC_Lesson14_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_1115502.png?v=22.1)
+    
+    >NOTA
+    Las descripciones de todos los tipos de reglas disponibles están disponibles en el tema  [Reglas de validación](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1).
+    
+-   Para el nodo recién creado, establezca  **TargetType**  en "MySolution.Module.BusinessObjects.DemoTask" y establezca la propiedad  **Criteria**  en . Establezca la propiedad  **ID**  en "TaskIsNotStarted",  **TargetContextIDs**  en "MarkCompleted" y  **CustomMessageTemplate**  en "No se puede establecer la tarea como completada porque no se ha iniciado".`Status != 'NotStarted'`
+    
+    ![Tutorial_UIC_Lesson14_2](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_2115508.png?v=22.1)
+    
+    >NOTA
+    El valor de la propiedad Criteria debe especificarse mediante la [sintaxis del lenguaje Criteria](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1). Para simplificar esta tarea, puede invocar el cuadro de diálogo  **Generador de filtros** haciendo clic en el botón de puntos suspensivos (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) situado a la derecha del valor  **Criterios**. Dentro de este cuadro de diálogo, puede diseñar visualmente una expresión de criterio.
+    
+-   La propiedad  **TargetContextIDs**  se establece en "MarkCompleted". Esto significa que la regla se comprobará al ejecutar la acción cuya propiedad  **ValidationContexts**  está establecida en "MarkCompleted". Por lo tanto, establezca la propiedad  **ValidationContexts de**  la acción  **Marcar**  completado (en  **ActionDesign**  |  **Acciones**  |  **Task.MarkCompleted**) a "MarkCompleted".
+    
+    ![Tutorial_UIC_Lesson14_2_1](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_2_1116422.png?v=22.1)
+    
+    >NOTA
+    También puede utilizar los contextos  **Guardar** o **Eliminar**, que están disponibles de forma predeterminada. Las reglas con estos contextos se validan cuando se guarda o elimina un objeto, respectivamente (consulte [Reglas de validación](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1)).
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Asigne el valor "Not Started" a la propiedad  **Status**  de uno de los objetos  **DemoTask**  existentes. Haga clic en el botón  **MarkCompleted**. Se mostrará el siguiente cuadro de diálogo  **Error de validación**.
+    
+    ![Tutorial_UIC_Lesson14_4](https://docs.devexpress.com/eXpressAppFramework/images/tutorial_uic_lesson14_4116421.png?v=22.1)
+    
+
+>NOTA
+Por lo general, puede agregar la regla necesaria a una clase o propiedad en el código (vea [Implementar la validación del valor de propiedad en el código](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)). El enfoque definido anteriormente es útil cuando las fuentes de clase son inaccesibles.
+
+Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Implementar la validación del valor de la propiedad en el modelo de aplicación
+
+En esta lección, aprenderá a comprobar si un valor de propiedad satisface o no una regla determinada. Para ello, se utilizarán la propiedad  **DemoTask.Status**  y la acción  **MarkCompleted**. Esta acción no debe ejecutarse si el estado actual de la tarea es "NotStarted". Por lo tanto, la regla se comprobará al ejecutar la acción  **MarkCompleted**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Implementar la validación del valor de la propiedad en el código](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+La funcionalidad de validación la proporciona el  [módulo](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module?v=22.1)  de validación que se agregó en la lección  [Implementar validación de valor de propiedad en código (XPO).](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  Cuando este módulo se agrega al proyecto  _MySolution.Module_, el nodo  **Validación**  está disponible en Application  [Model](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1). Este nodo define los  **contextos**  y  **reglas**  de validación utilizados en la aplicación. Puede utilizar el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para agregar reglas y especificar  **contextos**.
+
+-   Invoque el Editor de modelos para el proyecto  _MySolution.Module._  Vaya a la  **Validación**  |  **Nodo Reglas**. Ya contiene nodos secundarios que definen las reglas que se deben verificar. Por ejemplo, puede contener la regla "**RuleRequiredField for Position.Title**" que se implementó en la lección  [Implementar validación de valor de propiedad en código (XPO).](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  Para agregar una nueva regla que compruebe criterios específicos, haga clic con el botón secundario en el nodo  **Reglas**  y seleccione  **Agregar...**  |  **RuleCriteria**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5eff7e0a-cb80-4df8-8e7a-945ca9a37bc1)
+
+    
+    >NOTA
+    Las descripciones de todos los tipos de reglas disponibles están disponibles en el tema  [Reglas de validación](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1).
+    
+-   Para el nodo recién creado, establezca  **TargetType**  en "MySolution.Module.BusinessObjects.DemoTask" y establezca la propiedad  **Criteria**  en . Establezca la propiedad  **ID**  en "TaskIsNotStarted",  **TargetContextIDs**  en "MarkCompleted" y  **CustomMessageTemplate**  en "No se puede establecer la tarea como completada porque no se ha iniciado".`Status != 'NotStarted'`
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/203f4cf3-6bac-472c-8419-ec45aa5ca6cd)
+
+    
+    >NOTA
+    El valor de la propiedad Criteria debe especificarse mediante la [sintaxis del lenguaje Criteria](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1). Para simplificar esta tarea, puede invocar el cuadro de diálogo  **Generador de filtros** haciendo clic en el botón de puntos suspensivos (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) situado a la derecha del valor  **Criterios**. Dentro de este cuadro de diálogo, puede diseñar visualmente una expresión de criterio.
+    
+-   La propiedad  **TargetContextIDs**  se establece en "MarkCompleted". Esto significa que la regla se comprobará al ejecutar la acción cuya propiedad  **ValidationContexts**  está establecida en "MarkCompleted". Por lo tanto, establezca la propiedad  **ValidationContexts de**  la acción  **Marcar**  completado (en  **ActionDesign**  |  **Acciones**  |  **Task.MarkCompleted**) a "MarkCompleted".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b0ad2b03-f508-43dd-ab48-67311d7f2348)
+
+    
+    >NOTA
+    También puede utilizar los contextos  **Guardar** o **Eliminar**, que están disponibles de forma predeterminada. Las reglas con estos contextos se validan cuando se guarda o elimina un objeto, respectivamente (consulte [Reglas de validación](https://docs.devexpress.com/eXpressAppFramework/113008/validation/validation-rules?v=22.1)).
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Asigne el valor "Not Started" a la propiedad  **Status**  de uno de los objetos  **DemoTask**  existentes. Haga clic en el botón  **MarkCompleted**. Se mostrará el siguiente cuadro de diálogo  **Error de validación**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eacf4941-ab2d-4aa0-8cbd-d7df7088d822)
+
+    
+
+>NOTA
+Por lo general, puede agregar la regla necesaria a una clase o propiedad en el código (vea [Implementar la validación del valor de propiedad en el código](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)). El enfoque definido anteriormente es útil cuando las fuentes de clase son inaccesibles.
+
+Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
