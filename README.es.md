@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6f64f1b7-14fe-4c3b-be4e-e611e7ae9d1c)![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7360caac-3930-4e37-b7ec-ef7815bf5c6d)[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/blob/master/README.md)
 
 # Tutorial detallado de XAF WinForms & Web Forms (demostración principal)
 
@@ -2314,3 +2314,1396 @@ La funcionalidad de validación la proporciona el  [módulo](https://docs.devexp
 Por lo general, puede agregar la regla necesaria a una clase o propiedad en el código (vea [Implementar la validación del valor de propiedad en el código](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)). El enfoque definido anteriormente es útil cuando las fuentes de clase son inaccesibles.
 
 Puede ver los cambios realizados en esta lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Personalizar el diseño Ver elementos
+
+En esta lección, aprenderá a personalizar el diseño predeterminado del editor en una vista de detalles. Para ello, se utilizará la Vista de detalles de contacto.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **Nodo MySolution.Module.BusinessObjects.**  Expanda el nodo secundario  **Contact_DetailView**. Contiene los nodos secundarios  **Items**  y  **Layout**. Para ver y modificar el diseño actual de los editores de Vista de detalles de contacto, seleccione el nodo  **Diseño**. La lista de propiedades de la derecha se reemplazará por una superficie de diseño que imita la vista de detalles de contacto. Para modificar la disposición del editor, haga clic con el botón derecho en el espacio vacío de la vista y elija  **Personalizar diseño**.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ccc1343d-3929-4aaa-a785-0f3ded1d63f2)
+
+Se invocará el  **formulario de personalización**. En el formulario invocado, puede arrastrar editores a las posiciones requeridas.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dfaf2338-7719-4b25-9a42-fe95b5a07aa7)
+
+Siga las indicaciones gráficas que indican la nueva ubicación del elemento. Además, puede quitar y restaurar  **elementos de vista**. Arrastre el elemento necesario desde la Vista de detalles hasta el formulario de personalización para quitar el elemento y arrastre el elemento desde el  **Formulario**  de  **personalización**  a la  **Vista de detalles**  para agregarlo.
+
+Para ver el árbol de diseño de Ver elementos, haga clic en la ficha  **Vista de árbol de diseño**  del  **formulario de personalización**. Puede hacer clic derecho en un elemento de árbol e invocar un menú contextual, lo que le permite ocultar el  **formulario de personalización**, restablecer el diseño, crear un grupo con pestañas, etc. (Vea la imagen a continuación).
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a7341aa4-21a4-443d-b63e-24ff00d4c9ad)
+
+
+Para obtener más información sobre el formulario  **Personalización**, la pestaña  **Vista de árbol de diseño**  y su menú contextual, consulte el tema Personalización predeterminada del  [tiempo de ejecución](https://docs.devexpress.com/WindowsForms/2307/controls-and-libraries/form-layout-managers/layout-and-data-layout-controls/design-time-and-runtime-customization/default-runtime-customization?v=22.1).
+
+Cierre el  **formulario de personalización**. Ejecute la aplicación WinForms o ASP.NET formularios Web Forms e invoque una vista de detalles  **de contacto**. Tenga en cuenta que los editores están organizados según sea necesario.
+
+Si desea restablecer los cambios, haga clic con el botón derecho  **en Contact_DetailView**  |  **Diseño**  y elija  **Restablecer diferencias**.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c7737e45-c403-4c11-a6f2-0f3e896e5d15)
+
+>NOTA
+Como alternativa, puede personalizar el diseño de la vista de detalles de  **contacto**  en  tiempo de ejecución y, a continuación, combinar estas personalizaciones en **Misolución.Proyecto de módulo**. Consulte el tema  [Cómo: Combinar personalizaciones de usuario final en la solución XAF](https://docs.devexpress.com/eXpressAppFramework/113335/ui-construction/application-model-ui-settings-storage/application-model-storages/merge-end-user-customizations-model?v=22.1) para obtener más información.
+
+
+
+# Agregar un editor a una vista de detalles
+
+
+En esta lección se explica cómo agregar un editor a una  [vista de detalles](https://docs.devexpress.com/eXpressAppFramework/112611/ui-construction/views?v=22.1). En este ejemplo, agregamos un editor para la propiedad  **Department.Office**  a la vista de detalles de  **contacto**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar la siguiente lección:
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+## Instrucciones paso a paso
+
+1.  Abra el archivo  _Model.DesignedDiffs.xafml_  en el Editor de  [modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1).
+    
+2.  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **Nodo de contacto**. Expanda el nodo secundario  **Contact_DetailView**  y haga clic en el nodo  **Diseño**.
+    
+3.  El Editor de modelos muestra una superficie de diseño que imita la vista Detalles de  **contacto**. Haga clic con el botón derecho en el espacio vacío de la vista y elija  **Personalizar diseño**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e336dbea-0e35-4887-8fbd-4372d3c068f4)
+
+    
+4.  En la ventana  **Personalización**  invocada, haga clic en el botón  **Agregar**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5a065c8c-0c50-4dc4-b8b5-af408944ddc0)
+
+    
+5.  En el cuadro de diálogo  **Modelo de objetos**, expanda el nodo  **Departamento**, active la casilla  **Office**  y haga clic en  **Aceptar**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b757dde7-d496-43fc-b9bc-118819f5d673)
+
+    
+6.  El elemento Office: aparece en la pestaña  **Elementos ocultos**  de la ventana  **Personalización****:**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/09262827-8d24-4f72-8b2c-13883263f88a)
+
+    
+7.  Arrastre el elemento  **Office:**  a la posición requerida de la Vista de detalles de  **contacto**.
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b989c4b6-47b1-4852-b1ea-b03ee63ccdf9)
+
+
+8.  Ejecute la aplicación WinForms o ASP.NET formularios Web Forms e invoque una vista de  **detalles de contacto**. El editor de  **Office**  se encuentra en la misma columna que el editor de  **departamento**, el editor de  **posición**  y otros editores.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a3092abb-01c0-4455-b41e-4946fabdd140)
+
+    
+
+Puede ver los cambios realizados en esta lección en el  **Editor de modelos**  invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+## Explicación detallada
+
+### Personalización del diseño
+
+En el modo de personalización que activamos en el  _paso 3_  de esta lección, puede cambiar el diseño de la vista detallada. Consulte el tema siguiente para obtener más información:  [Personalizar el diseño Ver elementos](https://docs.devexpress.com/eXpressAppFramework/112833/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/customize-the-view-items-layout?v=22.1).
+
+Los usuarios también pueden personalizar el diseño de la vista detallada. En el tema siguiente se describe cómo cambiar el diseño en tiempo de ejecución:  [Personalización predeterminada del motor en tiempo de ejecución](https://docs.devexpress.com/WindowsForms/2307/controls-and-libraries/form-layout-managers/layout-and-data-layout-controls/design-time-and-runtime-customization/default-runtime-customization?v=22.1).
+
+Además, puede personalizar el diseño de la vista de detalles de  **contacto**  en tiempo de ejecución y combinar estos cambios en el proyecto  **MySolution.Module.**  Consulte el tema siguiente para obtener más información:  [Cómo: Combinar personalizaciones de usuario final en la solución XAF](https://docs.devexpress.com/eXpressAppFramework/113335/ui-construction/application-model-ui-settings-storage/application-model-storages/merge-end-user-customizations-model?v=22.1).
+
+
+# Cambiar el diseño y la visibilidad del campo en una vista de lista
+
+
+Esta lección le guiará a través de los pasos necesarios para seleccionar las columnas que se muestran en la  **vista de lista**. Para ello, se utilizará la vista Lista de  **contactos**. En tiempo de ejecución, puede hacer clic con el botón secundario en un encabezado de columna y activar el  **selector**  de columnas y, a continuación, arrastrar columnas invisibles desde la ventana  **Selector de columnas**  hasta el control de cuadrícula. Para establecer el diseño de tabla predeterminado, debe personalizarlo en tiempo de diseño.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1).
+
+En una aplicación WinForms, las personalizaciones realizadas mediante el  **selector de columnas en tiempo de ejecución**  se conservan en un archivo  _Model.user.xafml_, ubicado en la carpeta de la aplicación de forma predeterminada. En una aplicación de formularios Web Forms ASP.NET, es posible que deba establecer la propiedad SaveListViewStateInCookies del nodo  **Opciones**  y la propiedad  **SaveStateInCookies**  de las  **vistas**  correspondientes |  **_<ListView>_**  nodo a "true". Esto le permite guardar el estado de la vista de lista entre sesiones en las cookies del navegador de un usuario, lo que permite a cada usuario final personalizar la  **vista de lista**  individualmente. El conjunto de columnas visibles de forma predeterminada se genera en función de las reglas descritas en el artículo  [Generación de columnas de vista de lista](https://docs.devexpress.com/eXpressAppFramework/113285/ui-construction/views/layout/list-view-column-generation?v=22.1). Es posible que sea necesario personalizar el conjunto de columnas predeterminado. Para hacer que las columnas obligatorias sean visibles o invisibles dentro de la  **vista de lista**  de forma predeterminada, utilice el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1).
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module_  y navegue hasta  **Vistas**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  |  **Nodo Columnas**  para invocar el Diseñador del Editor de  **listas de cuadrículas**. Mostrará la estructura predeterminada de la vista de  **lista**. Puede personalizar la apariencia predeterminada de la vista de lista arrastrando, cambiando el tamaño y agrupando las columnas. Invoque la ventana  **Personalización**  haciendo clic con el botón secundario en el encabezado de la tabla y seleccionando  **Selector de columnas**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4024290d-905a-4db1-b343-c79fd7d6ba01)
+
+    
+-   Por ejemplo, personalice la vista de lista para mostrar las siguientes columnas.
+    
+    1.  **Nombre completo**
+    2.  **Posición**
+    3.  **Departamento**
+    4.  **Correo electrónico**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/aeea5f57-3bb1-4a13-85da-fdbb6b4a3a38)
+
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Vea si la vista de lista de  **contactos**  se parece a la siguiente imagen.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8253a5c3-a55f-4ab3-ae89-fca9cec17320)
+
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/bbc21a7a-5003-4fd8-a7e0-3d6c5398cecc)
+
+    
+    >PROPINA
+    Cuando la ventana del navegador se reduce, algunas columnas se ocultan y se puede acceder a ellas mediante el botón "..." .
+    
+    Si anteriormente personalizó la visibilidad de las columnas Vista de lista de  **contactos**  en tiempo de ejecución, no se aplicará el nuevo conjunto de columnas visibles. Para quitar la personalización anterior en una aplicación WinForms, haga clic en el botón  **Restablecer configuración de vista**. Como alternativa, puede invocar el  **Editor de modelos en tiempo de ejecución**  (mediante  **Herramientas**  |  **Elemento de menú Editar modelo**), haga clic con el botón derecho en  **Vistas**  |  **Contact_ListView**  nodo y seleccione  **Restablecer diferencias**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9be96930-afc7-45a3-86e2-78858e5f6767)
+
+    
+
+Puede ver los cambios realizados en la lección en el Editor de modelos invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+>NOTA
+Como alternativa, puede personalizar el orden y la visibilidad de las columnas cambiando el valor de la propiedad  **Index** de columnas específicas (nodos secundarios  **del nodo Columns**). Consulte el artículo  [Personalización de columnas de vista de lista](https://docs.devexpress.com/eXpressAppFramework/113679/ui-construction/views/layout/list-view-columns-customization?v=22.1) para obtener más información.
+
+>PROPINA
+Puede organizar las columnas en grupos lógicos (bandas). Para obtener más información, consulte el tema  [Diseño de bandas de vista de lista](https://docs.devexpress.com/eXpressAppFramework/113695/ui-construction/views/layout/list-view-bands-layout?v=22.1).
+
+
+
+# Mostrar una vista detallada con una vista de lista
+
+En esta lección, aprenderá a mostrar una vista  **detallada**  junto con una  **vista de lista**. Para ello, se utilizará la vista de lista de  **departamentos**. El objeto seleccionado en él se mostrará en la  **Vista de detalles**  correspondiente.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1).
+
+Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **Department_ListView**  nodo. Define la  **vista de lista**  que se utiliza para los objetos  **de departamento**  mediante las propiedades de la derecha. En la lista desplegable de la propiedad  [MasterDetailMode](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelListView.MasterDetailMode?v=22.1), seleccione  **ListViewAndDetailView**.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ab6b0d73-6b6c-49be-808b-38e6dd4e0183)
+
+
+Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. La vista Lista  **de departamentos**  aparecerá de la siguiente manera.
+
+**Aplicación WinForms**
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a48cea78-1f34-432e-85d0-27ee3242b004)
+
+
+**ASP.NET Aplicación de formularios Web Forms**
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5b6d3355-7e2d-4d63-8f1c-aedcd4476d84)
+
+En la aplicación WinForms, utilice los botones  **Guardar**  () o  **GuardarAndCerrar**  (![btn_SaveClose](https://docs.devexpress.com/eXpressAppFramework/images/btn_saveclose117425.png?v=22.1)![btn_Save](https://docs.devexpress.com/eXpressAppFramework/images/btn_save117423.png?v=22.1)) de la barra de herramientas para confirmar los cambios realizados en la  **Vista de detalles**. Para cancelar los cambios, utilice el botón  **Cancelar**  (![btn_Cancel](https://docs.devexpress.com/eXpressAppFramework/images/btn_cancel117426.png?v=22.1)).
+
+>NOTA
+>-   Puede especificar la DetailView  que debe mostrarse junto con la ListView  (consulte [ListView.DetailViewId](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ListView.DetailViewId?v=22.1)).
+>-   Para especificar la ubicación de la **DetailView**, utilice el [IModelSplitLayout.Direction](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelSplitLayout.Direction?v=22.1) y [IModelListViewSplitLayout.ViewsOrder](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelListViewSplitLayout.ViewsOrder?v=22.1)  de  orden de la **ListView** | **SplitLayout**.
+>-   La acción Restablecer configuración de  **vista** restablece la configuración de las vistas de lista y detalle en el modo de visualización Vista de  **ListViewAndDetailView**.
+
+En la aplicación ASP.NET formularios Web Forms, la opción  [IModelListViewWeb.DetailRowMode](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.SystemModule.IModelListViewWeb.DetailRowMode?v=22.1)  es similar a  **MasterDetailMode**, pero permite mostrar una vista detallada en la  [fila de detalles](https://docs.devexpress.com/AspNet/3769/components/grid-view/visual-elements/detail-row?v=22.1)  de una vista de lista.
+
+Puede ver los cambios realizados en esta lección en el  **Editor de modelos**  invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module**  y el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.Web.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Hacer editable una vista de lista
+
+
+En esta lección, aprenderá a hacer que una  **vista de lista**  sea editable. Para ello, se utilizará la vista  **Lista DemoTask**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Establecer una relación de muchos a muchos](https://docs.devexpress.com/eXpressAppFramework/112719/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/set-a-many-to-many-relationship-xpo?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **DemoTask_ListView**  nodo. Define la  **vista de lista**  que se utiliza para los objetos  **DemoTask**  con las propiedades a la derecha. En la lista desplegable de la propiedad  **AllowEdit**, seleccione "True". Cuando esta propiedad se establece en "True", la  **vista de lista**  es editable.
+    
+    Cuando las  **vistas de lista**  se muestran en modo de edición, puede aplicar la funcionalidad  **NewItemRow**  de  **XtraGrid**  que muestra  **ListViews**  en aplicaciones XAF. Esta funcionalidad permite a los usuarios finales crear nuevos objetos directamente en una vista de  **lista**  sin una  **vista de detalle**. Para agregar esta funcionalidad, establezca la propiedad  **NewItemRowPosition**  en  **Top**  o  **Bottom**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c2de0462-23f6-48e0-83f0-c1c1304e116e)
+
+    
+    >PROPINA   
+    En las aplicaciones de formularios Web Forms ASP.NET, hay varios modos de edición.  Para establecer el modo necesario, utilice [IModelListViewWeb.InlineEditMode](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.SystemModule.IModelListViewWeb.InlineEditMode?v=22.1) el **Editor de modelos** invocado para _MySolution.Module.Web_. Varios modos de edición se ilustran en el tema  [Modos de edición de vista de lista](https://docs.devexpress.com/eXpressAppFramework/113249/ui-construction/views/list-view-edit-modes?v=22.1) (sección  **Funcionalidad específica de formularios Web Forms de ASP.NET**).
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms y edite uno de los objetos  **DemoTask**  en la  **vista de lista**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9c5ba115-3f11-4fc7-bd17-73476f27c8c7)
+
+    
+    Para editar uno de los objetos  **DemoTask**  en una aplicación ASP.NET de formularios Web Forms, haga clic en  **Editar**() o haga clic en  **Nuevo**(![InlineEdit_NewButton](https://docs.devexpress.com/eXpressAppFramework/images/inlineedit_newbutton116547.png?v=22.1)![InlineEdit_EditButton](https://docs.devexpress.com/eXpressAppFramework/images/inlineedit_editbutton116546.png?v=22.1)) para crear una nueva  **tarea**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/60341f17-440c-4546-a54b-9ce2e0f2d582)
+
+    
+    En una aplicación WinForms, para guardar los cambios realizados en un objeto, haga clic en el botón  **Guardar**  () o  **GuardarAndCerrar**  (![btn_SaveClose](https://docs.devexpress.com/eXpressAppFramework/images/btn_saveclose117425.png?v=22.1)![btn_Save](https://docs.devexpress.com/eXpressAppFramework/images/btn_save117423.png?v=22.1)) de la barra de herramientas. Para cancelar los cambios, haga clic en el botón  **Cancelar**  (![btn_Cancel](https://docs.devexpress.com/eXpressAppFramework/images/btn_cancel117426.png?v=22.1)).
+    
+    En la aplicación ASP.NET formularios Web Forms, para guardar los cambios, haga clic en  **Actualizar**  (![btn_Save](https://docs.devexpress.com/eXpressAppFramework/images/btn_save117423.png?v=22.1)). Para cancelar los cambios, haga clic en  **Cancelar**  (![btn_Cancel](https://docs.devexpress.com/eXpressAppFramework/images/btn_cancel117426.png?v=22.1)).
+    
+
+>NOTA
+>-   Las vistas de lista en  [los modos de acceso a](https://docs.devexpress.com/eXpressAppFramework/113683/ui-construction/views/list-view-data-access-modes?v=22.1)  datos Vista de  datos, Vista de servidor y Vista decomentariosinstantáneos no admiten esta funcionalidad.
+>-   Puede establecer el modo de edición en el código. Para ello, aplique el atributo  [DefaultListViewOptionsAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DefaultListViewOptionsAttribute?v=22.1)  a la clase **DemoTask**.
+
+Para ver los cambios realizados en esta lección, invoque el  **Editor de modelos**  para los proyectos MainDemo.Module, MainDemo.Module.Win y  **MainDemo.Module.Web**  de la  **demostración principal****.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+
+# Agregar una vista previa a una vista de lista
+En esta lección, aprenderá a mostrar una sección de vista previa en la cuadrícula de una  **vista de lista**. Para ello, se utilizará la vista  **Lista DemoTask**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Establecer una relación de muchos a muchos](https://docs.devexpress.com/eXpressAppFramework/112719/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/set-a-many-to-many-relationship-xpo?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+[ASPxGridListEditor](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor?v=22.1)  presenta la vista de lista  **DemoTask**  en la aplicación ASP.NET formularios Web Forms y  [GridListEditor](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Win.Editors.GridListEditor?v=22.1)  en la aplicación WinForms. Estos  **editores de listas**admiten la característica  **de vista previa automática**  proporcionada por los controles  **ASPxGridView**  y  **XtraGrid**. Para habilitar esta característica, debe abrir el  **Editor de modelos**  y asignar el valor Vista de  **lista**  a la propiedad  **PreviewColumnName**. Cuando esta propiedad no está establecida, la característica se deshabilita. Está deshabilitado de forma predeterminada.
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto MySolution.Module. Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **DemoTask_ListView**  nodo. Define la vista de lista que se utiliza para los objetos DemoTask a través de las propiedades de la derecha. Establezca la propiedad  **PreviewColumnName**  en "Description". Como resultado, el texto de la sección de vista previa se recuperará de la propiedad  **DemoTask.Description.**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4bc3354e-79db-4392-8c11-ad6f4d0aaa61)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Desplácese hasta la vista  **Lista de tareas demo**. Compruebe que la sección de vista previa está habilitada y muestra la propiedad  **DemoTask.Description.**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2cfb6a31-245a-4e4d-a5f7-2ff237eda3c3)
+
+    
+
+Para ver los cambios realizados en esta lección, invoque el  **Editor de modelos**  para los proyectos MainDemo.Module, MainDemo.Module.Win y  **MainDemo.Module.Web**  de la  **demostración principal****.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Filtrar vistas de lista
+
+En esta lección, aprenderá a filtrar una vista de  **lista**. Se ilustrarán tres técnicas, basadas en diferentes escenarios. Para esta lección, se aplicará un filtro a la vista Lista de  **contactos**.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+>-   [Implementar clases empresariales personalizadas y propiedades de referencia](https://docs.devexpress.com/eXpressAppFramework/112732/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-custom-business-classes-and-reference-properties-xpo?v=22.1)
+>-   [Establecer una relación de uno a muchos](https://docs.devexpress.com/eXpressAppFramework/112733/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/set-a-one-to-many-relationship-xpo?v=22.1)
+>-   [Origen de datos del editor de búsqueda de filtros](https://docs.devexpress.com/eXpressAppFramework/112755/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/filter-lookup-editor-data-source?v=22.1)
+>-   [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1)
+
+## Activar una acción de filtrado
+
+Utilice este enfoque para permitir que un usuario final aplique filtros predefinidos a una vista de  **lista**  determinada. Con este enfoque, la acción  **SetFilter**  (cuyos elementos representan filtros predefinidos) es visible en la interfaz de usuario. Esta acción se activa solo para  **vistas de lista**. Los filtros predefinidos se pueden agregar en el  [modelo de aplicación](https://docs.devexpress.com/eXpressAppFramework/112580/ui-construction/application-model-ui-settings-storage/how-application-model-works?v=22.1)  y se representan mediante nodos secundarios de las  **vistas**  |  **_<ListView>_**  | Nodo  **Filtros**  (consulte  [Nodo Modelo de aplicación de filtros](https://docs.devexpress.com/eXpressAppFramework/112992/filtering/in-list-view/filters-application-model-node?v=22.1)).
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  nodo. Haga clic con el botón derecho en el nodo secundario  **Filtros**  y seleccione  **Nuevo**  |  **ListViewFilterItem**. Para el nuevo nodo, establezca la propiedad  **Id**  en "Contactos del departamento de desarrollo". Para especificar un criterio, establezca la propiedad  **Criteria**  en el valor.`[Department.Title] = 'Development Department'`
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ffaaea65-40c1-4136-9c87-8d01718a7fda)
+
+    
+    >NOTA
+    El valor de la propiedad Criteria debe especificarse mediante la [sintaxis del lenguaje Criteria](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1). Para simplificar esta tarea, puede invocar el cuadro de diálogo  **Generador de filtros** haciendo clic en el botón de puntos suspensivos (![EllipsisButton](https://docs.devexpress.com/eXpressAppFramework/images/ellipsisbutton116182.png?v=22.1)) situado a la derecha del valor  **Criterios**. En este cuadro de diálogo, puede diseñar una expresión de criterio mediante el **Generador de filtros**  visual.
+    
+-   Agregue un nodo  **Filter**  más al nodo  **Filters**  como se definió anteriormente. Establezca la propiedad  **Id**  en "Developers" y la propiedad  **Criteria**  en .`Position.Title = 'Developer'`
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a8fa42c9-8e4f-4485-b7f8-6eecb6665de9)
+
+-   Para poder ver todos los objetos  **Contact**  en la  **vista de lista**, agregue un nodo  **Filter**  más al nodo  **Filters**, como se ha definido anteriormente. Establezca la propiedad  **Id**  en "Todos los contactos" y deje vacía la propiedad  **Criteria**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/8376354c-1f33-48da-ab2d-bf8b8495274a)
+
+    
+-   Para el nodo  **Filters**, establezca la propiedad  **CurrentFilter**  en "Developers". Guarde los cambios.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/26e150ba-5bcf-4a5a-a2f4-5b68feba78a2)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms y seleccione el elemento  **Contactos**  en el control de navegación. Observe que la acción  **SetFilter**  ya está disponible.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e069e6cb-d939-4d94-a903-66405a62632d)
+
+    
+
+## Usar la aplicación del Editor de modelos | Vistas | Nodo Vista de lista
+
+Utilice este enfoque para filtrar una  **vista de lista**  a través del  **Editor de modelos**. Los filtros aplicados con el  **Editor de modelos**  no pueden ser modificados por los usuarios finales.
+
+-   **Ejecute el Editor de modelos**  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  nodo. Establezca su propiedad  **Criteria**  en .`Position.Title = 'Developer'`
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d2922076-0340-4475-8521-4ca0b622ffd4)
+
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Seleccione el elemento  **Contactos**  en el control de navegación y compruebe si los objetos de  **contacto**  de la  **vista de lista**  están filtrados.
+
+## Filtrar por nivel de origen de datos
+
+Utilice este enfoque si necesita aplicar filtros que no se cambiarán en tiempo de ejecución o mediante el  **Editor de modelos**.
+
+-   Cree un controlador de  **View y**  genere el controlador de eventos  **Activated**, tal como se define en el tutorial  [Agregar una acción simple](https://docs.devexpress.com/eXpressAppFramework/112737/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-a-simple-action?v=22.1), así como las demás lecciones de la sección  [Ampliar funcionalidad](https://docs.devexpress.com/eXpressAppFramework/112740/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality?v=22.1).
+-   Reemplace el código generado para el controlador de eventos  **Activated**  con el código siguiente.
+    
+
+    ```csharp
+    using DevExpress.Data.Filtering;
+    using MySolution.Module.BusinessObjects;
+    // ...
+    public partial class FilterListViewController : ViewController {
+       // ...
+       private void FilterListViewController_Activated(object sender, EventArgs e) {
+          if ((View is ListView) & (View.ObjectTypeInfo.Type == typeof(Contact))) {
+             ((ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+                "Position.Title", "Developer", BinaryOperatorType.Equal);
+          }
+       }
+    }
+    
+    ```
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms y seleccione el elemento  **Contactos**  en el control de navegación. Compruebe si los objetos de  **contacto de**  la  **vista de lista**  están filtrados.
+
+
+# Aplicar agrupación a datos de vista de lista
+
+
+Esta lección le enseñará cómo aplicar la agrupación a los datos de  **la vista de lista**. Para ello, agrupará los datos de Vista de lista  **de contactos**  por la propiedad  **Departamento**.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Colocar una acción en una ubicación diferente](https://docs.devexpress.com/eXpressAppFramework/112741/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/place-an-action-in-a-different-location?v=22.1).
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  _MySolution.Module._  Navegar a las  **vistas**  |  **MySolution.Module.BusinessObjects**  |  **Contact_ListView**  |  **Nodo Columnas**  para invocar el Diseñador del Editor de  **listas de cuadrículas**. Mostrará la estructura predeterminada de la vista de lista. Puede personalizar la apariencia predeterminada de la vista de lista. Para invocar la ventana Personalización, haga clic con el botón secundario en el encabezado de la tabla y seleccione  **Mostrar grupo por cuadro**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fa227d7e-707b-4a21-815e-eba6fd3e9800)
+
+    
+-   Esto establecerá la propiedad  **IsGroupPanelVisible**  de  **Contact_ListView**  en true y mostrará un área de grupo especial para las vistas de lista de  **contactos**  en las aplicaciones WinForms y ASP.NET formularios Web Forms. Para especificar la columna por la que se agrupará la vista de lista de  **contactos**  de forma predeterminada, arrastre el encabezado de la columna al área de grupo. Se puede aplicar una agrupación anidada arrastrando varias columnas al área de grupo. Agrupe la vista Lista de  **contactos**  en la columna  **Departamento**  y, a continuación, en la columna  **Posición**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/182010d7-f31b-4ff1-9634-8fb6b43e22eb)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms y seleccione el elemento  **Contactos**  en el control de navegación. El área de grupo se muestra en la vista Lista de  **contactos**. El orden de las columnas dentro de esta área representa el orden de anidamiento de los grupos de datos. La vista Lista de  **contactos**  está agrupada por las columnas  **Departamento**  y  **Puesto**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/973424b5-0bed-4e49-a7a9-760ae15b4061)
+
+    
+-   Puede especificar esta área de grupo en tiempo de ejecución de forma similar al método descrito anteriormente. Si desea restablecer los cambios, haga clic en  **el botón Restablecer configuración de vista**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/626425d2-d054-44ac-81a8-e803eedc62aa)
+
+    
+
+>NOTA
+Existe otro enfoque para la agrupación basado en cambiar el valor de la propiedad  **Group Index de** columnas específicas (nodos secundarios  **del nodo Columns**). Consulte el artículo  [Personalización de columnas de vista de lista](https://docs.devexpress.com/eXpressAppFramework/113679/ui-construction/views/layout/list-view-columns-customization?v=22.1) para obtener más información.
+
+Puede ver los cambios realizados en esta lección en el  **Editor de modelos**  invocado para el archivo  _Model.DesignedDiffs.xafml_  ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Elija el tipo de interfaz de usuario de formularios de Windows
+
+En esta lección, aprenderá a cambiar el tipo de interfaz de usuario de la aplicación WinForms. De forma predeterminada, el  [Asistente para soluciones](https://docs.devexpress.com/eXpressAppFramework/113624/installation-upgrade-version-history/visual-studio-integration/solution-wizard?v=22.1)  habilita la interfaz de  [varios documentos](https://docs.devexpress.com/WindowsForms/11355/controls-and-libraries/application-ui-manager/views/tabbed-view?v=22.1)  (**MDI**). Puede cambiar esta configuración a través del  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  o en el código. Por ejemplo, puede seleccionar  **Interfaz de documento único (SDI)**  para su aplicación.
+
+Siga los pasos siguientes para cambiar el tipo de interfaz de usuario de la aplicación WinForms mediante el Editor de modelos:
+
+-   Invoque el  **Editor de modelos**  haciendo doble clic en el archivo  _Model.xafml_  del proyecto  **MySolution.Win.**  Desplácese hasta el nodo  **Opciones**. Este nodo le permite editar diferentes configuraciones de interfaz de usuario de la aplicación. En la lista desplegable de la propiedad  **UIType**, seleccione la opción deseada, por ejemplo,  **SingleWindowSDI.**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f924cc3f-a3ae-4c66-b1eb-a7620d4ca85c)
+
+    
+-   Ejecute la aplicación WinForms. Asegúrese de que la  **SDI**  esté habilitada, como se ilustra en la imagen siguiente.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c9476756-6a0c-446e-a607-a077ac6f09f0)
+
+    
+    En el modo  **SDI**, cada  **vista**  invocada aparece dentro de una única ventana que sustituye a la anterior.
+    
+   > NOTA
+    Si ha seleccionado **MDI**, puede personalizar su comportamiento en el **Editor de modelos** mediante la propiedad  **MdiDefaultNewWindowTarget** nodo **Opciones**.
+    
+
+Para obtener información sobre cómo cambiar el tipo de interfaz de usuario en el código, consulte el tema  [WinApplication.ShowViewStrategy](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Win.WinApplication.ShowViewStrategy?v=22.1)  Si cambia el tipo de  **interfaz**  de  **usuario**  en el código, se omitirán los cambios realizados en el valor de la propiedad  **UIType**  en el nodo  **Opciones**  del  **editor de modelos**.
+
+En la  **demostración principal**, se crea un proyecto de WinForms independiente para demostrar el  **MDI**. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Alternar la interfaz de la cinta de opciones de formularios de Windows
+
+
+En esta lección, aprenderá a habilitar o deshabilitar la  [interfaz de usuario de la cinta de opciones](https://docs.devexpress.com/WindowsForms/2500/controls-and-libraries/ribbon-bars-and-menu/ribbon?v=22.1)  en la aplicación.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Crear una solución con el asistente](https://docs.devexpress.com/eXpressAppFramework/112717/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/create-a-solution-using-the-wizard?v=22.1).
+
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  haciendo doble clic en el archivo  _Model.xafml_  del proyecto  **MySolution.Win.**  Desplácese hasta el nodo  **Opciones**. Este nodo le permite editar diferentes configuraciones de interfaz de usuario de la aplicación. En la lista desplegable de la propiedad  **FormStyle**, seleccione Cinta de  **opciones**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/284e561b-024a-4c15-80d7-22d6b42c6f9c)
+
+    >NOTA
+    Hay opciones adicionales disponibles en **Options** | **RibbonOptions**.
+    
+-   Ejecute la aplicación WinForms para ver el resultado.
+    
+    **Interfaz de usuario de cinta de opciones**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6f33e454-3033-4068-8893-849d09d66393)
+
+    
+    **Interfaz de usuario estándar**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/249d7168-9013-429d-958f-067a6a078de8)
+
+    
+    NOTA
+    
+    La **interfaz de usuario**  de la cinta de opciones  proporciona la barra de herramientas de acceso rápido. Puede colocar acciones utilizadas con frecuencia en esta barra de herramientas para mejorar la facilidad de uso de la aplicación. Para agregar una determinada acción a esta barra de herramientas, vaya a Diseño de **acción** | **Acciones** | **_<Action>_** y establezca la propiedad  **de acceso rápido** en "**True**".
+    
+
+En la  **demostración principal**, se crea un proyecto de WinForms independiente para demostrar la  **interfaz de usuario de la cinta de opciones**.
+
+
+# Cambiar el estilo de los elementos de navegación
+
+
+En esta lección, aprenderá a cambiar el estilo de los elementos de navegación en una aplicación  **WinForms XAF**. De forma predeterminada, se muestra un icono de 32x32 con una etiqueta debajo para cada elemento. Este estilo es inconveniente cuando tiene muchos elementos de navegación. Para ahorrar espacio en la pantalla y evitar el desplazamiento, se puede mostrar un icono de 16x16 con una etiqueta a la derecha para cada elemento.
+
+-   Para invocar el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1), haga doble clic en el archivo  _Model.DesignedDiffs.xafml_  ubicado en el proyecto  **MySolution.Module.**  Navegar a  **NavigationItems**  |  **Artículos**  |  **Nodo predeterminado**. Este nodo especifica la configuración del grupo de navegación  **predeterminado**  que incluye los elementos de navegación creados en las lecciones anteriores (**Contacto**,  **Tarea**,  **Departamento**, etc.). En la cuadrícula de la derecha, establezca la propiedad  **ChildItemsDisplayStyle**  en  **List**  (el valor predeterminado es  **LargeIcons**).
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/94240224-24c0-42c8-ab54-4aa11550489f)
+
+    
+    Para obtener información detallada, vea la propiedad  [IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.IModelChoiceActionItemChildItemsDisplayStyle.ChildItemsDisplayStyle?v=22.1)  y la descripción de la enumeración  [ItemsDisplayStyle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Templates.ActionContainers.ItemsDisplayStyle?v=22.1).
+    
+-   Ejecute la aplicación WinForms. Verá que ahora se utilizan iconos pequeños para los elementos de navegación en el grupo  **de navegación predeterminado**. La siguiente imagen ilustra los cambios.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/00414bc2-d034-48ab-99e0-cd1f553366ac)
+
+
+# Módulos adicionales
+
+
+**eXpressApp Framework**  proporciona algunas características en ensamblados separados llamados  [módulos](https://docs.devexpress.com/eXpressAppFramework/118046/application-shell-and-base-infrastructure/application-solution-components/modules?v=22.1#modules-shipped-with-xaf)  En esta sección del tutorial, aprenderá cómo agregar y usar estas características en sus aplicaciones. Se recomiendan las siguientes lecciones:
+
+-   [Adjuntar archivos a objetos](https://docs.devexpress.com/eXpressAppFramework/112763/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/attach-files-to-objects?v=22.1)
+-   [Proporcionar varias variantes de vista para los usuarios finales](https://docs.devexpress.com/eXpressAppFramework/112765/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/provide-several-view-variants-for-end-users?v=22.1)
+-   [Auditar cambios en los objetos](https://docs.devexpress.com/eXpressAppFramework/112766/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/audit-object-changes?v=22.1)
+-   [Resaltar objetos de vista de lista](https://docs.devexpress.com/eXpressAppFramework/112854/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/highlight-list-view-objects?v=22.1)
+-   [Analizar datos](https://docs.devexpress.com/eXpressAppFramework/113023/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/analyze-data?v=22.1)
+-   [Crear un informe en Visual Studio](https://docs.devexpress.com/eXpressAppFramework/112734/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/create-a-report-in-visual-studio?v=22.1)
+-   [Crear un informe en tiempo de ejecución](https://docs.devexpress.com/eXpressAppFramework/113644/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/create-a-report-at-runtime?v=22.1)
+-   [Agregar el módulo Programador](https://docs.devexpress.com/eXpressAppFramework/113040/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/add-the-scheduler-module?v=22.1)
+-   [Agregar reglas de validación a clases empresariales](https://docs.devexpress.com/eXpressAppFramework/113041/getting-started/in-depth-tutorial-winforms-webforms/extra-modules/add-validation-rules-to-business-classes?v=22.1)
+
+
+
+# Adjuntar archivos a objetos (.NET Framework)
+
+
+>PROPINA
+Para aplicaciones .**NET 6**, vea: [Adjuntar archivos a objetos (.NET 6)](https://docs.devexpress.com/eXpressAppFramework/403288/getting-started/in-depth-tutorial-blazor/additional-modules/attach-files-to-objects?v=22.1).
+
+En esta lección, aprenderá a adjuntar colecciones de archivos a objetos de negocio. Para ello, se agregará el módulo  **File Attachment**  a la aplicación y se implementarán las nuevas clases de negocio  **Resume**  y  **PortfolioFileData**. La clase  **Resume**  se utilizará para almacenar y administrar la información del currículum de un contacto: una recopilación de datos de archivo y una referencia a un  **contacto**.  La clase  **PortfolioFileData**  representará el elemento de recopilación de datos de archivo. También aprenderá cómo se muestran y administran las propiedades del tipo de datos de archivo en una interfaz de usuario.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Implementar clases empresariales personalizadas y propiedades de referencia](https://docs.devexpress.com/eXpressAppFramework/112732/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-custom-business-classes-and-reference-properties-xpo?v=22.1)
+>-   [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+>-   [Establecer una relación de uno a muchos](https://docs.devexpress.com/eXpressAppFramework/112733/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/set-a-one-to-many-relationship-xpo?v=22.1)
+
+-   Agregue el módulo  **Archivos adjuntos**  al proyecto de módulo WinForms. Para ello, busque el archivo WinModule.cs (WinModule.vb) en el proyecto  **MySolution.Module.Win**  que se muestra en el  **Explorador de soluciones**.  Haga doble clic en este archivo para invocar el  [Diseñador de módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, expanda el  **DX.22.1: ficha Módulos XAF**. Arrastre el elemento  **FileAttachmentsWindowsFormsModule**  a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c62cca18-fdf0-4f99-97a0-53c6bfd92c7f)
+
+-   Agregue el módulo  **Archivos adjuntos**  al proyecto del módulo ASP.NET formularios Web Forms. Para ello, busque el archivo WebModule.cs (WebModule.vb) en el proyecto  **MySolution.Module.Web**  que se muestra en el Explorador de soluciones.  Haga doble clic en este archivo para invocar el  [Diseñador de módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, expanda el  **DX.22.1: ficha Módulos XAF**. Arrastre el elemento  **FileAttachmentsAspNetModule**  a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/98abaefe-2731-45a2-bef0-fd29c62a7351)
+
+    
+-   Después de realizar cambios en el  **Diseñador de módulos**, vuelva a generar la solución.
+-   Agregue una nueva clase empresarial  **Reanudar**, como se describe en la lección  [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1).
+-   Reemplace la declaración de clase  **Resume**  generada automáticamente por el código siguiente.
+    
+
+    
+    ```csharp
+    using DevExpress.Persistent.Base;
+    using DevExpress.Persistent.BaseImpl;
+    using DevExpress.Xpo;
+    using MySolution.Module.BusinessObjects;
+    
+    [DefaultClassOptions]
+    [ImageName("BO_Resume")]
+    public class Resume : BaseObject {
+       public Resume(Session session) : base(session) {}
+       private Contact contact;
+       public Contact Contact {
+          get { 
+             return contact;
+          }
+          set {
+             SetPropertyValue(nameof(Contact), ref contact, value);
+          }
+       }
+      [Aggregated, Association("Resume-PortfolioFileData")]
+      public XPCollection<PortfolioFileData> Portfolio {
+         get { return GetCollection<PortfolioFileData>(nameof(Portfolio)); }
+      }
+    }
+    
+    ```
+    
+    Declare la clase  **PortfolioFileData**, que es el descendiente de  **FileAttachmentBase**, y la enumeración  **DocumentType**  de la siguiente manera.
+    
+
+    
+    ```csharp
+    using DevExpress.Persistent.BaseImpl;
+    using DevExpress.Xpo;
+    
+    public class PortfolioFileData : FileAttachmentBase {
+       public PortfolioFileData(Session session) : base(session) {}
+       protected Resume resume;
+       [Persistent, Association("Resume-PortfolioFileData")]
+       public Resume Resume {
+          get { return resume; }
+          set { 
+             SetPropertyValue(nameof(Resume), ref resume, value); 
+          }
+       }
+       public override void AfterConstruction() {
+          base.AfterConstruction();
+          documentType = DocumentType.Unknown;
+       }
+       private DocumentType documentType;
+       public DocumentType DocumentType {
+          get { return documentType; }
+          set { SetPropertyValue(nameof(DocumentType), ref documentType, value); }
+       }
+    }
+    public enum DocumentType { SourceCode = 1, Tests = 2, Documentation = 3,
+       Diagrams = 4, ScreenShots = 5, Unknown = 6 };
+    
+    ```
+    
+    En el código anterior, puede ver que las clases  **Resume**  y  **PortfolioFileData**  están relacionadas con una relación de uno a muchos. Otro punto importante es que en XPO, la propiedad  **PortfolioFileData.DocumentType**  se inicializa en el método  **AfterConstruction**, al que se llama después de crear el objeto correspondiente.
+    
+    Consulte el tema Propiedades de datos adjuntos de archivo en XPO para obtener más información sobre la creación de propiedades de  [datos adjuntos de archivo](https://docs.devexpress.com/eXpressAppFramework/113549/business-model-design-orm/data-types-supported-by-built-in-editors/file-attachment-properties/file-attachment-properties-in-xpo?v=22.1).
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms y cree un nuevo objeto  **Resume**.
+-   Para especificar la propiedad  **File**, adjunte un archivo en el cuadro de diálogo  **Abrir**, invocado mediante el botón  **Agregar desde archivo...**  (![btn_attach](https://docs.devexpress.com/eXpressAppFramework/images/btn_attach117501.png?v=22.1)).
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/630bb916-96db-42ed-8c6e-2ae058186158)
+
+    
+-   Para abrir o guardar un archivo adjunto a la colección  **Portfolio**, o agregar un archivo nuevo, utilice  **Abrir**...,  **Guardar como**... o  **Agregar desde archivo...**  Acciones suministradas con la colección.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/5d172e5c-87d1-4398-800d-7d48c0175016)
+
+    
+
+>PROPINA
+Para guardar el archivo almacenado en el objeto  **File**  Data actual  en la secuencia especificada, utilice [IFileData.SaveToStream](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.IFileData.SaveToStream(System.IO.Stream)?v=22.1).
+
+Puede ver el código que se muestra aquí en el archivo Resume_.cs (Resume__.vb_) de la  **demostración principal**  instalada con XAF. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+ 
+# Proporcionar varias variantes de vista para los usuarios finales (.NET Framework)
+
+>PROPINA
+Para aplicaciones .**NET 6**, vea: [Crear varias variantes de vista (.NET 6)](https://docs.devexpress.com/eXpressAppFramework/403380/getting-started/in-depth-tutorial-blazor/additional-modules/create-multiple-view-variants?v=22.1).
+
+En esta lección, aprenderá a proporcionar varias variantes personalizadas de la misma vista y permitir  que un usuario final elija una variante de  **vista**  deseada en tiempo de ejecución. Las variantes se pueden aplicar tanto a las vistas de lista como a  **las vistas de detalle**.  En esta lección, se usará la  **vista Lista de contactos**. Se construirán dos variantes de esta  **vista de lista**  a través del  **editor de módulos**. Para cambiar entre estas variantes  **de View**, se utilizará la acción especial  **ChangeVariant**. Para agregar esta acción, se hará referencia al módulo  **ViewVariants**  en la aplicación.
+
+>NOTA
+Antes de continuar, tómese un momento para repasar las siguientes lecciones:
+>-   [Heredar de la clase de biblioteca de clase empresarial](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)
+>-   [Cambiar el diseño y la visibilidad del campo en una vista de lista](https://docs.devexpress.com/eXpressAppFramework/112746/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/change-field-layout-and-visibility-in-a-list-view?v=22.1)
+
+-   Agregue el módulo  **Ver variantes**  al proyecto  **MySolution.Module.**  Busque el archivo Module.cs (Module_.vb_) en el proyecto  **MySolution.Module**  que se muestra en el  **Explorador de soluciones**  y haga doble clic en este archivo.  Se invocará el  [Diseñador](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  de módulos. En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: ficha Módulos XAF**. Arrastre el elemento  **ViewVariantsModule**  de esta ficha a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/bb062f62-3f77-4f49-a0e1-a76585d2cce2)
+
+    
+-   Vuelva a generar la solución para que los cambios realizados en el  **Diseñador de módulos**  se carguen en el  **modelo de aplicación**.
+-   Invoque el  [Editor de modelos](https://docs.devexpress.com/eXpressAppFramework/112582/ui-construction/application-model-ui-settings-storage/model-editor?v=22.1)  para el proyecto  **MySolution.Module.**  Haga clic con el botón derecho en el nodo  **Vistas**  y seleccione  **Agregar...**  |  **ListView**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/43db4ea3-b1ce-4bee-800a-b253671666af)
+
+    
+    Para el nuevo nodo, establezca la propiedad  **Id**  en "Contact_ListView_AllColumns" y la propiedad  **ModelClass**  en "Contact".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2b7b3f51-78b8-475e-b1a5-41cdb702116b)
+
+
+    
+-   Haga clic con el botón derecho en el nodo recién creado y seleccione  **Generar contenido**. Las columnas se generarán utilizando información sobre la clase especificada (**BOModel**  |  **Nodo de contacto**) y sus antepasados. Deje estas columnas como están. Esta vista de lista representará la variante completa de la  **vista de lista**  de  **contactos**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/a56931f3-f16e-4b80-9280-eb07f0512c3f)
+
+
+-   Haga clic con el botón derecho en el nodo  **Vistas**  y seleccione  **Agregar...**  |  **ListView**. Para el nuevo nodo, establezca la propiedad  **Id**  en "Contact_ListView_Varied" y la propiedad  **ModelClass**  en "Contact". No genere contenido para el nuevo nodo.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/92d891ba-588b-4e53-bce4-479079be203f)
+
+    
+-   Expanda el nodo  **Contact_ListView_Varied**  recién agregado, haga clic con el botón derecho en el nodo secundario  **Variantes**  y seleccione  **Agregar...**  |  **Variante**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/906935a9-3439-40cf-8a9b-4cb91a5bf86d)
+
+    
+-   Para el nuevo nodo, establezca la propiedad  **View**  en "Contact_ListView" y las propiedades  **Id**  y  **Caption**  en "Pocas columnas".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0937e330-aac0-4b08-acfe-d8cc6ab44c58)
+
+    
+-   Haga clic con el botón derecho en el nodo  **Variantes**  y seleccione  **Agregar...**  |  **Variante**. Para el nuevo nodo, establezca la propiedad  **View**  en "Contact_ListView_AllColumns" y las propiedades  **Id**  y  **Caption**  en "Todas las columnas".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/879577c4-1668-4f64-b62d-109599a752b8)
+
+    
+-   Navegar a  **NavigationItems**  |  **Artículos**  |  **Predeterminado**  |  **Artículos**  |  **Nodo de contacto**. Su propiedad  **View**, que especifica la Vista que se muestra al elegir el elemento de navegación  **Contacto**, es "Contact_ListView" de forma predeterminada. Cámbielo a "Contact_ListView_Varied".
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2ef7c32c-6574-4706-acd2-a9c604e9ac29)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Seleccione el elemento  **Contacto**  en el control de navegación. Para la vista de lista de  **contactos**  mostrada, se activará la acción  **ChangeVariant**. Los elementos de esta acción representan las variantes de vista especificadas en el  **Editor de modelos**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/07810f1f-5e3b-417c-9cf8-048bd0c276bd)
+
+    
+    >NOTA
+    Puede utilizar la propiedad  **Index** para especificar el criterio de ordenación de las variantes en la lista desplegable  **Cambiaracción de variante**. Además, puede establecer la propiedad  **Current** del nodo  **Variants** para especificar la variante predeterminada.
+    
+-   Opcionalmente, puede agregar variantes de vista al control de navegación. Para ello, invoque el Editor de modelos y establezca la propiedad  **GenerateRelatedViewVariantsGroup**  del nodo  **NavigationItems**  en  **true**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0f5ce8bc-2d03-4985-adfc-30732509b4a3)
+
+    
+    Como resultado, el elemento de navegación  **Contacto**  expondrá elementos secundarios para cada variante de vista.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c1af8704-0a1a-4d2b-accd-7f2b0fc09d70)
+
+    
+
+Puede ver los cambios realizados en esta lección en el  **Editor de modelos**  invocado para el archivo  _Model.DesignedDiffs.xafml_, ubicado en la  **demostración principal**  |  **Proyecto MainDemo.Module.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Auditar cambios en el objeto (.NET Framework)
+
+
+En esta lección, aprenderá a auditar y analizar los cambios realizados en los objetos de negocio mientras se ejecuta la aplicación. Para ello, se añadirá el módulo  **Audit Trail**  a la aplicación. Se auditarán los cambios realizados en el objeto  **Contact.**  Se utilizarán dos técnicas para analizarlos.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar la lección  [Heredar de la clase de biblioteca de clase empresarial (XPO](https://docs.devexpress.com/eXpressAppFramework/112718/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/inherit-from-the-business-class-library-class-xpo?v=22.1)).
+
+## Auditar objetos de contacto
+
+Agregue el módulo  **AuditTrail**  al proyecto  **MySolution.Module.**  Para ello, busque el archivo Module_.cs_  (Module.vb) en el proyecto  **MySolution.Module**  que se muestra en el  **Explorador de soluciones**.  Haga doble clic en este archivo para invocar el  [Diseñador de módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, expanda el  **DX.22.1: ficha Módulos XAF**. Arrastre el elemento  **AuditTrailModule**  a la sección  **Módulos necesarios**  del diseñador.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1fc0bf92-13c9-404d-a33f-70443d632715)
+
+
+Ahora, se auditan todos los objetos que se crean en la aplicación. El  **sistema de seguimiento de auditoría**  registra información sobre el tipo de cambio (objeto creado, cambiado, etc.), quién realizó este cambio, el objeto que se cambió, los valores de propiedad anteriores y nuevos, etc. Cuando se guarda un objeto en la base de datos, se registran los cambios entre dos eventos secuenciales.
+
+## Analizar el registro de auditoría en la aplicación
+
+Utilice el siguiente enfoque para ver los cambios de objeto directamente en la aplicación.
+
+-   Agregue una propiedad de colección a la clase  **Contact**. Los elementos de la colección proporcionarán información de registro recuperada de la base de datos.
+
+    
+    ```csharp
+    using DevExpress.ExpressApp;
+    // ...
+    [DefaultClassOptions]
+    public class Contact : Person {
+       //...
+       private XPCollection<AuditDataItemPersistent> changeHistory;
+       [CollectionOperationSet(AllowAdd = false, AllowRemove = false)]
+       public XPCollection<AuditDataItemPersistent> ChangeHistory {
+           get {
+               if(changeHistory == null) {
+                   changeHistory = AuditedObjectWeakReference.GetAuditTrail(Session, this);
+               }
+               return changeHistory;
+           }
+       }
+    }
+    
+    ```
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms e invoque una vista de detalles  **de contacto**. Modifique el objeto  **Contact**  para probar la capacidad de auditoría, guarde los cambios y haga clic en  **Actualizar**  (![btn_refresh](https://docs.devexpress.com/eXpressAppFramework/images/btn_refresh117427.png?v=22.1)). La colección Historial de cambios contendrá información sobre los  **cambios**  anteriores del objeto  **Contact.**
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e3ee76e0-216b-4954-8af8-314c8b32f1c8)
+
+    
+
+>NOTA
+Como recordará, la propiedad  **Office** se declara en la clase  **Department**, no en la clase **Contact**. Por lo tanto, los cambios realizados en la propiedad de  **Office** mediante la vista de detalles de contacto no se muestran en el historial de cambios del contacto. En su lugar, estos cambios aparecen en el **historial**  de cambios  del objeto de departamento correspondiente (si se auditan los  cambios realizados en los objetos  **de departamento**). Puede adquirir el registro de auditoría de forma remota mediante consultas SQL a la base de datos. Consulte el tema  [Analizar el registro de auditoría](https://docs.devexpress.com/eXpressAppFramework/113615/data-security-and-safety/audit-trail/audit-trail-xpo/analyze-the-audit-log?v=22.1).
+
+Puede ver el código mostrado aquí en el archivo Contact_.cs_  (_Contact.vb_) de la  **demostración principal**  instalada con XAF. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Resaltar objetos de vista de lista (.NET Framework)
+
+En esta lección, aprenderá a dar formato a los datos que satisfagan los criterios especificados. Para ello, se añadirá a la aplicación el módulo  [Apariencia condicional](https://docs.devexpress.com/eXpressAppFramework/113286/conditional-appearance?v=22.1). Resaltará los objetos  **DemoTask**  cuya propiedad  **Status**  no esté establecida en  **Completed**. Además, resaltará la propiedad  **Priority**  cuando contenga el valor  **High**.
+
+-   Agregue el módulo  **Apariencia condicional**  al proyecto  **MySolution.Module.**  Para este fin, haga doble clic en el archivo Module.cs (Module_.vb_), ubicado en el proyecto  **MySolution.Module.**  Se invocará el  [Diseñador](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  de módulos. En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: ficha Módulos XAF**  y arrastre el elemento  **ConditionalAppearanceModule**  desde esta ficha a la sección  **Módulos necesarios**  del diseñador, como se muestra a continuación.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/98d02361-8dea-483a-ab94-e1f29cb6588f)
+
+    
+-   Vuelva a generar la solución después de haber realizado cambios en el  **Diseñador de módulos**.
+-   Para declarar una regla de apariencia condicional para la clase  **DemoTask**, aplique el atributo  [AppearanceAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute?v=22.1)  a esta clase. Como primer parámetro, especifique el  **identificador de la regla de apariencia**  (por ejemplo, "FontColorRed"). A continuación, especifique los siguientes parámetros.
+
+  ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e9368b8b-cbb0-449c-89fc-a5ef8cb00fe0)
+
+-   En el código siguiente se muestra el atributo aplicado y sus parámetros a la clase DemoTask, que se declaró en el archivo  _BusinessObjects_\DemoTask_.cs (__DemoTask.vb_).
+    
+
+    ```csharp
+    using DevExpress.ExpressApp.ConditionalAppearance;
+    // ...
+    [Appearance("FontColorRed", AppearanceItemType = "ViewItem", TargetItems = "*", Context = "ListView",
+        Criteria = "Status!='Completed'", FontColor = "Red")]
+    public class DemoTask : Task {
+        // ...
+    }
+    
+    ```
+    
+    >NOTA
+    El valor  **Criteria** debe especificarse mediante la [sintaxis del lenguaje Criteria](https://docs.devexpress.com/CoreLibraries/4928/devexpress-data-library/criteria-language-syntax?v=22.1).
+    
+-   Aplique el atributo  [AppearanceAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute?v=22.1)  a la propiedad  **Priority**  de la clase  **DemoTask**. Como primer parámetro posicional, especifique el identificador de  **la regla de apariencia**  (por ejemplo, "PriorityBackColorPink"). A continuación, especifique los siguientes parámetros.
+    
+    -   _Especificar los elementos de la interfaz de usuario de destino que se verán afectados por la regla_
+        
+        Establezca el parámetro  [AppearanceAttribute.AppearanceItemType](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute.AppearanceItemType?v=22.1)  en "ViewItem". Esto significa que la regla generada a partir del atributo afectará a la propiedad  **Priority**  que se muestra en la  **vista**  actual.
+        
+    -   _Especificar las condiciones en las que debe estar en vigor la regla_
+        
+        Establezca el parámetro AppearanceAttribute.Context en "Any" y el parámetro  [AppearanceAttribute.Criteria](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute.Context?v=22.1)  en "Priority=2".[](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute.Criteria?v=22.1)  En este caso, la regla generada a partir del atributo afectará a la propiedad  **Priority**  cuando se establezca en 2 (**Alto**) en cualquier vista  **DemoTask**.
+        
+    -   _Especificar la apariencia condicional aplicada por la regla_
+        
+        Establezca el parámetro  [AppearanceAttribute.BackColor](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute.BackColor?v=22.1)  en "255, 240, 240".
+        
+    
+    En el código siguiente se muestra el atributo aplicado y sus parámetros.
+    
+
+    
+    ```csharp
+    public class DemoTask : Task {
+        // ...
+        [Appearance("PriorityBackColorPink", AppearanceItemType = "ViewItem", Context = "Any", 
+            Criteria = "Priority=2", BackColor = "255, 240, 240")]
+        public Priority Priority {
+            // ...
+        }
+        // ...
+    }
+    
+    ```
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Se resaltarán los datos de la vista de lista de  **tareas de demostración**  y la vista de detalles, como se muestra en la siguiente imagen.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/829f963c-78a1-4636-90d9-50696d024d43)
+
+    
+
+>NOTA
+**Las reglas de apariencia** que se declaran en el código están disponibles en el **Editor de modelos**. Para acceder a ellos, puede ejecutar el **Editor de modelos** para **Misolución.Proyecto de módulo**. Vaya a la **lista de materiales** | **Tarea de demostración** | **Nodo Reglas de apariencia**. Este nodo tiene dos nodos secundarios (**Colorde fuente rojo**  y  **Color de fondo de prioridadrosa) que se generan automáticamente a partir de los atributos Apariencia aplicados a la clase Tarea de**  **demostración** y la tarea de  **demostración.Propiedad prioritaria**. Puede crear nuevas **reglas**  de apariencia  directamente en el **Editor de modelos** agregando nodos secundarios al nodo  **Reglas de apariencia**.
+
+Puede ver los cambios realizados en la lección en el archivo DemoTask.cs (_DemoTask.vb_) ubicado en el proyecto  _MainDemo.Module_  de la solución  **MainDemo.**  La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+# Analizar datos (.NET Framework)
+
+
+En esta lección, aprenderá a agregar la funcionalidad  **Análisis**  a su aplicación. Para ello, agregará la clase empresarial  **Análisis**  y el módulo de  [gráfico dinámico](https://docs.devexpress.com/eXpressAppFramework/113024/analytics/pivot-chart-module?v=22.1)  a la aplicación.
+
+-   Agregue la clase de negocio  **Analysis**  al proyecto  **MySolution.Module**  mediante el Diseñador de  [módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). Invoque haciendo doble clic en el archivo Module_.cs_  (Module.vb) dentro del proyecto  **MySolution.Module**  que se muestra en el  **Explorador de soluciones**.  En la sección  **Tipos exportados**, busque los  **ensamblados a los que se hace referencia**  |  **DevExpress.Persistent.BaseImpl.v22.1**  |  **Nodo de análisis**. Selecciónelo y presione la  **barra espaciadora**, o haga clic derecho en él y elija  **Usar tipo en aplicación en**  el menú invocado. El nodo se marcará en negrita. Esto significa que la clase de negocio  **Análisis**  se agregará al  [modelo de aplicación](https://docs.devexpress.com/eXpressAppFramework/112748/getting-started/in-depth-tutorial-winforms-webforms/ui-customization?v=22.1)  y esta clase participará en el proceso de construcción de la interfaz de usuario.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/1e0df405-a86a-4e24-8946-5a84ba73abf2)
+
+    
+-   Vuelva a generar la solución para que los cambios realizados en el  **diseñador**  se carguen en el  **modelo de aplicación**.
+-   El  **marco eXpressApp**  proporciona el  [módulo de gráfico dinámico](https://docs.devexpress.com/eXpressAppFramework/113024/analytics/pivot-chart-module?v=22.1). Cuando se hace referencia a este módulo, la propiedad  **Self**  de la vista de detalle  **de análisis**  se muestra a través de un  **editor de propiedades**  especial. En las aplicaciones de WinForms, este  **editor de propiedades**  utiliza el control  **PivotGridControl**  proporcionado por la biblioteca de  [cuadrícula dinámica](https://docs.devexpress.com/WindowsForms/3409/controls-and-libraries/pivot-grid?v=22.1)  y el  **control ChartControl**  de la biblioteca de  [controles de gráficos](https://docs.devexpress.com/WindowsForms/8117/controls-and-libraries/chart-control?v=22.1). En ASP.NET aplicaciones de formularios Web Forms, este  **Editor de propiedades**  utiliza la cuadrícula dinámica de formularios Web Forms ASP.NET proporcionada por la biblioteca de  **cuadrícula dinámica**  de formularios Web  [Forms ASP.NET](https://docs.devexpress.com/AspNet/5830/components/pivot-grid?v=22.1)  y  **el control WebChartControl**  de la biblioteca de  [controles de gráficos](https://docs.devexpress.com/WindowsForms/8117/controls-and-libraries/chart-control?v=22.1). Estos controles permiten a los usuarios finales crear informes resumidos para analizar grandes cantidades de datos de forma rápida y sencilla. Características como el filtrado, la visualización del valor superior, la disposición jerárquica del valor en los ejes y los totales generales y grupales brindan a los usuarios finales una amplia gama de herramientas para controlar el nivel de datos en detalle.
+    
+    Para utilizar el módulo de  **gráfico dinámico**  en una aplicación de WinForms, agréguelo al proyecto de módulo de WinForms. Para ello, busque el archivo WinModule.cs (WinModule.vb) en el proyecto  **MySolution.Module.Win**  que se muestra en el Explorador de soluciones.  Haga doble clic en este archivo. Se invocará el  [Diseñador](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  de módulos. En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Página Módulos XAF**. Arrastre el elemento  **PivotChartWindowsFormsModule**  a la sección  **Módulos necesarios**  del diseñador. Compile el proyecto.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/decad30a-4e76-4b95-9f58-668c02d97111)
+
+    
+    Para utilizar el módulo de  **gráfico dinámico**  en la aplicación ASP.NET formularios Web Forms, agréguelo al proyecto de módulo ASP.NET formularios Web Forms. Para este fin, haga doble clic en el archivo WebModule.cs (WebModule.vb), ubicado en el proyecto de aplicación  **MySolution.Module.Web.**  Se invocará el  [Diseñador](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  de módulos. En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: ficha Módulos XAF**  y arrastre el elemento  **PivotChartAspNetModule**  a la sección  **Módulos necesarios**  del diseñador. Compile el proyecto.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/37edceb1-725e-4310-9a7d-6ff67878e3f5)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. En el control de navegación, seleccione  **Informes**  |  **Ítem de análisis**. Se mostrará una lista de objetos de análisis vacía (denominada Vista  **de**  lista  **de análisis**). Cree un nuevo objeto  **Analysis**  haciendo clic en el botón  **Nuevo**. En la  **vista de detalles**  invocada, especifique un nombre para el nuevo objeto  **Analysis**  y el tipo de objetos que se van a analizar mediante una cuadrícula dinámica y un control de gráfico. Por ejemplo, asigne el valor "Tareas" a la propiedad  **Nombre**  y elija "Tarea" en el menú desplegable  **Tipo de datos**. Haga clic en  **Enlazar datos de análisis**  (![Enlazar datos de análisis](https://docs.devexpress.com/eXpressAppFramework/images/bind-analysis-data116074.png?v=22.1)).  **Los**  objetos de tarea se cargarán como origen de datos para la cuadrícula dinámica.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/547358e3-ea33-426b-939e-47760bacefc8)
+
+    
+-   Arrastre los campos obligatorios a las áreas de fila, columna y datos.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ca1da551-d30b-4336-b115-067990aa3d37)
+
+    
+    La siguiente configuración muestra cómo averiguar cuántas tareas se asignan a un contacto.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/91477ab4-fb1c-47ea-967c-9b2a60231b33)
+
+    
+-   Cambie a la pestaña  **Gráfico**. Muestra los datos configurados en la cuadrícula dinámica a través de un gráfico.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4e5fa376-1229-483f-bfcf-dabbcf6265a1)
+
+    
+-   En las aplicaciones de WinForms, puede especificar la configuración del gráfico mediante la acción  ChartWizard invocada haciendo clic con el botón secundario en la imagen del gráfico y eligiendo  **ChartWizard**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/25655d7d-de65-42df-b176-013ef556052c)
+
+    
+    En ASP.NET aplicaciones de formularios Web Forms, sólo puede establecer el tipo de gráfico mediante el cuadro combinado  **ChartType**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/ba48bce9-759c-4dea-b48e-10cbce16ae01)
+
+    
+
+Las siguientes configuraciones muestran cómo se pueden reconfigurar los campos de la cuadrícula dinámica en función de lo que intenta analizar.
+
+_Cuántas tareas de una prioridad particular se completan_.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e45d65cb-ee8a-48ee-ab4a-9702ab29842f)
+
+
+_Cuántas tareas de una prioridad particular se asignan a un contacto_.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4a8e3b15-9a57-4743-93b1-0b22c77b5dec)
+
+
+_Cuántas horas estimadas y reales ha dedicado cada contacto a implementar todas las tareas asignadas a ese contacto_.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f7163c98-4530-4f0a-88e4-c0ca1525965b)
+
+
+_Cuántas horas de trabajo se planifican para un contacto y cuántas horas ya ha dedicado un contacto a las tareas completadas_.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cf66ad3f-1640-4329-a87b-50840ca52b7d)
+
+
+_El análisis anterior se amplía mostrando la distribución basada en la prioridad de la tarea_.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/589ba2e1-f129-43ce-94a6-f1f288e91ed0)
+
+
+>NOTA
+Las imágenes anteriores ilustran cómo generar un análisis en una aplicación de formularios Win, pero puede seguir los mismos pasos en una aplicación de formulariosWeb Forms ASP.NET.
+
+Cuando se muestra un objeto  **Análisis**  en una vista de detalle, el botón  **Exportar**  se puede utilizar para exportar la cuadrícula dinámica o el gráfico a varios formatos.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/fc9ac919-af33-4219-a582-9d753e5e1280)
+
+
+La acción  **Exportar**  está disponible en las aplicaciones WinForms y ASP.NET formularios Web Forms.
+
+Las acciones Imprimir cuadrícula dinámica () e  **Imprimir**  gráfico (![btn_chart_print](https://docs.devexpress.com/eXpressAppFramework/images/btn_chart_print117502.png?v=22.1)![btn_pivot_print](https://docs.devexpress.com/eXpressAppFramework/images/btn_pivot_print117503.png?v=22.1)) se pueden usar para imprimir la  **cuadrícula dinámica**  y el gráfico. Estas acciones no están disponibles en una aplicación ASP.NET formularios Web Forms.
+
+Puede ver el análisis demostrado anteriormente en la  **demostración principal**. La aplicación MainDemo se instala en %_PUBLIC%\Documents\DevExpress Demos  22.1\Components\XAF\MainDemo_  de forma predeterminada.  La versión ASP.NET de formularios Web Forms está disponible en línea en  [https://demos.devexpress.com/XAF/MainDemo](https://demos.devexpress.com/XAF/MainDemo/Login.aspx) .
+
+
+
+# Crear un informe en Visual Studio (.NET Framework)
+
+En esta lección, aprenderá a crear informes en el sistema de informes integrado. Este sistema se basa en la biblioteca de  [informes](https://docs.devexpress.com/XtraReports/2162/reporting?v=22.1)  DevExpress para WinForms y ASP.NET formularios Web Forms. Esta lección le guiará a través de la creación de un informe que muestra una lista de objetos de  **contacto**  con sus nombres y direcciones de correo electrónico. El informe estará disponible para los usuarios finales en las aplicaciones WinForms y ASP.NET Web Forms.
+
+## Adición de módulos XAF
+
+-   Agregue el módulo  [Reports V2](https://docs.devexpress.com/eXpressAppFramework/113591/shape-export-print-data/reports/reports-v2-module-overview?v=22.1)  independiente de la plataforma a su proyecto. Para ello, haga doble clic en el archivo Module.cs (Module_.vb_) en el proyecto  **MySolution.Module.**  Esto invocará al Diseñador de  [módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Grupo de módulos XAF**. Arrastre el elemento  **ReportsModuleV2**  de este grupo a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/af175834-31b6-450a-a0af-e20f60c84e5b)
+
+    
+-   Agregue un módulo  **Reports V2**  específico de WinForms al proyecto de módulo WinForms. Haga doble clic en el archivo WinModule.cs (WinModule.vb) en el proyecto  **MySolution.Module.Win.**  Esto invocará al Diseñador de  [módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Grupo de módulos XAF**. Arrastre el elemento  **ReportsWindowsFormsModuleV2**  de este grupo a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c92a76b6-e947-441b-9d75-bdbd12d59b76)
+
+    
+-   Agregue el módulo  **Reports V2**  específico de ASP.NET formularios Web Forms al proyecto de aplicación de formularios Web Forms de ASP.NET. Para invocar el  [Diseñador de módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1), haga doble clic en el archivo WebModule.cs (WebModule.vb) en el proyecto  **MySolution.Module.Web.**  En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Grupo de módulos XAF**. Arrastre el elemento  **ReportsAspNetModuleV2**  de este grupo a la sección  **Módulos necesarios**  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6059b031-92cb-4f53-959f-5829da82a5ec)
+
+    
+-   Vuelva a generar la solución.
+
+## Informes en tiempo de diseño
+
+-   Haga clic con el botón secundario en el proyecto  **MySolution.Module**  y seleccione  **Agregar**  |  **Nueva carpeta**. Establezca el nombre de la nueva carpeta en "Informes". Haga clic con el botón derecho en la carpeta  **Informes**  y seleccione  **Agregar**  |  **Nuevo artículo**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f7783978-7e87-47a9-b09a-99fb0a5ff1e3)
+
+    
+    >NOTA
+    Puede colocar informes en cualquier carpeta (incluida la carpeta raíz del proyecto), aunque se recomienda organizar los archivos de proyecto.
+    
+-   Seleccione el  **informe de DevExpress v22.1**, asígnele el nombre "ContactsReport" y haga clic en  **Agregar**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/794e19d0-24cb-47d5-8094-f9d5c99c88f4)
+
+    
+-   Esto invoca al  [Asistente para informes](https://docs.devexpress.com/XtraReports/4254/visual-studio-report-designer/report-wizard?v=22.1). Seleccione  **En blanco**  y haga clic en  **Finalizar**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b91a6de7-e7cb-490b-8709-103658011267)
+
+    
+    >NOTA
+    No utilice tipos de informe que no sean **En blanco**. Otros tipos de informe no le permitirán seleccionar un origen de datos específico de XAF. Podrá continuar con el  **Asistente**  para informes  más adelante, una vez seleccionado el origen de datos en el **Diseñador de informes**.
+    
+-   Después de hacer clic en  **Finalizar**, se invoca al  [Diseñador de informes](https://docs.devexpress.com/XtraReports/4257/winforms-reporting/end-user-report-designer-for-winforms/api-and-customization?v=22.1). En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Grupo Orígenes de datos XAF para informes**. Arrastre el elemento  **CollectionDataSource**  de este grupo a la ventana Diseñador de  **informes**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2242af2a-cf4a-4b9c-89de-6c144717105b)
+
+    
+-   En la ventana  [Explorador de informes](https://docs.devexpress.com/XtraReports/4258/visual-studio-report-designer/dock-panels/report-explorer?v=22.1), seleccione el elemento  **collectionDataSource1**. En la ventana  **Propiedades**, asigne el valor "MySolution.Module.BusinessObjects.Contact" a la propiedad  **ObjectTypeName**. Tenga en cuenta los cambios en la ventana Lista de campos: los  [campos](https://docs.devexpress.com/XtraReports/4259/visual-studio-report-designer/dock-panels/field-list?v=22.1)  de la clase  **Contact**  ahora están disponibles si expande el nodo  **collectionDataSource1**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f55b14a1-0522-429b-927c-4a2c52d17e49)
+
+    
+-   Haga clic en la  [etiqueta inteligente](https://docs.devexpress.com/XtraReports/4260/detailed-guide-to-devexpress-reporting/use-report-controls/manipulate-report-controls?v=22.1)  del  **Diseñador**  de informes y seleccione Diseño en el  **Asistente para informes... en**  el menú invocado.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/d77e91b0-4c2f-444b-8fa8-30321486e5b8)
+
+    
+-   Esto invoca al  [Asistente para informes](https://docs.devexpress.com/XtraReports/4241/visual-studio-report-designer/data-source-wizard/connect-to-a-database?v=22.1). En el primer paso, debe seleccionar el  **informe de tabla**  y hacer clic en  **Siguiente**. Dado que el origen de datos ya está especificado, omitirá algunas pantallas del asistente y el segundo paso le permitirá elegir los datos del informe.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/525ee9f1-bb5a-4bfb-acae-dea63d245c71)
+
+    
+-   Seleccione los campos que se utilizarán en el informe. Compruebe el miembro de datos  **collectionDataSource1**  a la izquierda y los siguientes campos de datos a la derecha:
+    
+    -   **Nombre**
+    -   **Apellido**
+    -   **Correo electrónico**
+    
+    Haga clic en  **Siguiente**  cuando haya terminado.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2312473f-b4f4-4310-9d5e-d847c76df982)
+
+    
+-   Seleccione los campos por los que desea agrupar las filas del informe. Dado que la agrupación no es necesaria en este ejemplo, haga clic en  **Siguiente**  para continuar.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7c3d6af1-bf53-47e0-bddc-3cd13c2421d3)
+
+    
+-   En el siguiente paso, puede personalizar la página del informe. Mantenga esta configuración sin cambios y haga clic en  **Siguiente**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c296c139-1f02-4e12-85c4-78efda75e429)
+
+    
+-   Elija una combinación de colores de informe, por ejemplo,  **Azure**, y haga clic en  **Siguiente**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/dbff9479-f4e5-4009-af3b-301434c1952d)
+
+    
+-   En el paso final, puede establecer el título del informe. Este texto se mostrará en la parte superior del informe. Establezca el título en "Contactos" y haga clic en  **Finalizar**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0cc78765-8f83-4be0-8517-76b062469c73)
+
+    
+-   La estructura de informe que ha creado se mostrará en el  **Diseñador de informes**. Personalice y guarde el informe.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6638e50d-9285-443b-9b17-dfdc59920d09)
+
+    
+    >NOTA
+    En tiempo de diseño, la ficha Vista previa del Diseñador de informes está vacía. Los componentes Origen de datos de recopilación y  [Verorigen de datos no se conectan directamente a una base de datos y requieren una instancia de IObject Space (que solo se puede crear en tiempo de ejecución) para cargar datos](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.ViewDataSource?v=22.1)  [](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.CollectionDataSource?v=22.1).[](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.IObjectSpace?v=22.1) Por lo tanto, no puede cargar datos en tiempo de diseño.
+    
+-   Ahora registre el informe en la aplicación XAF mediante la clase  [PredefinedReportsUpdater](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ReportsV2.PredefinedReportsUpdater?v=22.1). Para ello, en el Explorador de  **soluciones**, haga clic con el botón secundario en  _MySolution.Module_  | Module_.cs_  (_Module.vb_) y seleccione Ver código para editar su  **código**  fuente. El siguiente fragmento de código muestra los cambios necesarios.
+
+    
+    ```csharp
+    using DevExpress.ExpressApp.ReportsV2;
+    using MySolution.Module.Reports;
+    using MySolution.Module.BusinessObjects;
+    //...
+    namespace MySolution.Module {
+        public sealed partial class MySolutionModule : ModuleBase {
+            //...
+            public override IEnumerable<ModuleUpdater> GetModuleUpdaters(
+                IObjectSpace objectSpace, Version versionFromDB) {
+                ModuleUpdater updater = new DatabaseUpdate.Updater(objectSpace, versionFromDB);
+                PredefinedReportsUpdater predefinedReportsUpdater = 
+                    new PredefinedReportsUpdater(Application, objectSpace, versionFromDB);
+                predefinedReportsUpdater.AddPredefinedReport<ContactsReport>(
+                "Contacts Report", typeof(Contact));
+                return new ModuleUpdater[] { updater, predefinedReportsUpdater };
+            }
+            //...
+        }
+    }
+    
+    ```
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms, vaya a  **Informes**  y abra el  **Informe de contactos**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c12d7aba-8085-46a3-a12e-bb9e39b475b2)
+
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/4fcb281e-8c71-459d-adbf-0da9e345f1b5)
+
+    
+
+>NOTA
+>-   Los informes predefinidos no se pueden editar en tiempo de ejecución, pero puede editar una copia de un informe (consulte [Modificar un informe existente](https://docs.devexpress.com/eXpressAppFramework/113647/shape-export-print-data/reports/modify-an-existing-report?v=22.1)).
+>-   Los datos del informe se pueden [ordenar](https://docs.devexpress.com/eXpressAppFramework/113595/shape-export-print-data/reports/data-sorting-in-reports-v2?v=22.1) y [filtrar](https://docs.devexpress.com/eXpressAppFramework/113594/filtering/in-reports/data-filtering-in-reports?v=22.1) de acuerdo con un parámetro definido por el usuario final.
+
+
+
+# Crear un informe en tiempo de ejecución (.NET Framework)
+
+En esta lección, aprenderá a crear informes en tiempo de ejecución. Se creará un informe que muestra una lista de  **tareas**  en la aplicación WinForms en tiempo de ejecución y, a continuación, estará disponible para imprimir en aplicaciones WinForms y ASP.NET formularios Web Forms.
+
+>PROPINA
+También puede crear un nuevo informe en una aplicación de formularios Web Forms ASP.NET (vea  [Crear y ver informes en una aplicación de formularios Web Forms ASP.NET](https://docs.devexpress.com/eXpressAppFramework/113648/shape-export-print-data/reports/create-and-view-reports-in-an-asp-net-application?v=22.1)).
+
+1.  Ejecute la aplicación WinForms y vaya a la vista de lista de  **informes**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e26c0536-39a6-4835-938b-735a60e4680a)
+
+    
+2.  Cree un nuevo informe haciendo clic en el botón  **Nuevo**  (![button_new](https://docs.devexpress.com/eXpressAppFramework/images/btn_new117411.png?v=22.1)).
+3.  Asigne a este informe el nombre "Informe de tareas", establezca el  **tipo de datos**  en "Tarea" y haga clic en  **Siguiente**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2746ea5e-d0c2-4584-b651-af1449db41c3)
+
+    
+    >NOTA
+    La lista desplegable  **Tipo de datos** muestra sólo las clases de negocio que tienen aplicado el atributo  [`DefaultClassOptionsAttribute`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.DefaultClassOptionsAttribute?v=22.1) o el  [`VisibleInReportsAttribute`](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.VisibleInReportsAttribute?v=22.1).
+    
+4.  Elija el tipo "Informe de tabla" y haga clic en  **Siguiente**.
+    
+5.  Agregue los siguientes campos.
+    
+    -   Asunto
+    -   Prioridad
+    -   Estado
+    -   Porcentaje completado
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f67c2950-0f99-49fc-89a2-f6ae810998b1)
+
+    
+
+-   Haga clic en  **Siguiente**  para omitir la configuración de agrupación, las funciones de resumen y la configuración de la página de informes.
+-   Elija la combinación de colores del informe de  **Azure**  y haga clic en  **Siguiente**.
+-   Establezca el título en "Tareas" y haga clic en  **Finalizar**.
+-   Después de hacer clic en  **Finalizar**, se invocará el  [Diseñador de informes en tiempo de ejecución](https://docs.devexpress.com/XtraReports/1763/winforms-reporting/end-user-report-designer-for-winforms/gui/end-user-report-designer-with-a-standard-toolbar?v=22.1).
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/f4092b4c-44d7-432c-8959-5d2320b47f3b)
+
+    
+-   Personalice el informe, guárdelo haciendo clic en el botón  **Guardar**  (![btn_report_save](https://docs.devexpress.com/eXpressAppFramework/images/btn_report_save117463.png?v=22.1)) y ábralo desde la Vista de lista de  **informes**. Este informe también estará disponible en la versión ASP.NET de formularios Web Forms de la aplicación.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/e5358fd4-3e81-4ab7-a379-d677f63a2888)
+
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/efdff11a-7b1e-471c-9a67-c4b7f4017c84)
+
+
+# Agregue el módulo Programador (.NET Framework)
+
+
+>IMPORTANTE
+El Programador requiere que la clase empresarial  **Event** esté en el modelo de aplicación XAF. Siga los pasos descritos en la lección  [Agregar una clase de la Biblioteca de clases empresariales](https://docs.devexpress.com/eXpressAppFramework/112721/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/add-a-class-from-the-business-class-library-xpo?v=22.1) para obtener información sobre cómo agregarla.
+
+**eXpressApp Framework (XAF)**  proporciona el  [módulo Programador](https://docs.devexpress.com/eXpressAppFramework/112811/event-planning-and-notifications/scheduler-module?v=22.1). Cuando se hace referencia a este módulo, la vista de lista de  **eventos**  se muestra a través de un control especial. En las aplicaciones WinForms, este control es proporcionado por  [XtraScheduler Suite](https://www.devexpress.com/products/net/controls/winforms/scheduler/) ; en ASP.NET aplicaciones de formularios Web Forms, se utiliza el control proporcionado por  [ASPxScheduler Suite](https://www.devexpress.com/products/net/controls/asp/scheduler/). Ambos controles proporcionan una serie de características que serán útiles si necesita cambiar entre diferentes vistas de fecha, usar un navegador de fechas y varias técnicas de cita, imprimir y exportar datos de origen o personalizar la apariencia. Para obtener más información, consulte el tema  [Demostraciones  de programación de formularios Web Forms ASP.NET](https://demos.devexpress.com/ASPxSchedulerDemos/)  y  [Características principales](https://docs.devexpress.com/WindowsForms/1971/controls-and-libraries/scheduler?v=22.1)  del programador. Se proporcionan más ejemplos del uso de módulos adicionales XAF en la sección  [Módulos adicionales](https://docs.devexpress.com/eXpressAppFramework/112770/getting-started/in-depth-tutorial-winforms-webforms/extra-modules?v=22.1)  de este tutorial.
+
+-   Para utilizar el módulo Programador en la aplicación WinForms, agréguelo al proyecto de módulo WinForms. Para ello, busque el archivo WinModule.cs (WinModule.vb) en el proyecto de aplicación  _MySolution.Module.Win_  que se muestra en el  **Explorador de soluciones**.  Haga doble clic en este archivo para invocar el  [Diseñador de módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1). En el  **Cuadro de herramientas**, desplácese hasta DX**.22.1: Sección Módulos XAF**. Arrastre el elemento  **SchedulerWindowsFormsModule**  al panel  **Módulos requeridos**  del diseñador y genere el proyecto.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/723297c9-4809-4a07-92d1-80e6d7829069)
+
+    
+    Para utilizar el módulo Programador en una aplicación ASP.NET de formularios Web Forms, agréguelo al proyecto de módulo ASP.NET formularios Web Forms. Para ello, invoque el Diseñador de  [módulos](https://docs.devexpress.com/eXpressAppFramework/112828/installation-upgrade-version-history/visual-studio-integration/module-designer?v=22.1)  haciendo doble clic en el archivo WebModule_.cs (WebModule__.vb_). A continuación, arrastre el elemento  **SchedulerAspNetModule**  desde el Cuadro de  **herramientas**  hasta el panel  **RequiredModules**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/578cf14d-4d1c-477b-b4cb-fc80a8af4538)
+
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. Seleccione el elemento  **Evento del programador**  en el  **control de navegación**. La lista de objetos de evento (denominada "Vista de lista  **de**  eventos") se mostrará mediante el control  **Programador**. Puede crear nuevos objetos  **Event**  haciendo clic en el botón  **Nuevo**  (![btn_new](https://docs.devexpress.com/eXpressAppFramework/images/btn_new117411.png?v=22.1)) de la barra de herramientas. Como alternativa, puede seleccionar un área en la vista de línea de tiempo, hacer clic con el botón derecho en ella y elegir  **Nueva cita**.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/6602fba0-05e6-4434-85df-8b2f08e9513f)
+
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0aaab529-21b4-481c-bde0-12fb74d9e9c5)
+
+    
+
+
+>NOTA
+Las horas de inicio y finalización predeterminadas del nuevo evento corresponden al intervalo seleccionado en el control del programador. Además, puede crear eventos con el comando  **Nuevo** en el menú contextual del control.
+
+>PROPINA
+XAF tiene un módulo especial de notificaciones  que permite establecer notificaciones para eventos. Consulte el tema de ayuda  [Cómo: Usar notificaciones con el evento del programador](https://docs.devexpress.com/eXpressAppFramework/113687/event-planning-and-notifications/how-to-use-notifications-with-the-scheduler-event?v=22.1) para obtener información sobre cómo usarlo en la aplicación.
+
+
+
+# Agregar reglas de validación a clases empresariales
+
+Para agregar funcionalidad de validación a la aplicación XAF, siga los pasos descritos en las lecciones Implementar validación de valor de propiedad en  [código (XPO)](https://docs.devexpress.com/eXpressAppFramework/112736/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/implement-property-value-validation-in-code-xpo?v=22.1)  e  [Implementar validación de valor de propiedad en el modelo de aplicación](https://docs.devexpress.com/eXpressAppFramework/112750/getting-started/in-depth-tutorial-winforms-webforms/ui-customization/implement-property-value-validation-in-the-application-model?v=22.1).
+
+
+# Sistema de seguridad
+
+**eXpressApp Framework**  proporciona el sistema de seguridad utilizado para proteger los datos de las aplicaciones empresariales. En esta sección del tutorial, aprenderá a usar el sistema de seguridad y sus características. Ofrecemos las siguientes lecciones.
+
+-   [Uso del sistema de seguridad](https://docs.devexpress.com/eXpressAppFramework/112768/getting-started/in-depth-tutorial-winforms-webforms/security-system/using-the-security-system?v=22.1)
+-   [Acceder al sistema de seguridad en código](https://docs.devexpress.com/eXpressAppFramework/112769/getting-started/in-depth-tutorial-winforms-webforms/security-system/access-the-security-system-in-code?v=22.1)
+
+
+# Uso del sistema de seguridad (.NET Framework)
+
+
+En esta lección, aprenderá a utilizar un  **sistema de seguridad**  en la aplicación. Cuando se utiliza este sistema, la estrategia de seguridad  [SecurityStrategyComplex](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Security.SecurityStrategyComplex?v=22.1)  se aplica a la aplicación. De acuerdo con esta estrategia, los usuarios tienen roles, que a su vez se caracterizan por un conjunto de  **permisos**. Este tema le guiará a través de la creación de un administrador y un usuario común en el código. El administrador tendrá un conjunto de permisos de acceso completo y el usuario tendrá un conjunto de permisos limitado. Verá cómo el administrador puede crear usuarios y roles, especificar  **permisos**  para ellos y, a continuación, asignar  **roles**  a  **usuarios**  en tiempo  de ejecución. También utilizará el tipo de autenticación  [AuthenticationStandard](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Security.AuthenticationStandard?v=22.1)  para iniciar sesión en la aplicación.
+
+>NOTA
+Antes de continuar, tómese un momento para revisar los siguientes temas.
+>-   [Crear una solución mediante el asistente](https://docs.devexpress.com/eXpressAppFramework/112717/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/create-a-solution-using-the-wizard?v=22.1)
+>-   [Proporcionar datos iniciales](https://docs.devexpress.com/eXpressAppFramework/112788/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/supply-initial-data-xpo?v=22.1)
+
+## Autenticación de Active Directory
+
+Si ha seguido la lección  [Crear una solución mediante el asistente](https://docs.devexpress.com/eXpressAppFramework/112717/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/create-a-solution-using-the-wizard?v=22.1), ya ha habilitado el sistema de seguridad con la autenticación  [AuthenticationActiveDirectory](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Security.AuthenticationActiveDirectory?v=22.1).
+
+Invoque el Diseñador de aplicaciones para la aplicación WinForms y eche un vistazo a la sección Seguridad.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/9e2fe8c6-8a78-457f-950e-bda8f2e69a48)
+
+
+Como puede ver en la imagen anterior, se usa una estrategia de seguridad compleja y autenticación de Active Directory, y la propiedad  **CreateUserAutomatically**  se establece en  **true**. Esto significa que un objeto de usuario (**PermissionPolicyUser**) se crea automáticamente la primera vez que se ejecuta la aplicación.  **La propiedad UserName**  de este objeto se establece en su cuenta de Active Directory. Tiene todos los permisos, ya que el tipo de usuario creado automáticamente es un administrador. Para ver los detalles de este usuario en tiempo de ejecución, vaya a los elementos User y MyDetails en el control de navegación.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/12bca6ae-8e07-4965-a35c-0b071a7c58c5)
+
+
+Ahora, siga el Tutorial para aprender cómo cambiar el tipo de autenticación en su aplicación.
+
+## Autenticación estándar
+
+-   Invoque el Diseñador de aplicaciones para la aplicación WinForms. Para utilizar una estrategia de autenticación estándar, arrastre el componente  **AuthenticationStandard**  desde el  **DX.22.1: ficha Caja de herramientas de seguridad XAF**  a la sección  _Seguridad_  del diseñador.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/2dd34856-83d7-4d70-b3d3-e8aa45c92586)
+
+    
+-   Invoque el  **Diseñador de aplicaciones**  para la aplicación ASP.NET formularios Web Forms. Arrastre el componente  **AuthenticationStandard**  desde el  **DX.22.1: ficha Caja de herramientas de seguridad XAF**  a la sección  **Seguridad**  del diseñador.
+
+## Crear usuarios y roles predefinidos en el código
+
+-   Antes de ejecutar una aplicación con la  **autenticación estándar**  habilitada, cree varios objetos de negocio Usuarios y Roles predefinidos  **y**  asigne los  **Roles**  a  **los Usuarios**.  Esto le permitirá iniciar sesión y crear más  **usuarios**  en tiempo de ejecución.
+    
+    Los objetos que deben existir en la base de datos mientras se ejecuta la aplicación se crean en el método  [ModuleUpdater.UpdateDatabaseAfterUpdateSchema](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Updating.ModuleUpdater.UpdateDatabaseAfterUpdateSchema?v=22.1)  en  _MySolution.Module_  |  _Actualización de base de datos_  |  _Archivo Updater.cs_/_Updater.vb_  (consulte el tema  [Proporcionar datos iniciales](https://docs.devexpress.com/eXpressAppFramework/112788/getting-started/in-depth-tutorial-winforms-webforms/business-model-design/supply-initial-data-xpo?v=22.1)).
+    
+    Primero, cree  **roles**. El código siguiente muestra cómo crear un  **rol**  "Administradores".
+    
+
+    
+    ```csharp
+    using DevExpress.ExpressApp.Security;
+    // ...
+    public override void UpdateDatabaseAfterUpdateSchema() {
+        base.UpdateDatabaseAfterUpdateSchema();
+        // ...
+        PermissionPolicyRole adminRole = ObjectSpace.FirstOrDefault<PermissionPolicyRole>(role => role.Name == SecurityStrategy.AdministratorRoleName);
+        if (adminRole == null) {
+            adminRole = ObjectSpace.CreateObject<PermissionPolicyRole>();
+            adminRole.Name = SecurityStrategy.AdministratorRoleName;
+            adminRole.IsAdministrative = true;
+        }
+        // ...
+    }
+    
+    ```
+    
+    Aquí, el rol "Administradores" tiene acceso completo a objetos de todo tipo, porque su propiedad  [IPermissionPolicyRole.IsAdministrative](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.IPermissionPolicyRole.IsAdministrative?v=22.1)  está establecida en  **true**.
+    
+    Ahora cree un rol "Usuarios",  un  **rol**  muy básico que solo tendrá acceso al objeto de usuario actual. Más adelante, puede extender el conjunto de permisos de este  **rol**  en la interfaz de usuario mediante métodos de extensión de la clase  [PermissionSettingHelper](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Security.PermissionSettingHelper?v=22.1). Consulte el código siguiente.
+    
+
+    
+    ```csharp
+    public override void UpdateDatabaseAfterUpdateSchema() {
+        // ...
+        PermissionPolicyRole userRole = ObjectSpace.FirstOrDefault<PermissionPolicyRole>(role => role.Name == "Users");
+        if(userRole == null) {
+            userRole = ObjectSpace.CreateObject<PermissionPolicyRole>();
+            userRole.Name = "Users";
+            userRole.PermissionPolicy = SecurityPermissionPolicy.AllowAllByDefault;
+            userRole.AddTypePermission<PermissionPolicyRole>(SecurityOperations.FullAccess, 
+    SecurityPermissionState.Deny);
+            userRole.AddTypePermission<PermissionPolicyUser>(SecurityOperations.FullAccess, 
+    SecurityPermissionState.Deny);
+            userRole.AddObjectPermissionFromLambda<PermissionPolicyUser>(SecurityOperations.ReadOnlyAccess, 
+    u => u.Oid == (Guid)CurrentUserIdOperator.CurrentUserId(), SecurityPermissionState.Allow);
+            userRole.AddMemberPermission<PermissionPolicyUser>(SecurityOperations.Write, 
+    "ChangePasswordOnFirstLogon", null, SecurityPermissionState.Allow);
+            userRole.AddMemberPermission<PermissionPolicyUser>(SecurityOperations.Write, 
+    "StoredPassword", null, SecurityPermissionState.Allow);
+            userRole.AddTypePermission<PermissionPolicyRole>(SecurityOperations.Read, SecurityPermissionState.Allow);
+            userRole.AddTypePermission<PermissionPolicyTypePermissionObject>("Write;Delete;Navigate;Create", SecurityPermissionState.Deny);
+            userRole.AddTypePermission<PermissionPolicyMemberPermissionsObject>("Write;Delete;Navigate;Create", 
+    SecurityPermissionState.Deny);
+            userRole.AddTypePermission<PermissionPolicyObjectPermissionsObject>("Write;Delete;Navigate;Create", 
+    SecurityPermissionState.Deny);
+        }
+        //...
+    }
+    
+    ```
+    
+    En el código siguiente se muestra cómo crear usuarios.
+    
+
+    
+    ```csharp
+    using DevExpress.ExpressApp.Security;
+    // ...
+    public class Updater : ModuleUpdater {
+       public Updater(IObjectSpace objectSpace, Version currentDBVersion) 
+          : base(objectSpace, currentDBVersion) { }   
+       public override void UpdateDatabaseAfterUpdateSchema() {
+          // ...
+          // If a user named 'Sam' does not exist in the database, create this user.
+          PermissionPolicyUser user1 = ObjectSpace.FirstOrDefault<PermissionPolicyUser>(user => user.UserName == "Sam");
+          if(user1 == null) {
+             user1 = ObjectSpace.CreateObject<PermissionPolicyUser>();
+             user1.UserName = "Sam";
+             // Set a password if the standard authentication type is used.
+             user1.SetPassword("");
+          }
+          // If a user named 'John' does not exist in the database, create this user.
+          PermissionPolicyUser user2 = ObjectSpace.FirstOrDefault<PermissionPolicyUser>(user => user.UserName == "John");
+          if(user2 == null) {
+             user2 = ObjectSpace.CreateObject<PermissionPolicyUser>();
+             user2.UserName = "John";
+             // Set a password if the standard authentication type is used.
+             user2.SetPassword("");
+          }
+       }
+    }
+    
+    ```
+    
+    Finalmente, asignará  **roles**  a  **los usuarios**.
+    
+
+    
+    ```csharp
+    public class Updater : ModuleUpdater {
+        // ... 
+        public override void UpdateDatabaseAfterUpdateSchema() {
+          // ...
+          user1.Roles.Add(adminRole);
+          user2.Roles.Add(userRole);
+        }
+    }
+    
+    ```
+    
+    >NOTA
+    Se proporcionan más ejemplos en el tema  [Seguridad del lado cliente (arquitectura de 2 niveles).](https://docs.devexpress.com/eXpressAppFramework/113436/data-security-and-safety/security-system/security-tiers/2-tier-security-integrated-mode-and-ui-level?v=22.1)
+    
+-   Ejecute la aplicación WinForms o ASP.NET formularios Web Forms. La siguiente ventana de inicio de sesión se mostrará en una aplicación de WinForms.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/cc511014-f597-4473-975e-985b16003955)
+
+    
+    La siguiente ventana se mostrará en la aplicación ASP.NET formularios Web Forms.
+    
+    ![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/335b9199-2e7f-4376-bb0d-2280f8fc59e2)
+
+    
+    Después de hacer clic en el botón  **Iniciar sesión**, se autentican las credenciales del usuario y se ejecutará la aplicación.
+    
+
+## Crear un rol en una interfaz de usuario
+
+Los administradores y otros usuarios con permiso de creación de roles pueden crear roles de la siguiente manera.
+
+Seleccione el elemento  **Rol**  en el control de navegación y haga clic  **en Nueva acción**. En la vista de detalles invocada, establezca el nombre y los permisos para el nuevo rol.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/0fa0276a-546e-46cc-a89d-a790de1a7e49)
+
+
+Con la propiedad  **Directiva de permisos**, puede asignar directivas de permisos predeterminadas "denegar todo", "solo leer todo" o "permitir todo" para cada rol. Para cada operación, puede especificar explícitamente el modificador Permitir o Denegar o dejarlo en blanco. Si no se especifica el modificador, el permiso viene determinado por la directiva de permisos del rol.
+
+## Crear un usuario en una interfaz de usuario
+
+Los usuarios que tienen permiso para crear usuarios pueden hacer lo siguiente.
+
+Seleccione el elemento  **Usuario**  en el control de navegación y haga clic en el botón  **Nuevo**. En la vista de detalles invocada, especifique el  **nombre de usuario**  y asigne uno o más roles.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c982cc3c-e4eb-403d-869f-67356a36636d)
+
+
+
+>NOTA
+Establezca la propiedad  **Is Active** en **false** si necesita prohibir temporalmente al usuario el uso de la aplicación.
+
+Para asignar una contraseña a un usuario recién creado, haga clic en el botón  **Restablecer contraseña**. La contraseña asignada debe pasarse al usuario. Un usuario podrá cambiarlo al iniciar sesión por primera vez.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/eb562525-263f-4f98-a343-47fbb8540d67)
+
+
+NOTA
+
+Este botón es la acción  **Restablecercontraseña**, que está disponible para los usuarios que tienen permiso para modificar objetos de usuario. Este botón no está disponible cuando se utiliza la autenticación de Active Directory.
+
+## Mis datos
+
+El elemento  **de navegación Mis detalles**  está disponible para los usuarios que tienen acceso de lectura al objeto User actual. Este elemento de navegación abre los detalles del usuario actual.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/c8fb2266-620a-40ff-98f8-57716416958c)
+
+
+En una aplicación ASP.NET formularios Web Forms, también se puede abrir haciendo clic en el vínculo  **Mis detalles**  en la esquina superior derecha de la página.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/7c11ee1a-2f50-4143-abb6-af36781b4949)
+
+
+## Cambiar contraseña
+
+Cuando se utiliza el tipo de autenticación estándar, el botón  **Cambiar mi contraseña**  está disponible una vez que se muestra la vista de detalles  **Mis detalles**. Este botón abre un cuadro de diálogo donde un usuario puede cambiar la contraseña.
+
+![image](https://github.com/jjcolumb/In-Depth-XAF-WinForms-WebForms-Tutorial/assets/126447472/b68108a3-056b-4070-bd9f-cfff70cf4302)
+
+
+>NOTA
+This button is the **ChangePasswordByUser** Action that is not available if the Active Directory authentication is used. To change a password in this instance, end users can use the operating system’s standard tools (e.g., press **CTRL**+**ALT**+**DEL** and select **Change a password**).
+
+
+
+# Acceder al sistema de seguridad en código
+
+
+Esta lección le guiará a través del uso de la clase  [SecurityStrategy](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Security.SecurityStrategy?v=22.1)  para comprobar si un usuario tiene o no un permiso determinado. La acción  [SetTask](https://docs.devexpress.com/eXpressAppFramework/112738/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-an-action-with-option-selection?v=22.1)  será accesible para los usuarios que tengan permiso para modificar objetos  **DemoTask**.
+
+>NOTA
+>Antes de continuar, le recomendamos que revise las siguientes lecciones:
+>-   [Uso del sistema de seguridad](https://docs.devexpress.com/eXpressAppFramework/112768/getting-started/in-depth-tutorial-winforms-webforms/security-system/using-the-security-system?v=22.1)
+>-   [Agregar una acción con selección de opción](https://docs.devexpress.com/eXpressAppFramework/112738/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-an-action-with-option-selection?v=22.1)
+
+-   Abra el archivo TaskActionsController_.cs (TaskActionsController__.vb_) que creó en la lección  [Agregar una acción con selección de opciones](https://docs.devexpress.com/eXpressAppFramework/112738/getting-started/in-depth-tutorial-winforms-webforms/extend-functionality/add-an-action-with-option-selection?v=22.1). Agregue la directiva "using" y modifique el controlador de eventos  **Activated**  como se muestra a continuación.
+    
+
+    
+    ```csharp
+    using DevExpress.ExpressApp.Security;
+    //...
+    public partial class TaskActionsController : ViewController {
+        // ...
+        private void TaskActionsController_Activated(object sender, EventArgs e) {
+            View.SelectionChanged += View_SelectionChanged;
+            UpdateSetTaskActionState();
+        }
+        void View_SelectionChanged(object sender, EventArgs e) {
+            UpdateSetTaskActionState();
+        }
+        private void UpdateSetTaskActionState() {
+            bool isGranted = true;
+            SecurityStrategy security = Application.GetSecurityStrategy();
+            foreach(object selectedObject in View.SelectedObjects) {
+                bool isPriorityGranted = security.CanWrite(selectedObject, nameof(DemoTask.Priority));
+                bool isStatusGranted = security.CanWrite(selectedObject, nameof(DemoTask.Status));
+                if(!isPriorityGranted || !isStatusGranted) {
+                    isGranted = false;
+                }
+            }
+            SetTaskAction.Enabled.SetItemValue("SecurityAllowance", isGranted);
+        }
+    }
+    
+    ```
+    
+    Con el código agregado, se activará la acción  **Establecer tarea**  para los usuarios que tengan permisos de escritura para las propiedades  **Priority**  y  **Status**  de los objetos  **DemoTask**  seleccionados.
+    
+-   Agregue un usuario que no tenga permiso para modificar los objetos  **DemoTask**  (consulte  [Uso del sistema de seguridad](https://docs.devexpress.com/eXpressAppFramework/112768/getting-started/in-depth-tutorial-winforms-webforms/security-system/using-the-security-system?v=22.1)). Ejecute la aplicación como este nuevo usuario. La acción  **Definir tarea**  no estará visible cuando muestre la vista Lista de tareas de demostración.
+
+Esta es la última lección del  [tutorial en profundidad](https://docs.devexpress.com/eXpressAppFramework/112560/getting-started/in-depth-tutorial-winforms-webforms?v=22.1). Para obtener información sobre cómo implementar aplicaciones XAF, revise el  [Tutorial de implementación](https://docs.devexpress.com/eXpressAppFramework/113231/deployment/deployment-tutorial?v=22.1).
